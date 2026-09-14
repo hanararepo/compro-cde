@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             SettingsSeeder::class,
             SampleContentSeeder::class,
             HomeArticleCategorySeeder::class,
+            ArticleSeeder::class,
         ]);
     }
 }

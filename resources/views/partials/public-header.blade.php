@@ -40,6 +40,14 @@
                             @endif
                         @endforeach
                     </nav>
+
+                    <button class="mobile-side-menu-toggle" type="button" aria-label="{{ __('Toggle navigation') }}">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -67,18 +75,14 @@
                     <img src="{{ asset('assets/img/logo/logo-2.png') }}" alt="{{ $siteName }}">
                 @endif
             </a>
-            <button class="mobile-side-menu-close"><i class="fa-regular fa-xmark"></i></button>
+            <button class="mobile-side-menu-close" type="button" aria-label="{{ __('Close navigation') }}">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
         </div>
-        <div class="side-menu-wrap">
-            <ul class="mobile-nav">
-                {{-- Public navigation is copied from public-navbar by Antra's mobile menu. --}}
-                @auth
-                    <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                @else
-                    <li><a href="{{ route('login') }}">Sign In</a></li>
-                @endauth
-            </ul>
-        </div>
+        <div class="side-menu-wrap"></div>
     </div>
 </div>
 <div class="mobile-side-menu-overlay"></div>
