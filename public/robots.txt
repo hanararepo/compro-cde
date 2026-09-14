@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /login
+Disallow: /logout
+
+# Block Laravel internals
+Disallow: /_ignition/
+Disallow: /telescope/

@@ -1,0 +1,548 @@
+/* ==========================================================================
+   Coal Products — Minimalist Premium Design
+   ========================================================================== */
+
+/* ── Hero Section ─────────────────────────────────────────────────────────── */
+.coal-hero-section {
+    padding: 56px 0 44px;
+    background: linear-gradient(180deg, #edf4ef 0%, #f4f8f5 100%);
+    border-bottom: 1px solid #dae7dd;
+    position: relative;
+    overflow: hidden;
+}
+
+.coal-hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 0%, rgba(48,170,71,0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.coal-hero-content { max-width: 920px; position: relative; z-index: 1; }
+
+.coal-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 14px;
+    border-radius: 100px;
+    background: rgba(22,78,57,0.08);
+    border: 1px solid rgba(22,78,57,0.15);
+    color: var(--tl-color-theme-dark);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.coal-hero-badge .badge-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--tl-color-theme-primary);
+    box-shadow: 0 0 0 3px rgba(48,170,71,0.2);
+}
+
+.coal-hero-section h1 {
+    font-size: clamp(30px, 3.6vw, 50px);
+    line-height: 1.15;
+    margin: 0 0 16px;
+    color: var(--tl-color-heading-primary);
+    font-family: var(--tl-ff-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.coal-hero-section h1 span { color: var(--tl-color-theme-primary); }
+
+.coal-hero-lead {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--tl-color-text-body);
+    max-width: 720px;
+    margin: 0 0 28px;
+}
+
+/* ── Product Switcher ─────────────────────────────────────────────────────── */
+.coal-product-switcher {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(218,231,221,0.8);
+}
+
+.coal-product-switcher .switcher-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #8fa898;
+}
+
+.coal-product-switcher .switcher-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.coal-switcher-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 16px;
+    border-radius: 100px;
+    background: #fff;
+    border: 1px solid #d5e2d8;
+    color: #203b2b;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.coal-switcher-pill i { color: #8fa898; font-size: 12px; transition: color 0.2s; }
+
+.coal-switcher-pill:hover {
+    border-color: var(--tl-color-theme-primary);
+    color: #0b2e21;
+    box-shadow: 0 2px 10px rgba(48,170,71,0.1);
+}
+
+.coal-switcher-pill:hover i { color: var(--tl-color-theme-primary); }
+
+.coal-switcher-pill.active {
+    background: #0b2e21;
+    border-color: #0b2e21;
+    color: #fff;
+}
+
+.coal-switcher-pill.active i { color: var(--tl-color-theme-primary); }
+
+/* ── Detail Section ───────────────────────────────────────────────────────── */
+.coal-detail-section {
+    padding: 52px 0 100px;
+    background: #f5f8f6;
+}
+
+/* ── Spec Panel ───────────────────────────────────────────────────────────── */
+.coal-spec-panel {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e2ece5;
+}
+
+/* Panel Header */
+.coal-spec-panel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 36px 44px 32px;
+}
+
+.coal-spec-panel-header .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tl-color-theme-primary);
+    margin-bottom: 10px;
+}
+
+.coal-spec-panel-header .header-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b2e21;
+    font-family: var(--tl-ff-heading);
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+}
+
+.coal-spec-panel-header .header-sub {
+    font-size: 13px;
+    color: #9aada2;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.param-count-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    background: transparent;
+    border: 1px solid #d8e8de;
+    color: #5a7a67;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.param-count-badge i { color: var(--tl-color-theme-primary); }
+
+/* ── TABLE ────────────────────────────────────────────────────────────────── */
+.coal-table-container {
+    width: 100%;
+    overflow: visible;
+    border-top: 1px solid #edf2ef;
+}
+
+.coal-modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+/* THEAD — ultra minimal */
+.coal-modern-table thead tr {
+    border-bottom: 1px solid #e8eeea;
+}
+
+.coal-modern-table thead th {
+    padding: 14px 32px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #9aada2;
+    text-align: left;
+    background: #fafcfb;
+    white-space: nowrap;
+}
+
+/* First header — green left accent + darker label */
+.coal-modern-table thead th:first-child {
+    color: #4a6b57;
+    padding-left: 44px;
+    border-left: 3px solid var(--tl-color-theme-primary);
+}
+
+/* Column widths */
+.coal-modern-table th.col-param,
+.coal-modern-table th.col-param-dynamic {
+    width: 42%;
+    min-width: 200px;
+}
+
+.coal-modern-table th.col-typical,
+.coal-modern-table th.col-rejection,
+.coal-modern-table th.col-value { white-space: nowrap; }
+
+/* TBODY */
+.coal-modern-table tbody tr {
+    border-bottom: 1px solid #f0f4f2;
+    transition: background 0.12s ease;
+}
+
+.coal-modern-table tbody tr:last-child { border-bottom: none; }
+
+.coal-modern-table tbody tr:hover { background: #f5faf7; }
+
+/* Cells */
+.coal-modern-table tbody th,
+.coal-modern-table tbody td {
+    padding: 20px 32px;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ── Parameter Cell ───────────────────────────────────────────────────────── */
+.cell-param {
+    padding-left: 44px !important;
+    border-left: 3px solid transparent;
+    transition: border-color 0.15s ease;
+}
+
+.coal-modern-table tbody tr:hover .cell-param {
+    border-left-color: var(--tl-color-theme-primary);
+}
+
+.param-info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.param-indicator {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #c8dece;
+    flex-shrink: 0;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.coal-modern-table tbody tr:hover .param-indicator {
+    background: var(--tl-color-theme-primary);
+    transform: scale(1.4);
+}
+
+.param-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a3528;
+    letter-spacing: -0.01em;
+}
+
+.basis-pill {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #edf5f0;
+    color: #3a6b4e;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+/* ── Value Cells ──────────────────────────────────────────────────────────── */
+.typical-value {
+    font-weight: 600;
+    color: #0b2e21;
+    font-size: 14px;
+    font-family: var(--tl-ff-heading);
+    letter-spacing: -0.01em;
+}
+
+.rejection-none {
+    color: #d8e3dc;
+    font-size: 16px;
+    font-weight: 300;
+    user-select: none;
+}
+
+.rejection-limit-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 9px;
+    background: #fef9ec;
+    border: 1px solid #fce9a0;
+    color: #92400e;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.rejection-limit-badge i { font-size: 10px; color: #d97706; }
+
+/* ── Panel Footer ─────────────────────────────────────────────────────────── */
+.coal-spec-panel-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 24px 44px;
+    border-top: 1px solid #edf2ef;
+}
+
+.coal-spec-panel-footer .footer-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 620px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #9aada2;
+}
+
+.coal-spec-panel-footer .footer-note i {
+    color: var(--tl-color-theme-primary);
+    font-size: 13px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* ── Inquire CTA ──────────────────────────────────────────────────────────── */
+.coal-inquire-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px 10px 22px;
+    background: var(--tl-gradient-button);
+    color: #fff;
+    border-radius: 100px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.22s ease;
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+    box-shadow: 0 4px 14px rgba(var(--tl-color-theme-primary-rgb), 0.3);
+}
+
+.coal-inquire-cta .cta-icon {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.22s ease;
+}
+
+.coal-inquire-cta .cta-icon i {
+    font-size: 11px;
+    transform: rotate(-45deg);
+    transition: transform 0.22s ease;
+}
+
+.coal-inquire-cta:hover {
+    opacity: 0.88;
+    box-shadow: 0 8px 24px rgba(var(--tl-color-theme-primary-rgb), 0.4);
+    transform: translateY(-1px);
+}
+
+.coal-inquire-cta:hover .cta-icon { background: rgba(255,255,255,0.3); }
+.coal-inquire-cta:hover .cta-icon i { transform: rotate(0deg); }
+
+/* ── Index Product Cards ──────────────────────────────────────────────────── */
+.coal-products-section {
+    padding: 48px 0 80px;
+    background: #f5f8f6;
+}
+
+.coal-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.coal-product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 28px 28px 24px;
+    background: #fff;
+    border: 1px solid #e2ece5;
+    border-radius: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.coal-product-card::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--tl-color-theme-primary);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.25s ease;
+    border-radius: 0 2px 2px 0;
+}
+
+.coal-product-card:hover::after { transform: scaleY(1); }
+.coal-product-card:hover {
+    border-color: #c5dccb;
+    box-shadow: 0 8px 28px rgba(11,46,33,0.07);
+    transform: translateY(-2px);
+}
+
+.coal-product-number {
+    font-size: 44px;
+    font-weight: 800;
+    color: rgba(11,46,33,0.05);
+    font-family: var(--tl-ff-heading);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    display: block;
+}
+
+.coal-product-card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0b2e21;
+    font-family: var(--tl-ff-heading);
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.coal-product-card p {
+    font-size: 12px;
+    color: #9aada2;
+    margin: 0;
+    font-weight: 500;
+}
+
+.coal-product-link {
+    margin-top: auto;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5a7a67;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding-top: 12px;
+    border-top: 1px solid #edf2ef;
+    transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.coal-product-card:hover .coal-product-link {
+    color: var(--tl-color-theme-primary);
+    gap: 8px;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 991px) {
+    .coal-table-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    .coal-spec-panel-header { padding: 28px 28px 24px; }
+    .coal-modern-table thead th { padding: 12px 20px; }
+    .coal-modern-table thead th:first-child { padding-left: 28px; }
+    .coal-modern-table tbody th,
+    .coal-modern-table tbody td { padding: 16px 20px; }
+    .cell-param { padding-left: 28px !important; }
+    .coal-spec-panel-footer { padding: 20px 28px; }
+}
+
+@media (max-width: 767px) {
+    .coal-spec-panel-header { padding: 22px 20px; }
+    .coal-spec-panel-header .header-title { font-size: 19px; }
+    .coal-modern-table thead th { padding: 11px 14px; font-size: 10px; }
+    .coal-modern-table thead th:first-child { padding-left: 20px; }
+    .coal-modern-table tbody th,
+    .coal-modern-table tbody td { padding: 14px; font-size: 13px; }
+    .cell-param { padding-left: 20px !important; }
+    .coal-spec-panel-footer {
+        padding: 18px 20px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .coal-inquire-cta { justify-content: center; }
+}
+
+@media (max-width: 575px) {
+    .coal-hero-section h1 { font-size: 28px; }
+    .coal-table-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    .coal-modern-table {
+        min-width: max(520px, calc(var(--col-count, 3) * 150px));
+    }
+}

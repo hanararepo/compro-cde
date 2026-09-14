@@ -1,0 +1,12 @@
+Tool: built-in image_gen (image edit)
+Asset: public/assets/img/images/company-mining-truck-v2.png
+Output: 1536 x 1024, opaque PNG with a white background.
+The generator did not produce an alpha channel, so the final image uses a
+white background to match the Our Company section.
+
+Use case: precise-object-edit
+Asset type: website Our Company section image on a pure white page.
+Primary request: replace the entire gray-and-white checkerboard in the provided mining truck image with completely solid, flat, pure white (#FFFFFF). Erase every gray square and grid line everywhere outside the truck, including the open gaps between railings, steps, wheels, chassis and machinery. Those gaps must also become plain white.
+Input image: edit target. Keep the same truck.
+Preserve the yellow mining dump truck's exact front three-quarter angle facing right, proportions, realistic yellow paint, dark metal, tires, railings, existing markings, lighting, and photographic detail. Show the entire vehicle uncropped with small white margins, landscape 3:2 format.
+The final image must look like an industrial product photograph isolated on a seamless WHITE studio background. All background pixels should be opaque pure white. No checkerboard anywhere. No gray background. No transparency pattern. No floor horizon. No scenery. No new text. No cast shadow on the background.

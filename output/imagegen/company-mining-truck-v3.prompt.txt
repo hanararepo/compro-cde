@@ -1,0 +1,12 @@
+Tool: built-in image_gen (image edit)
+Input: public/assets/img/images/company-mining-truck-v2.png
+Asset: public/assets/img/images/company-mining-truck-v3.png
+Output: 1536 x 1024 PNG, white background with a soft ground shadow.
+
+Use case: precise-object-edit
+Asset type: premium mining company website Our Company section image.
+Primary request: make this same yellow mining dump truck look clean, well maintained, and strongly three-dimensional. ALL TIRES MUST BE RICH BLACK RUBBER, including the entire large foreground tire, its sidewall, all tread blocks, and rear tires. Remove every pale gray, whitish, beige, blue, dusty or muddy patch from the rubber. Preserve readable tread texture using subtle charcoal highlights over black rubber; no gray or blue sidewalls. Wheel rims remain clean yellow metal.
+Clean the whole truck: remove dust, dried mud, rust, chipped paint, scratches, stains and grime from the yellow body, bumper, undercarriage, steps, wheels and dump bed. Restore smooth vibrant industrial yellow paint with realistic controlled glossy highlights, crisp dark metal, clean glass. It should look recently detailed and professionally photographed, not weathered or distressed.
+Depth: use convincing directional studio light from upper left, clear modeling of the curved tires and body, realistic occlusion shadows beneath the chassis, crisp highlights on yellow surfaces, and a visible soft cast shadow directly under and slightly behind the wheels that fades naturally into the pure white background. The truck should feel solid and project toward the viewer in three-quarter perspective. Keep wheels grounded.
+Invariants: preserve this truck's identity, geometry, front three-quarter view facing right, cab, rails, wheel count, existing vehicle markings and proportions. Retain photographic realism. Entire truck and its ground shadow must be fully in frame, with modest white margins and enough space under the wheels for the shadow. Landscape 3:2.
+Background: plain seamless opaque pure white #FFFFFF to blend into a white website. No checkerboard, no environment, no horizon line, no frame, no rectangular backdrop, no added typography. Change only the condition/finish, tire color, lighting and shadow as requested.
