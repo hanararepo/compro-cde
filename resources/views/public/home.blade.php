@@ -221,11 +221,15 @@
     <!-- Insights & Trends Articles -->
     @include('partials.home-insights-section')
 
-    <!-- Our Company: Antra Home 7 About layout -->
+    {{-- Our Company: Antra Home 7 About layout --}}
     @include('partials.home-company-section')
 
-    <!-- Vision & Mission: adapted from Antra Home 5's process layout -->
+    {{-- Board of Directors --}}
+    @include('partials.home-bod-section')
+
+    {{-- Vision & Mission: adapted from Antra Home 5's process layout --}}
     @include('partials.home-vision-mission-section')
+
 
     <!-- Core Values: Antra service layout with the SUCCESS values -->
     @include('partials.home-core-values-section')
