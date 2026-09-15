@@ -105,7 +105,7 @@
                                data-vbtype="image"
                                title="{{ $tall->getTranslation('title', app()->getLocale()) }}"
                                aria-label="{{ $tall->getTranslation('title', app()->getLocale()) }}">
-                                <img src="{{ $tall->imageUrl() }}"
+                                <img src="{{ $tall->thumbnailUrl() }}"
                                      alt="{{ $tall->alt_text ?? $tall->getTranslation('title', app()->getLocale()) }}"
                                      loading="{{ $chunkIndex === 0 ? 'eager' : 'lazy' }}"
                                      fetchpriority="{{ $chunkIndex === 0 ? 'high' : 'auto' }}"
@@ -144,7 +144,7 @@
                                    data-vbtype="image"
                                    title="{{ $small->getTranslation('title', app()->getLocale()) }}"
                                    aria-label="{{ $small->getTranslation('title', app()->getLocale()) }}">
-                                    <img src="{{ $small->imageUrl() }}"
+                                    <img src="{{ $small->thumbnailUrl() }}"
                                          alt="{{ $small->alt_text ?? $small->getTranslation('title', app()->getLocale()) }}"
                                          loading="{{ $chunkIndex === 0 ? 'eager' : 'lazy' }}"
                                          fetchpriority="{{ $chunkIndex === 0 ? 'high' : 'auto' }}"

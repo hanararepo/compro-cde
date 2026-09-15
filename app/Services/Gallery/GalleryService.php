@@ -140,8 +140,13 @@ class GalleryService
     }
 
     /**
-     * Generate a 400×300 thumbnail and store it under galleries/thumbnails/.
-     * Returns the relative storage path.
+     * Generate a thumbnail (max 800px wide, aspect ratio preserved) and store it
+     * under galleries/thumbnails/. Returns the relative storage path.
+     *
+     * Using scale(800) instead of cover() to:
+     * - Preserve the original aspect ratio (no forced crop)
+     * - Keep image sharp at display size (~300–600px on grid)
+     * - Still reduce file size significantly vs. the original
      */
     private function generateThumbnail(UploadedFile $file): string
     {
@@ -149,7 +154,7 @@ class GalleryService
 
         try {
             $image = Image::decode($file->getRealPath())
-                ->cover(400, 300);
+                ->scaleDown(width: 800);   // max 800px lebar, tinggi menyesuaikan rasio
 
             Storage::disk('public')->put($thumbnailPath, $image->encode()->toString());
         } catch (\Throwable) {
