@@ -54,7 +54,7 @@
                 <div class="bod-card">
                     <div class="bod-img-wrap">
                         <img
-                            src="{{ asset('assets/img/images/DAVID_HENDRICK_SIREGAR_COO_CDE.png') }}"
+                            src="{{ asset('assets/img/images/DAVIDHENDRICKSIREGAR_COO_CDE.png') }}"
                             alt="David Hendrick Siregar"
                             loading="lazy"
                             decoding="async"
@@ -76,7 +76,7 @@
                 <div class="bod-card">
                     <div class="bod-img-wrap">
                         <img
-                            src="{{ asset('assets/img/images/AFAN_SURYADI_CSO_CCM_GROUP.png') }}"
+                            src="{{ asset('assets/img/images/AFANSURYADI_CSO_CCM_GROUP.png') }}"
                             alt="Afan Suryadi"
                             loading="lazy"
                             decoding="async"
