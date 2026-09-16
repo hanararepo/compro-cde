@@ -27,29 +27,7 @@
         {{-- BOD Cards Grid --}}
         <div class="row justify-content-center g-4 bod-grid">
 
-            {{-- BOD Member 1 --}}
-            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-delay="0.0">
-                <div class="bod-card">
-                    <div class="bod-img-wrap">
-                        <img
-                            src="{{ asset('assets/img/images/ADITYA_RAHMAN_CEO_CDE.png') }}"
-                            alt="Aditya Rahman"
-                            loading="lazy"
-                            decoding="async"
-                            class="bod-img"
-                        >
-                        <div class="bod-overlay">
-                            <span class="bod-overlay-role">Chief Executive Officer (CEO)</span>
-                        </div>
-                    </div>
-                    <div class="bod-info">
-                        <h3 class="bod-name">Aditya Rahman</h3>
-                        <span class="bod-role">Chief Executive Officer (CEO)</span>
-                    </div>
-                </div>
-            </div>
-
-            {{-- BOD Member 2 --}}
+             {{-- BOD Member 1 --}}
             <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-delay="0.08">
                 <div class="bod-card">
                     <div class="bod-img-wrap">
@@ -67,6 +45,28 @@
                     <div class="bod-info">
                         <h3 class="bod-name">David Hendrick Siregar</h3>
                         <span class="bod-role">Chief Operating Officer (COO)</span>
+                    </div>
+                </div>
+            </div>
+
+            {{-- BOD Member 2 --}}
+            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-delay="0.0">
+                <div class="bod-card">
+                    <div class="bod-img-wrap">
+                        <img
+                            src="{{ asset('assets/img/images/ADITYA_RAHMAN_CEO_CDE.png') }}"
+                            alt="Aditya Rahman"
+                            loading="lazy"
+                            decoding="async"
+                            class="bod-img"
+                        >
+                        <div class="bod-overlay">
+                            <span class="bod-overlay-role">Chief Executive Officer (CEO)</span>
+                        </div>
+                    </div>
+                    <div class="bod-info">
+                        <h3 class="bod-name">Aditya Rahman</h3>
+                        <span class="bod-role">Chief Executive Officer (CEO)</span>
                     </div>
                 </div>
             </div>
