@@ -1,151 +1,233 @@
 <x-layouts.public :title="'[PREVIEW] ' . $article->getTranslation('title', app()->getLocale())">
-    <div x-data="{ previewLang: '{{ app()->getLocale() }}', rejectOpen: false }">
-        <!-- Floating Reviewer Toolbar -->
-        <div class="sticky top-20 z-50 bg-slate-900/95 backdrop-blur-md text-white border-y border-slate-700 shadow-xl py-3 px-4 sm:px-8">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-                <!-- Left: Status Indicator -->
-                <div class="flex items-center gap-3">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-300 border border-brand-500/30">
-                        <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
-                        PREVIEW MODE
+
+    @push('head-meta')
+    <style>
+        /* Sembunyikan navbar & footer di halaman preview */
+        .header, .public-company-footer, #scroll-percentage { display: none !important; }
+
+        /* Toolbar styles */
+        #preview-bar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+            background: #111827;
+            border-bottom: 1px solid #1f2937;
+            box-shadow: 0 1px 12px rgba(0,0,0,0.5);
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+        }
+        #preview-bar-main {
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 8px;
+            max-width: 1000px; margin: 0 auto; padding: 10px 20px;
+        }
+        .pb-left  { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .pb-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+        .pb-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 3px 10px; border-radius: 100px; font-size: 11px; font-weight: 700;
+            letter-spacing: .04em; text-transform: uppercase;
+        }
+        .pb-badge-preview {
+            background: rgba(48,170,71,.12); border: 1px solid rgba(48,170,71,.3); color: #4ade80;
+        }
+        .pb-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; }
+
+        .pb-status {
+            font-size: 12px; color: #9ca3af;
+        }
+        .pb-status strong { color: #e5e7eb; font-weight: 600; }
+
+        .pb-divider { width: 1px; height: 16px; background: #374151; }
+
+        /* Language toggle */
+        .pb-lang { display: flex; align-items: center; gap: 2px; background: #1f2937; border-radius: 8px; padding: 3px; border: 1px solid #374151; }
+        .pb-lang-btn {
+            padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 500;
+            border: 0; background: transparent; cursor: pointer; color: #6b7280; transition: all .15s;
+        }
+        .pb-lang-btn.active { background: #1d662b; color: #fff; font-weight: 700; }
+
+        /* Action buttons */
+        .pb-btn {
+            display: inline-flex; align-items: center; gap: 5px;
+            padding: 5px 14px; border-radius: 7px; font-size: 12px; font-weight: 600;
+            border: 0; cursor: pointer; text-decoration: none; transition: all .15s;
+            white-space: nowrap;
+        }
+        .pb-btn-approve { background: #166534; color: #fff; }
+        .pb-btn-approve:hover { background: #15803d; }
+        .pb-btn-reject  { background: #991b1b; color: #fff; }
+        .pb-btn-reject:hover  { background: #b91c1c; }
+        .pb-btn-edit    { background: #1f2937; color: #d1d5db; border: 1px solid #374151; }
+        .pb-btn-edit:hover { background: #374151; }
+        .pb-btn-back    { background: transparent; color: #6b7280; font-weight: 500; padding: 5px 8px; }
+        .pb-btn-back:hover { color: #d1d5db; }
+
+        /* Reject drawer */
+        #preview-reject-drawer {
+            display: none;
+            background: #1f2937; border-top: 1px solid #374151; padding: 12px 20px;
+        }
+        #preview-reject-drawer form { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; max-width: 1000px; margin: 0 auto; }
+        #preview-reject-drawer input {
+            flex: 1; min-width: 200px; padding: 7px 12px; font-size: 12px;
+            background: #111827; border: 1px solid #374151; border-radius: 7px; color: #e5e7eb;
+            outline: none;
+        }
+        #preview-reject-drawer input:focus { border-color: #4b5563; }
+        #preview-reject-drawer input::placeholder { color: #6b7280; }
+
+        /* Article spacing — push content below fixed toolbar */
+        #preview-article {
+            padding-top: var(--toolbar-h, 60px);
+        }
+    </style>
+    @endpush
+
+    <div x-data="{ previewLang: '{{ app()->getLocale() }}' }">
+
+        {{-- ── Reviewer Toolbar ──────────────────────────────── --}}
+        <div id="preview-bar">
+            <div id="preview-bar-main">
+
+                {{-- Left: mode + status --}}
+                <div class="pb-left">
+                    <span class="pb-badge pb-badge-preview">
+                        <span class="pb-badge-dot"></span>
+                        Preview
                     </span>
-                    <span class="text-xs text-slate-300">
-                        Article Status: <x-badge :color="$article->status->value">{{ $article->status->label() }}</x-badge>
+                    <span class="pb-status">
+                        Status: <strong>{{ $article->status->label() }}</strong>
                     </span>
+                    <span class="pb-divider" aria-hidden="true"></span>
+                    {{-- Language toggle --}}
+                    <div class="pb-lang">
+                        <button class="pb-lang-btn" :class="previewLang === 'en' && 'active'" @click="previewLang = 'en'" type="button">EN</button>
+                        <button class="pb-lang-btn" :class="previewLang === 'id' && 'active'" @click="previewLang = 'id'" type="button">ID</button>
+                    </div>
                 </div>
 
-                <!-- Center: Language Toggle -->
-                <div class="flex items-center gap-2 bg-slate-800 p-1 rounded-xl border border-slate-700">
-                    <span class="text-xs text-slate-400 pl-2 font-medium">View in:</span>
-                    <button type="button" @click="previewLang = 'en'" :class="previewLang === 'en' ? 'bg-brand-600 text-white font-bold' : 'text-slate-400 hover:text-white'" class="px-3 py-1 rounded-lg text-xs transition-all">
-                        🇬🇧 English
-                    </button>
-                    <button type="button" @click="previewLang = 'id'" :class="previewLang === 'id' ? 'bg-brand-600 text-white font-bold' : 'text-slate-400 hover:text-white'" class="px-3 py-1 rounded-lg text-xs transition-all">
-                        🇮🇩 Bahasa Indonesia
-                    </button>
-                </div>
-
-                <!-- Right: Action Buttons -->
-                <div class="flex items-center gap-3">
+                {{-- Right: actions --}}
+                <div class="pb-right">
                     @can('approve', $article)
                         @if($article->status->value === 'pending')
-                            <!-- Approve Form -->
-                            <form action="{{ route('admin.articles.approve', $article) }}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button type="submit" class="px-4 py-1.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold shadow-xs transition-colors">
-                                    ✓ Approve & Publish
-                                </button>
+                            <form method="POST" action="{{ route('admin.articles.approve', $article) }}" style="margin:0;">
+                                @csrf @method('PATCH')
+                                <button type="submit" class="pb-btn pb-btn-approve">✓ Approve</button>
                             </form>
-
-                            <!-- Reject Toggle -->
-                            <button @click="rejectOpen = !rejectOpen" class="px-3 py-1.5 rounded-xl bg-rose-600/80 hover:bg-rose-600 text-white text-xs font-semibold transition-colors">
-                                ✗ Reject
-                            </button>
+                            <button type="button" class="pb-btn pb-btn-reject" onclick="document.getElementById('preview-reject-drawer').style.display = document.getElementById('preview-reject-drawer').style.display === 'none' ? 'block' : 'none'">✕ Reject</button>
                         @endif
                     @endcan
-
                     @can('update', $article)
-                        <a href="{{ route('admin.articles.edit', $article) }}" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors border border-slate-700">
-                            Edit Article
-                        </a>
+                        <a href="{{ route('admin.articles.edit', $article) }}" class="pb-btn pb-btn-edit">Edit</a>
                     @endcan
-
-                    <a href="{{ route('admin.articles.pending') }}" class="text-xs text-slate-400 hover:text-white transition-colors">
-                        ← Back to Queue
-                    </a>
+                    <a href="{{ route('admin.articles.pending') }}" class="pb-btn pb-btn-back">← Queue</a>
                 </div>
             </div>
 
-            <!-- Reject Reason Drawer -->
-            <div x-show="rejectOpen" x-transition class="max-w-7xl mx-auto mt-3 pt-3 border-t border-slate-800">
-                <form action="{{ route('admin.articles.reject', $article) }}" method="POST" class="flex flex-col sm:flex-row items-center gap-3">
-                    @csrf
-                    @method('PATCH')
-                    <input type="text" name="rejection_reason" placeholder="Explain why this article is rejected..." required class="flex-1 w-full px-3.5 py-1.5 text-xs bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-rose-500">
-                    <div class="flex items-center gap-2 shrink-0">
-                        <button type="button" @click="rejectOpen = false" class="px-3 py-1.5 text-xs text-slate-400 hover:text-white">Cancel</button>
-                        <button type="submit" class="px-4 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold">Confirm Reject</button>
-                    </div>
+            {{-- Reject drawer --}}
+            <div id="preview-reject-drawer">
+                <form method="POST" action="{{ route('admin.articles.reject', $article) }}">
+                    @csrf @method('PATCH')
+                    <input type="text" name="rejection_reason" placeholder="Reason for rejection..." required>
+                    <button type="button" class="pb-btn pb-btn-back" onclick="document.getElementById('preview-reject-drawer').style.display='none'">Cancel</button>
+                    <button type="submit" class="pb-btn pb-btn-reject">Confirm Reject</button>
                 </form>
             </div>
         </div>
 
-        <!-- Article Reader Area -->
-        <article class="py-12 bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Breadcrumbs -->
-                <nav class="flex items-center gap-2 text-xs text-slate-400 mb-8">
-                    <span>Home</span>
-                    <span>/</span>
-                    <span>Articles</span>
-                    <span>/</span>
+        {{-- ── Article (same structure as public/news/show.blade.php) ── --}}
+        <article id="preview-article" class="blog-details-section news-detail-section" style="background:#fff;">
+            <div class="container news-detail-container">
+
+                {{-- Breadcrumb --}}
+                <nav class="news-breadcrumb" aria-label="{{ __('Breadcrumb') }}">
+                    <span>{{ __('Home') }}</span>
+                    <span aria-hidden="true">/</span>
+                    <span>{{ __('News') }}</span>
                     @if($article->category)
-                        <span class="text-brand-600 font-semibold" x-text="previewLang === 'en' ? '{{ $article->category->getTranslation('name', 'en') }}' : '{{ $article->category->getTranslation('name', 'id') }}'"></span>
-                        <span>/</span>
+                        <span aria-hidden="true">/</span>
+                        <span x-text="previewLang === 'en' ? '{{ $article->category->getTranslation('name', 'en') }}' : '{{ $article->category->getTranslation('name', 'id') }}'"></span>
                     @endif
-                    <span class="text-slate-600 truncate max-w-xs" x-text="previewLang === 'en' ? '{{ addslashes($article->getTranslation('title', 'en')) }}' : '{{ addslashes($article->getTranslation('title', 'id')) }}'"></span>
                 </nav>
 
-                <!-- Article Header -->
-                <header class="space-y-4 mb-8">
+                {{-- Header --}}
+                <header class="news-detail-header">
                     @if($article->category)
-                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700" x-text="previewLang === 'en' ? '{{ $article->category->getTranslation('name', 'en') }}' : '{{ $article->category->getTranslation('name', 'id') }}'">
-                        </span>
+                        <span class="news-filter" x-text="previewLang === 'en' ? '{{ $article->category->getTranslation('name', 'en') }}' : '{{ $article->category->getTranslation('name', 'id') }}'"></span>
                     @endif
+                    <h1 x-show="previewLang === 'en'">{{ $article->getTranslation('title', 'en') }}</h1>
+                    <h1 x-show="previewLang === 'id'" style="display:none;">{{ $article->getTranslation('title', 'id') }}</h1>
 
-                    <!-- English Title -->
-                    <h1 x-show="previewLang === 'en'" class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                        {{ $article->getTranslation('title', 'en') }}
-                    </h1>
-
-                    <!-- Indonesian Title -->
-                    <h1 x-show="previewLang === 'id'" class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight" style="display: none;">
-                        {{ $article->getTranslation('title', 'id') }}
-                    </h1>
-
-                    <!-- Author & Publishing Meta -->
-                    <div class="flex items-center gap-4 py-4 border-y border-slate-100">
-                        <img src="{{ $article->author->avatarUrl() }}" alt="{{ $article->author->name }}" class="w-12 h-12 rounded-full object-cover ring-2 ring-slate-100">
+                    <div class="news-author">
+                        @if($article->author->avatar)
+                            <img class="news-author-avatar" src="{{ $article->author->avatarUrl() }}" alt="" width="48" height="48">
+                        @else
+                            <span class="news-author-avatar" aria-hidden="true">{{ Str::upper(Str::substr($article->author->name, 0, 1)) }}</span>
+                        @endif
                         <div>
-                            <p class="font-bold text-slate-900 text-sm">{{ $article->author->name }}</p>
-                            <p class="text-xs text-slate-400 mt-0.5">
-                                Submitted on {{ $article->created_at->format('F d, Y') }} 
-                                • Author Profile
-                            </p>
+                            <p>{{ $article->author->name }}</p>
+                            <p class="news-published">Submitted on <time>{{ $article->created_at->format('d F Y') }}</time></p>
                         </div>
                     </div>
                 </header>
 
-                <!-- Featured Thumbnail Image -->
+                {{-- Thumbnail --}}
                 @if($article->thumbnail)
-                    <div class="aspect-16/9 rounded-3xl overflow-hidden mb-10 shadow-lg shadow-slate-100">
-                        <img src="{{ $article->thumbnailUrl() }}" alt="" class="w-full h-full object-cover">
-                    </div>
+                    <figure class="news-featured-image">
+                        <img src="{{ $article->thumbnailUrl() }}" alt="" decoding="async">
+                    </figure>
                 @endif
 
-                <!-- English Content Body -->
-                <div x-show="previewLang === 'en'" class="article-content">
+                {{-- Content --}}
+                <div x-show="previewLang === 'en'" class="article-content news-article-content">
                     {!! $article->getTranslation('content', 'en') !!}
                 </div>
-
-                <!-- Indonesian Content Body -->
-                <div x-show="previewLang === 'id'" class="article-content" style="display: none;">
+                <div x-show="previewLang === 'id'" class="article-content news-article-content" style="display:none;">
                     {!! $article->getTranslation('content', 'id') !!}
                 </div>
 
-                <!-- Tags -->
+                {{-- Tags --}}
                 @if($article->tags->isNotEmpty())
-                    <div class="mt-12 pt-6 border-t border-slate-100 flex items-center gap-2 flex-wrap">
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Tags:</span>
+                    <div class="news-tags news-detail-tags">
+                        <span>{{ __('Tags:') }}</span>
                         @foreach($article->tags as $tag)
-                            <span class="px-3 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">
-                                #{{ $tag->getTranslation('name', app()->getLocale()) }}
-                            </span>
+                            <span class="news-tag">#{{ $tag->getTranslation('name', app()->getLocale()) }}</span>
                         @endforeach
                     </div>
                 @endif
+
             </div>
         </article>
     </div>
+
+    @push('scripts')
+    <script>
+        (function () {
+            var bar     = document.getElementById('preview-bar');
+            var article = document.getElementById('preview-article');
+
+            function syncHeight() {
+                if (!bar || !article) return;
+                var h = bar.getBoundingClientRect().height;
+                document.documentElement.style.setProperty('--toolbar-h', h + 'px');
+            }
+
+            syncHeight();
+            window.addEventListener('resize', syncHeight);
+            // Observe toolbar size changes (reject drawer toggle)
+            if (typeof ResizeObserver !== 'undefined') {
+                new ResizeObserver(syncHeight).observe(bar);
+            }
+
+            // Sync Alpine.js language toggle active class (CSS-based)
+            document.querySelectorAll('.pb-lang-btn').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.pb-lang-btn').forEach(function(b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                });
+            });
+        })();
+    </script>
+    @endpush
+
 </x-layouts.public>
