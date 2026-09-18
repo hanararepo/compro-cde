@@ -207,7 +207,7 @@
     <!-- CSR & Environment Articles -->
     @include('partials.home-article-section', [
         'sectionId' => 'home-csr',
-        'spacing' => 'pt-150 pb-120',
+        'spacing' => 'pt-70 pb-120',
         'category' => $csrCategory,
         'categorySlug' => 'csr-environment',
         'label' => __('Latest Update'),

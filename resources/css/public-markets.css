@@ -1,5 +1,5 @@
 .home-markets-section {
-    padding: 110px 0;
+    padding: 100px 0 50px;
     background: #f3f6f0;
     color: #163d2c;
     overflow: hidden;
@@ -65,14 +65,14 @@
     .home-markets-live { max-width: 110px; }
 }
 @media (max-width: 991px) {
-    .home-markets-section { padding: 75px 0; }
+    .home-markets-section { padding: 70px 0 40px; }
     .home-markets-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; }
     .home-markets-description { max-width: 620px; }
     .home-markets-countries { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .home-markets-live { max-width: none; }
 }
 @media (max-width: 575px) {
-    .home-markets-section { padding: 60px 0; }
+    .home-markets-section { padding: 50px 0 30px; }
     .home-markets-countries { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .home-markets-atlas { border-radius: 18px; }
     .home-markets-atlas-top { padding: 18px 14px; font-size: 9px; }
