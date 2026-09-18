@@ -21,10 +21,10 @@
         <div class="home-markets-layout">
             <div class="home-markets-copy">
                 <div class="section-heading">
-                    <h4 class="sub-heading">{{ __('Our Market Reach') }}</h4>
-                    <h2 id="home-markets-heading" class="section-title">{{ __('From Indonesia.') }}<br><span>{{ __('Across Asia.') }}</span></h2>
+                    <h4 class="sub-heading">{{ __('Our Footprint. Your Opportunity.') }}</h4>
+                    <h2 id="home-markets-heading" class="section-title">{{ __('Strategic Coverage') }}<br><span>{{ __('Across Key Asian Markets') }}</span></h2>
                 </div>
-                <p class="home-markets-description">{{ __('Connecting Indonesian coal resources with key markets across Asia. A regional perspective, built on lasting connections.') }}</p>
+                <p class="home-markets-description">{!! __('We operate and deliver value across <strong>:count key countries</strong> in Asia, connecting resources, markets, and opportunities.', ['count' => 12]) !!}</p>
                 <div class="home-markets-stats">
                     <div><strong>12</strong><span>{{ __('Countries connected') }}</span></div>
                     <div><strong>01</strong><span>{{ __('Connected region') }}</span></div>
@@ -32,7 +32,7 @@
                 <p class="home-markets-hint" id="home-markets-hint">{{ __('Explore a country to see its connection.') }}</p>
                 <div class="home-markets-countries" role="group" aria-label="{{ __('Explore our markets') }}" aria-describedby="home-markets-hint">
                     @foreach ($marketCountries as $country)
-                        <button type="button" class="home-market-button" data-market="{{ $country['code'] }}" data-market-name="{{ __($country['name']) }}" aria-pressed="{{ $country['code'] === 'CHN' ? 'true' : 'false' }}">
+                        <button type="button" class="home-market-button" data-market="{{ $country['code'] }}" data-market-name="{{ __($country['name']) }}" aria-pressed="false">
                             <span class="home-market-dot" aria-hidden="true"></span>
                             <span>{{ __($country['name']) }}</span>
                             @if ($country['code'] === 'IDN')<span class="home-market-origin">{{ __('Origin') }}</span>@endif
@@ -42,7 +42,7 @@
             </div>
 
             <figure class="home-markets-atlas" aria-label="{{ __('Connections from Indonesia to Asian markets') }}">
-                <div class="home-markets-atlas-top"><span><i class="fa-regular fa-globe" aria-hidden="true"></i> {{ __('Regional connections') }}</span><span>ASIA / 12</span></div>
+            
                 <svg class="home-markets-map" viewBox="0 0 850 700" aria-hidden="true" focusable="false">
                     <defs>
                         <pattern id="market-map-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 H 0 V 40" fill="none" stroke="#a4d5b6" stroke-opacity=".07"/></pattern>
@@ -59,7 +59,7 @@
                                 $y = (55 - $country['lat']) * 10;
                                 $curve = 'M 430 588 Q '.(($x + 430) / 2 + 55).' '.(($y + 588) / 2 - 85).' '.$x.' '.$y;
                             @endphp
-                            <g data-map-route="{{ $country['code'] }}" class="market-map-route {{ $country['code'] === 'CHN' ? 'is-active' : '' }}" style="--route-delay: -{{ $loop->index * 0.7 }}s">
+                            <g data-map-route="{{ $country['code'] }}" class="market-map-route" style="--route-delay: -{{ $loop->index * 0.7 }}s">
                                 <path class="market-route-line" d="{{ $curve }}"/>
                                 <path class="market-route-flow" d="{{ $curve }}" pathLength="100"/>
                             </g>
@@ -67,7 +67,7 @@
                     </g>
                     @foreach ($marketCountries as $country)
                         @php $x = ($country['lon'] - 60) * 10; $y = (55 - $country['lat']) * 10; @endphp
-                        <g data-map-point="{{ $country['code'] }}" class="market-map-point {{ $country['code'] === 'CHN' ? 'is-active' : '' }} {{ $country['code'] === 'IDN' ? 'is-origin' : '' }}" transform="translate({{ $x }} {{ $y }})">
+                        <g data-map-point="{{ $country['code'] }}" class="market-map-point {{ $country['code'] === 'IDN' ? 'is-origin' : '' }}" transform="translate({{ $x }} {{ $y }})">
                             <circle class="market-point-ring" r="12"/>
                             <circle class="market-point-core" r="4.5"/>
                             <text class="market-point-label" y="-20" text-anchor="middle">{{ __($country['name']) }}</text>
@@ -76,10 +76,7 @@
                     <text class="market-map-ocean" x="120" y="510" text-anchor="middle">{{ __('INDIAN OCEAN') }}</text>
                     <text class="market-map-ocean" x="735" y="430" text-anchor="middle">{{ __('PACIFIC OCEAN') }}</text>
                 </svg>
-                <figcaption class="home-markets-caption">
-                    <div><span class="home-markets-caption-label">{{ __('Explore the connection') }}</span><strong>{{ __('Indonesia') }} <span aria-hidden="true">↗</span> <span data-market-destination>{{ __('China') }}</span></strong></div>
-                    <span class="home-markets-live"><span aria-hidden="true"></span>{{ __('One region. Many opportunities.') }}</span>
-                </figcaption>
+              
             </figure>
         </div>
     </div>

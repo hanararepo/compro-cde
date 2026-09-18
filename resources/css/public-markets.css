@@ -43,8 +43,7 @@
 .market-point-core { fill: #c0e89b; stroke: #102a1c; stroke-width: 2; }
 .market-map-point.is-active .market-point-core { fill: #fff6ca; r: 6; }
 .market-map-point.is-active .market-point-ring { opacity: 1; }
-.market-point-label { fill: #edffe6; font-size: 16px; font-weight: 500; paint-order: stroke; stroke: #0b261d; stroke-width: 5px; stroke-linejoin: round; opacity: 0; transition: opacity 200ms; }
-.market-map-point:is(.is-active, .is-origin) .market-point-label { opacity: 1; }
+.market-point-label { fill: #edffe6; font-size: 16px; font-weight: 500; paint-order: stroke; stroke: #0b261d; stroke-width: 5px; stroke-linejoin: round; opacity: 1; transition: opacity 200ms; }
 .market-map-point.is-origin .market-point-core { fill: #e6ffc7; r: 7; }
 .market-map-point.is-origin .market-point-ring { transform-box: fill-box; transform-origin: center; animation: market-origin-pulse 3s ease-out infinite; }
 .market-map-ocean { fill: #84b29b; opacity: .45; font-size: 10px; letter-spacing: 3px; }

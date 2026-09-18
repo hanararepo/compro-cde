@@ -2,7 +2,17 @@ const network = document.querySelector('[data-market-network]');
 
 if (network) {
     const buttons = [...network.querySelectorAll('[data-market]')];
-    let selected = buttons.find((button) => button.getAttribute('aria-pressed') === 'true');
+    let selected = null; // tidak ada yang aktif di awal
+
+    /** Hapus semua state aktif */
+    const clearActive = () => {
+        network.querySelectorAll('[data-map-route], [data-map-point], [data-map-country]').forEach((el) => {
+            el.classList.remove('is-active');
+        });
+        network.querySelector('[data-market-destination]').textContent = network.dataset.regionLabel;
+    };
+
+    /** Aktifkan satu negara */
     const render = (button) => {
         const code = button.dataset.market;
         network.querySelectorAll('[data-map-route], [data-map-point], [data-map-country]').forEach((element) => {
@@ -16,13 +26,20 @@ if (network) {
 
     buttons.forEach((button) => {
         button.addEventListener('pointerenter', (event) => { if (event.pointerType === 'mouse') render(button); });
-        button.addEventListener('pointerleave', () => render(selected));
+        button.addEventListener('pointerleave', () => { if (selected) render(selected); else clearActive(); });
         button.addEventListener('focus', () => render(button));
-        button.addEventListener('blur', () => render(selected));
+        button.addEventListener('blur', () => { if (selected) render(selected); else clearActive(); });
         button.addEventListener('click', () => {
-            selected = button;
-            buttons.forEach((other) => other.setAttribute('aria-pressed', String(other === button)));
-            render(button);
+            if (selected === button) {
+                // klik negara yang sama → deselect
+                selected = null;
+                buttons.forEach((b) => b.setAttribute('aria-pressed', 'false'));
+                clearActive();
+            } else {
+                selected = button;
+                buttons.forEach((other) => other.setAttribute('aria-pressed', String(other === button)));
+                render(button);
+            }
         });
     });
 
