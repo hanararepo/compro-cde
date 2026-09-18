@@ -18,9 +18,7 @@
                 </span>
             @endif
         </a>
-        @if($article->category)
-            <a class="category" href="{{ route('news.category', ['category' => $article->category->slug]) }}">{{ $article->category->name }}</a>
-        @endif
+
     </div>
     <div class="post-content">
         <time class="news-card-date" datetime="{{ $cardDate->toDateString() }}">{{ $cardDate->translatedFormat('d M Y') }}</time>

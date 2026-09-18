@@ -78,24 +78,11 @@
                 @endif
             </nav>
             <header class="news-detail-header">
-                @if($article->category)
-                    <a class="news-filter" href="{{ $listingUrl }}">{{ $article->category->name }}</a>
-                @endif
+
                 <h1>{{ $articleTitle }}</h1>
-                <div class="news-author">
-                    @if($article->author->avatar)
-                        <img class="news-author-avatar" src="{{ $article->author->avatarUrl() }}" alt="" width="48" height="48">
-                    @else
-                        <span class="news-author-avatar" aria-hidden="true">{{ Str::upper(Str::substr($articleAuthorName, 0, 1)) }}</span>
-                    @endif
-                    <div>
-                        <p>{{ $articleAuthorName }}</p>
-                        <p class="news-published">
-                            {{ __('Published on') }} <time datetime="{{ $articlePublished }}">{{ ($article->published_at ?? $article->created_at)->translatedFormat('d F Y') }}</time>
-                            &middot; {{ number_format($article->views_count) }} {{ __('views') }}
-                        </p>
-                    </div>
-                </div>
+                <p class="news-published">
+                    {{ __('Published on') }} <time datetime="{{ $articlePublished }}">{{ ($article->published_at ?? $article->created_at)->translatedFormat('d F Y') }}</time>
+                </p>
             </header>
             @if($article->thumbnail)
                 <figure class="news-featured-image">

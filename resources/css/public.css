@@ -19,6 +19,27 @@
 @import 'lenis/dist/lenis.css';
 @import './typography.css';
 @import './public-markets.css';
+/* ==========================================================================
+   Text Selection Override
+   Template mengeset color:white tanpa background -- teks tidak terlihat saat diblok.
+   Override ini mengembalikan ke warna hijau brand.
+   ========================================================================== */
+
+::selection,
+*::selection {
+    background-color: #30aa47;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+::-moz-selection,
+*::-moz-selection {
+    background-color: #30aa47;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+
 
 /* ==========================================================================
    Brand Green Theme Customization with Gradient
