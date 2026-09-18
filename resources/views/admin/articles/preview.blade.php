@@ -3,7 +3,7 @@
     @push('head-meta')
     <style>
         /* Sembunyikan navbar & footer di halaman preview */
-        .header, .public-company-footer, #scroll-percentage { display: none !important; }
+        .header, .public-company-footer { display: none !important; }
 
         /* Toolbar styles */
         #preview-bar {
@@ -11,7 +11,7 @@
             background: #111827;
             border-bottom: 1px solid #1f2937;
             box-shadow: 0 1px 12px rgba(0,0,0,0.5);
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+            font-family: var(--font-site-stack);
         }
         #preview-bar-main {
             display: flex; align-items: center; justify-content: space-between;

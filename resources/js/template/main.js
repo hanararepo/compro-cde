@@ -1,5 +1,12 @@
+import { scrollPageTo } from '../public-scroll';
+
 (function ($) {
   "use strict";
+
+  // Mobile browser toolbars resize the viewport during a swipe. Recalculating
+  // every reveal at that point interrupts scrolling and can shift the page.
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ ignoreMobileResize: true });
 
   // Get Device width
   var device_width = window.innerWidth;
@@ -37,22 +44,18 @@
     var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var preloaderTL = gsap.timeline();
 
-    // Preserve the template's eight panels, filling two panels at a time.
+    // Leave the full company name readable before the eight panels cover it.
     if (!reducedMotion) {
+      const nameReadTime = 1.5;
       for (var i = 0; i < innerBars.length; i += 2) {
         var pair = innerBars.slice(i, i + 2);
-        var start = (i / 2) * 0.2;
+        var start = nameReadTime + (i / 2) * 0.25;
 
         preloaderTL.to(pair, {
-          width: function () { return Math.floor(Math.random() * 101) + "%"; },
-          duration: 0.2,
-          ease: "none",
-        }, start);
-        preloaderTL.to(pair, {
           width: "100%",
-          duration: 0.5,
-          ease: "none",
-        }, start + 0.2);
+          duration: 0.85,
+          ease: "sine.inOut",
+        }, start);
       }
     }
 
@@ -64,7 +67,7 @@
     });
     preloaderTL.to(preloader, {
       opacity: 0,
-      duration: reducedMotion ? 0 : 0.8,
+      duration: reducedMotion ? 0 : 0.9,
       ease: "power2.out",
     });
     preloaderTL.call(function () {
@@ -124,9 +127,10 @@
     }
 
     function menuSticky() {
+      const alwaysFixed = stickyHeader.is('[data-sticky-always]');
       let isFixed;
       const updateSticky = () => {
-        const nextFixed = window.scrollY > 0;
+        const nextFixed = alwaysFixed || window.scrollY > 0;
         if (nextFixed === isFixed) return;
         isFixed = nextFixed;
         stickyHeader.toggleClass("fixed", isFixed);
@@ -559,7 +563,7 @@
       gsap.config({
         force3D: true,
       });
-      var $container = $(".gallary-wrap");
+      var $container = $(".gallary-wrap:not(.home-photo-gallery-row)");
 
       $container.each(function () {
         const $section = $(this);
@@ -1511,24 +1515,15 @@
     if (fadeArray_items.length > 0) {
       gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
         const fadeArray = gsap.utils.toArray(".slide-anim");
-        fadeArray.forEach((item, i) => {
-          // Cegah flickering (FOUC) pada halaman tanpa preloader (seperti Tentang Kami):
-          // Jika elemen sudah terlihat di viewport awal saat script dimuat, jangan sembunyikan dengan gsap.from().
-          const hasPreloader = !!document.querySelector(".preloader");
-          if (!hasPreloader) {
-            const rect = item.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-              return;
-            }
-          }
-
-          const repeatOnScroll = item.hasAttribute("data-scroll-repeat");
+        const touchScroll = window.matchMedia('(pointer: coarse)').matches;
+        fadeArray.forEach((item) => {
+          const repeatOnScroll = item.hasAttribute("data-scroll-repeat") && !touchScroll;
           var fade_direction = "bottom";
           var onscroll_value = 1;
-          var duration_value = repeatOnScroll ? 0.65 : 1.15;
-          var fade_offset = repeatOnScroll ? 24 : 50;
+          var duration_value = 2;
+          var fade_offset = window.innerWidth < 768 ? 40 : 80;
           var delay_value = repeatOnScroll ? 0 : 0.15;
-          var ease_value = "power2.out";
+          var ease_value = "sine.out";
           if (item.getAttribute("data-offset")) {
             fade_offset = item.getAttribute("data-offset");
           }
@@ -1547,34 +1542,41 @@
           if (item.getAttribute("data-ease")) {
             ease_value = item.getAttribute("data-ease");
           }
+          const from = { opacity: 0 };
           let animation_settings = {
-            opacity: 0,
+            opacity: 1,
+            x: 0,
+            y: 0,
+            onStart: () => { item.style.willChange = 'transform, opacity'; },
+            onComplete: () => { item.style.removeProperty('will-change'); },
             ease: ease_value,
             duration: duration_value,
             delay: delay_value,
           };
           if (fade_direction == "top") {
-            animation_settings["y"] = -fade_offset;
+            from.y = -fade_offset;
           }
           if (fade_direction == "left") {
-            animation_settings["x"] = -fade_offset;
+            from.x = -fade_offset;
           }
           if (fade_direction == "bottom") {
-            animation_settings["y"] = fade_offset;
+            from.y = fade_offset;
           }
           if (fade_direction == "right") {
-            animation_settings["x"] = fade_offset;
+            from.x = fade_offset;
           }
           if (onscroll_value == 1) {
             animation_settings["scrollTrigger"] = {
               trigger: item,
-              start: "top 85%",
+              start: "top 82%",
               end: "bottom top",
+              once: touchScroll,
               toggleActions: repeatOnScroll ? "restart none restart reset" : "play none none none",
             };
           }
-          gsap.from(item, animation_settings);
+          gsap.fromTo(item, from, animation_settings);
         });
+        return () => fadeArray.forEach((item) => item.style.removeProperty('will-change'));
       });
     }
 
@@ -1629,76 +1631,17 @@
       });
     });
 
-    // Page Scroll Percentage
-    function scrollTopPercentage() {
-      const scrollElementWrap = document.getElementById("scroll-percentage");
-      const scrollLabel = document.getElementById("scroll-percentage-value");
-      if (!scrollElementWrap || !scrollLabel) return;
-      let previousValue = -1;
-      let previousActive;
-      let frame = null;
-      const scrollPercentage = () => {
-        frame = null;
-        const scrollTopPos = document.documentElement.scrollTop;
-        const calcHeight =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-        const scrollValue = calcHeight > 0 ? Math.max(0, Math.min(100, Math.round((scrollTopPos / calcHeight) * 100))) : 0;
-        const active = scrollTopPos > 100;
-        if (active !== previousActive) {
-          scrollElementWrap.classList.toggle("active", active);
-          previousActive = active;
-        }
-        if (scrollValue === previousValue) return;
-        previousValue = scrollValue;
-        scrollElementWrap.style.background = `conic-gradient(var(--tl-color-common-white) ${scrollValue}%, var(--tl-color-theme-primary) ${scrollValue}%)`;
-        if (scrollValue < 96) {
-          scrollLabel.textContent = `${scrollValue}%`;
-        } else {
-          if (!scrollLabel.querySelector("i")) scrollLabel.innerHTML = '<i class="fa-sharp fa-regular fa-arrow-up-long"></i>';
-        }
-      };
-      const scheduleProgress = () => {
-        if (frame === null) frame = window.requestAnimationFrame(scrollPercentage);
-      };
-      window.addEventListener("scroll", scheduleProgress, { passive: true });
-      window.addEventListener("resize", scheduleProgress, { passive: true });
-      window.addEventListener("load", scheduleProgress);
-      new ResizeObserver(scheduleProgress).observe(document.getElementById("antra-smooth-content") || document.body);
-      scrollPercentage();
 
-      // Back to Top
-      function scrollToTop() {
-        document.documentElement.scrollTo({
-          top: 0,
-          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
-        });
-      }
-
-      $("#scroll-percentage").on("click", scrollToTop);
-    }
-
-    scrollTopPercentage();
   });
 
   document.querySelectorAll(".scroll-btn").forEach((btn, index) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (event) => {
+      event.preventDefault();
       var sectionTarget = btn.getAttribute("data-target");
-      gsap.to(window, {
-        duration: 1,
-        scrollTo: { y: sectionTarget, offsetY: 70 },
-      });
+      scrollPageTo(sectionTarget, { offset: -70 });
     });
   });
 
-  // Native scrolling avoids transforming the entire page on every frame.
-  // ScrollTrigger still handles the individual section reveals above.
-
-  let resizeTimer;
-  $(window).on("resize", function () {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 200);
-  });
+  // ScrollTrigger already refreshes on resize and orientation changes, while
+  // ignoreMobileResize excludes the browser toolbar's small vertical resizes.
 })(jQuery);

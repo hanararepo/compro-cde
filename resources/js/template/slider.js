@@ -7,30 +7,37 @@
             return; 
         }
 
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        let sliderStarted = false;
+
         /* ============================ Animation Function ============================ */
         function sliderAnimations(elements) {
-            var animationEndEvents = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
             elements.each(function () {
                 var $this = $(this);
-                var delay = $this.data("delay");
-                var duration = $this.data("duration");
                 var animationType = "antra-animation " + $this.data("animation");
-                
+                // Reset before replay, including when returning to an unfinished slide.
+                $this.removeClass(animationType);
                 $this.css({
-                    opacity: 1,
-                    "animation-delay": delay,
-                    "-webkit-animation-delay": delay,
-                    "animation-duration": duration,
+                    opacity: reducedMotion.matches ? 1 : 0,
+                    "animation-delay": $this.data("delay"),
+                    "animation-duration": $this.data("duration"),
                 });
+            });
 
-                $this.addClass(animationType).one(animationEndEvents, function () {
-                    $this.removeClass(animationType);
-                });
+            if (reducedMotion.matches || !elements.length) return;
+            // Commit the reset once for the whole group so CSS animations restart.
+            void elements[0].offsetWidth;
+            elements.each(function () {
+                $(this).css('opacity', 1).addClass('antra-animation ' + $(this).data('animation'));
             });
         }
 
         /* ============================ Swiper Setup ============================ */
         const sliderElement = document.querySelector(".antra-slider");
+        sliderElement.classList.add('hero-motion-ready');
+        reducedMotion.addEventListener('change', () => {
+            if (reducedMotion.matches) sliderAnimations($(sliderElement).find('[data-animation]'));
+        });
         const hasMultipleSlides = sliderElement.querySelectorAll(".swiper-wrapper > .swiper-slide").length > 1;
         var sliderOptions = {
             init: false,
@@ -51,6 +58,7 @@
             },
             on: {
                 slideChangeTransitionStart: function () {
+                    if (!sliderStarted) return;
                     var swiper = this;
                     var animatingElements = $(swiper.slides[swiper.activeIndex]).find("[data-animation]");
                     sliderAnimations(animatingElements);
@@ -74,7 +82,6 @@
         };
 
         /* ============================ START AFTER PRELOADER ============================ */
-        let sliderStarted = false;
         window.startSliderAfterPreload = function () {
             const swiper = window.mainSlider;
             if (!swiper || swiper.destroyed || sliderStarted) return;

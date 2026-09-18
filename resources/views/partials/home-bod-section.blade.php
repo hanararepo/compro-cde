@@ -28,7 +28,7 @@
         <div class="row justify-content-center g-4 bod-grid">
 
              {{-- BOD Member 1 --}}
-            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-delay="0.08">
+            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-direction="left" data-delay="0.08">
                 <div class="bod-card">
                     <div class="bod-img-wrap">
                         <img
@@ -50,7 +50,7 @@
             </div>
 
             {{-- BOD Member 2 --}}
-            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-delay="0.0">
+            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.0">
                 <div class="bod-card">
                     <div class="bod-img-wrap">
                         <img
@@ -72,7 +72,7 @@
             </div>
 
             {{-- BOD Member 3 --}}
-            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-delay="0.16">
+            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-direction="right" data-delay="0.16">
                 <div class="bod-card">
                     <div class="bod-img-wrap">
                         <img

@@ -1,0 +1,12 @@
+/* One text family shared by public pages, the dashboard, and authentication. */
+:root {
+    --font-site-stack: 'Golos Text', Arial, sans-serif;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: var(--font-site-stack);
+}

@@ -21,18 +21,16 @@
         <div class="row mt-40">
             @forelse($category?->articles ?? collect() as $article)
                 <div class="col-lg-4 col-md-6 mb-40">
-                    <article class="post-card slide-anim" data-scroll-repeat data-delay="{{ $loop->index * 0.08 }}">
+                    <article class="post-card slide-anim" data-scroll-repeat data-direction="{{ ['left', 'bottom', 'right'][$loop->index % 3] }}" data-delay="{{ $loop->index * 0.08 }}">
                         <div class="post-thumb">
                             <a href="{{ $article->publicUrl() }}">
                                 <img src="{{ $article->thumbnailUrl() ?: asset('assets/img/blog/post-1.jpg') }}"
                                      alt="{{ $article->title }}" loading="lazy" decoding="async">
                             </a>
-                            <span class="category">{{ $category->getTranslation('name', app()->getLocale()) }}</span>
                         </div>
                         <div class="post-content">
                             <ul class="post-meta">
                                 <li>{{ $article->published_at ? $article->published_at->format('M d, Y') : $article->created_at->format('M d, Y') }}</li>
-                                <li>{{ __('By') }} <span>{{ $article->author->name ?? 'Admin' }}</span></li>
                             </ul>
                             <h3 class="title">
                                 <a href="{{ $article->publicUrl() }}">{{ $article->title }}</a>

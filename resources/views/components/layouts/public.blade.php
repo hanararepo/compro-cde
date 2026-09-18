@@ -72,10 +72,8 @@
         <meta property="article:section" content="{{ $articleSection }}">
     @endisset
 
-    <!-- Google Fonts for Template -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+    {{-- Preload the locally bundled font before the page stylesheet. --}}
+    @fonts('site')
 
     <!-- Compiled Template CSS via Vite -->
     @vite(['resources/css/public.css'])
@@ -95,7 +93,7 @@
     <!-- Header Section -->
     @include('partials.public-header')
 
-    <!-- Antra page structure; scrolling is handled natively by the browser. -->
+    <!-- Native page flow, with wheel smoothing synchronized to section reveals. -->
     <div id="antra-smooth-wrapper">
         <div id="antra-smooth-content">
             <!-- Main Content Slot -->
@@ -107,9 +105,6 @@
             @include('partials.public-company-footer')
         </div>
     </div>
-
-    <!-- Scroll up button -->
-    <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
 
     <!-- Vendor JavaScripts (jQuery, GSAP, Swiper, etc.) -->
     <script src="{{ asset('assets/js/vendor/jquary-3.7.1.min.js') }}"></script>

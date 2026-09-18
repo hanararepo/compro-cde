@@ -6,38 +6,39 @@
         __('Maintaining environmental sustainability by implementing environmentally friendly technologies and principles of social responsibility.'),
         __('Building a corporate culture based on integrity, team unity, compliance, and synergy to develop a resilient and dedicated team.'),
     ];
+    $missionIcons = [
+        'M13 2 4 14h7l-1 8 10-12h-7l1-8Z',
+        'M4 19h16M5 15l5-5 4 3 6-8M15 5h5v5',
+        'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z',
+        'M20 3c-8-1-15 3-15 10a6 6 0 0 0 6 6c7 0 10-8 9-16ZM3 21l11-11',
+        'M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7l-9-4ZM8 12l3 3 5-6',
+    ];
 @endphp
 
-<section id="home-vision-mission" class="process-section-5 home-vision-mission pt-130 pb-130" aria-labelledby="home-vision-mission-heading">
+<section id="home-vision-mission" class="home-vision-mission" aria-labelledby="home-vision-mission-heading">
     <div class="container container-2">
-        <div class="row section-heading-wrap ml-0 mw-100 slide-anim" data-scroll-repeat>
-            <div class="shape"><img src="{{ asset('assets/img/shapes/section-heading.png') }}" alt="" aria-hidden="true"></div>
-            <div class="col-lg-4 col-md-12">
-                <div class="section-heading mb-0">
-                    <h4 class="sub-heading">{{ __('About Us') }}</h4>
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-12">
-                <div class="section-heading section-heading-2 mb-0">
-                    <{{ $headingTag ?? 'h2' }} id="home-vision-mission-heading" class="section-title cursor-effect title-2">{{ __('Our Vision &') }} <span>{{ __('Mission') }}</span></{{ $headingTag ?? 'h2' }}>
-                </div>
-            </div>
+        <div class="home-purpose-heading section-heading slide-anim" data-scroll-repeat data-direction="bottom">
+            <h4 class="sub-heading">{{ __('About Us') }}</h4>
+            <{{ $headingTag ?? 'h2' }} id="home-vision-mission-heading" class="section-title">{{ __('Our Vision &') }} <span>{{ __('Mission') }}</span></{{ $headingTag ?? 'h2' }}>
         </div>
 
-        <div class="row g-5">
-            <div class="col-lg-5">
-                <article class="home-vision-copy slide-anim" aria-labelledby="home-vision-heading" data-scroll-repeat>
+        <div class="home-purpose-grid">
+            <article class="home-vision-card slide-anim" data-scroll-repeat aria-labelledby="home-vision-heading" data-direction="left">
+                <img class="home-vision-image" src="{{ asset('assets/img/bg-img/vision-mining-sky.webp') }}" alt="" width="1122" height="1402" loading="lazy" decoding="async">
+                <div class="home-vision-caption" aria-hidden="true"><span></span> {{ __('North Bengkulu, Bengkulu, Indonesia') }}</div>
+                <div class="home-vision-copy">
+                    <span class="home-vision-rule" aria-hidden="true"></span>
                     <h3 id="home-vision-heading" class="home-vision-heading">{{ __('Our Vision') }}</h3>
                     <p class="home-vision-statement">{{ __('To become a global force that provides sustainable energy and investment solutions, creates national prosperity, advances society and preserves the earth.') }}</p>
-                </article>
-            </div>
-            <div class="col-lg-7">
-                <h3 id="home-mission-heading" class="home-mission-heading slide-anim" data-scroll-repeat>{{ __('Our Mission') }}</h3>
-                <ol class="process-item-wrap-5 home-mission-list" aria-labelledby="home-mission-heading" role="list">
+                </div>
+            </article>
+            <div class="home-mission-panel">
+                <h3 id="home-mission-heading" class="home-mission-heading">{{ __('Our Mission') }}</h3>
+                <ol class="home-mission-list" aria-labelledby="home-mission-heading" role="list">
                     @foreach ($missions as $mission)
-                        <li class="process-item-5 slide-anim" data-scroll-repeat data-delay="{{ $loop->index * 0.06 }}">
-                            <span class="number" aria-hidden="true">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
-                            <div class="content">
+                        <li class="home-mission-item slide-anim" data-scroll-repeat data-direction="right" data-offset="32" data-delay="{{ $loop->index * 0.04 }}">
+                            <span class="home-mission-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ $missionIcons[$loop->index] }}"/></svg></span>
+                            <div class="home-mission-content">
                                 <p>{{ $mission }}</p>
                             </div>
                         </li>

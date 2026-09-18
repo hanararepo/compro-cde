@@ -7,7 +7,7 @@
     <div class="container container-2">
         <div class="row align-items-center gy-5">
             <div class="col-lg-4 col-md-12">
-                <div class="gallary-left-content home-insights-intro slide-anim" data-scroll-repeat>
+                <div class="gallary-left-content home-insights-intro slide-anim" data-scroll-repeat data-direction="left">
                     <div class="section-heading white-content mb-0">
                         <h4 class="sub-heading">{{ __('Latest Articles') }}</h4>
                         <h2 id="home-insights-heading" class="section-title cursor-effect title-2">{{ __('Insights &') }}<br> <span>{{ __('Trends') }}</span></h2>
@@ -18,11 +18,11 @@
             </div>
             <div class="col-lg-8">
                 @if ($insightsArticles->isNotEmpty())
-                    <div class="gallary-carousel-wrap home-insights-rail slide-anim" data-scroll-repeat data-delay="0.12">
+                    <div class="gallary-carousel-wrap home-insights-rail slide-anim" data-scroll-repeat data-direction="right" data-delay="0.12">
                         <div class="home-insights-slider swiper" aria-label="{{ $insightsCategory->getTranslation('name', app()->getLocale()) }}">
                             <div class="swiper-wrapper">
                                 @foreach ($insightsArticles as $article)
-                                    <article class="swiper-slide gallary-inner-item home-insights-item" data-insights-article-id="{{ $article->id }}">
+                                    <article class="swiper-slide home-insights-item" data-insights-article-id="{{ $article->id }}">
                                         <a class="home-insights-card" href="{{ $article->publicUrl() }}" aria-labelledby="home-insights-title-{{ $article->id }}">
                                             <div class="home-insights-card-media">
                                                 @if ($article->thumbnailUrl())
@@ -30,7 +30,6 @@
                                                 @else
                                                     <span class="home-insights-placeholder" aria-hidden="true"><i class="fa-regular fa-mountain"></i></span>
                                                 @endif
-                                                <span class="home-insights-category">{{ $insightsCategory->getTranslation('name', app()->getLocale()) }}</span>
                                             </div>
                                             <div class="home-insights-card-content">
                                                 <h3 id="home-insights-title-{{ $article->id }}" class="home-insights-title">{{ $article->title }}</h3>

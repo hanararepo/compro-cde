@@ -1,0 +1,8 @@
+Mode: built-in image_gen, edit
+Source: C:/Users/Lenovo/Pictures/ChatGPT Image 31 Agu 2026, 12.04.22 (6).png
+Edited master: output/imagegen/vision-mine-refined.png
+Website asset: public/assets/img/bg-img/vision-mine-refined.webp
+Web export: 1122 x 1402, WebP quality 86; no additional visual retouching.
+
+Final prompt:
+Use case: lighting-weather. Edit target: the supplied aerial open-pit mine image. Asset type: photograph for a modern energy company website vision panel. Improve only photographic finishing: gently lift underexposed shadows to reveal the terraced rock texture, refine clarity without oversharpening, balance highlights, natural neutral charcoal and warm earth tones with restrained forest-green tint in shadows. Preserve the exact original overhead camera viewpoint, portrait framing, mine geometry, winding roads, number and placement of all vehicles and machinery. Keep photorealistic and editorial, tasteful natural daylight, no added trees, people, buildings, objects, sky, lettering, logos, watermarks or gradients. No layout or text. Output portrait image matching the source aspect ratio, suitable for high-quality web display.

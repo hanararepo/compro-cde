@@ -49,6 +49,7 @@ class HomeController extends Controller
         $galleries = Gallery::with('category')
             ->published()
             ->latest()
+            ->orderByDesc('id')
             ->take(8)
             ->get();
 

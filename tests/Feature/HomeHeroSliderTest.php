@@ -52,8 +52,8 @@ class HomeHeroSliderTest extends TestCase
             $response = $this->withSession(['locale' => $locale])->get(route('home'));
 
             $response->assertOk()
-                ->assertSee('<h4 class="sub-heading">'.$title.'</h4>', false)
-                ->assertSee('<h2 class="section-title cursor-effect text-white">'.$description.'</h2>', false)
+                ->assertSee('<h4 class="sub-heading" data-animation="antra-fadeInDown" data-delay="0ms" data-duration="2000ms">'.$title.'</h4>', false)
+                ->assertSee('<h2 class="section-title cursor-effect text-white" data-animation="antra-fadeInDown" data-delay="0ms" data-duration="2000ms">'.$description.'</h2>', false)
                 ->assertSee('<source media="(max-width: 767px)" srcset="'.$slider->mobileImageUrl().'">', false)
                 ->assertSee('src="'.$slider->desktopImageUrl().'"', false)
                 ->assertSee('fetchpriority="high"', false)
@@ -74,7 +74,7 @@ class HomeHeroSliderTest extends TestCase
             ->assertDontSee('home-hero-pagination');
 
         $hero = explode('<!-- ./ slider-section -->', $response->getContent())[0];
-        $this->assertStringNotContainsString('<h2 class="section-title cursor-effect text-white">', $hero);
+        $this->assertStringNotContainsString('<h2 class="section-title cursor-effect text-white"', $hero);
     }
 
     public function test_dashboard_data_changes_are_visible_on_the_next_request(): void

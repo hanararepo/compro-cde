@@ -17,15 +17,15 @@
         <div class="row about-wrap-7">
             <div class="col-lg-4">
                 <figure class="home-company-visual slide-anim" data-scroll-repeat data-direction="left">
-                    <img class="home-company-truck"
-                         src="{{ asset('assets/img/images/company-mining-truck-v3.png') }}"
-                         alt="{{ __('Mining dump truck') }}"
-                         width="1536" height="1024" loading="lazy" decoding="async">
+                    <img class="home-company-pit"
+                         src="{{ asset('assets/img/bg-img/vision-mine-refined.webp') }}"
+                         alt="{{ __('Aerial view of an open-pit coal mine') }}"
+                         width="1122" height="1402" loading="lazy" decoding="async">
                 </figure>
             </div>
             <div class="col-lg-8">
                 <div class="about-content-7">
-                    <div class="left-content home-company-copy slide-anim" data-scroll-repeat data-delay="0.12">
+                    <div class="left-content home-company-copy slide-anim" data-scroll-repeat data-direction="right" data-delay="0.12">
                         <p>{{ __('PT. Cakrawala Dinamika Energi, PT. Cereno Energi Selaras, and PT. Mitra Padjadjaaran Prima are a group of Penanaman Modal Asing (PMA) coal mining company located in North Bengkulu, Bengkulu, Indonesia. We have a total mining concession rights of 6342 Hectares where PT. CDE has 2000 Hectares, PT. CES has 2342 Hectares and PT. MPP has 2000 Hectares respectively.') }}</p>
                         <p>{{ __('PT. CDE commenced its mining operations since 2018 while PT. CES commenced its mining operations in 2019. Our vast experience as a mining contractor during our early years working in both Kalimantan and Bengkulu, have allowed us to manage and operate the coal mines effectively and sustainably.') }}</p>
                         <p>{{ __('Both PT. CDE and PT. CES produces mainly the mid-calorific thermal coal of 4600 GAR (ARB) and 4800 GAR (ARB). Low sulphur content of less than 0.25% and Ash Fusion Temperature (AFT) of above 1300 degrees are some of the uniqueness of our coal.') }}</p>

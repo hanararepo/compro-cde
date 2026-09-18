@@ -67,9 +67,9 @@
                             <div class="slider-content-wrap">
                                 <div class="slider-content">
                                     <div class="section-heading white-content">
-                                        <h4 class="sub-heading">{{ $slider->title }}</h4>
+                                        <h4 class="sub-heading" data-animation="antra-fadeInDown" data-delay="0ms" data-duration="2000ms">{{ $slider->title }}</h4>
                                         @if (filled($slider->description))
-                                            <h2 class="section-title cursor-effect text-white">{{ $slider->description }}</h2>
+                                            <h2 class="section-title cursor-effect text-white" data-animation="antra-fadeInDown" data-delay="0ms" data-duration="2000ms">{{ $slider->description }}</h2>
                                         @endif
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@
     @if ($galleryVideos->isNotEmpty())
         <section class="home-video-section pt-150 pb-150 overflow-hidden tl-bg-color" aria-labelledby="home-video-heading">
             <div class="container container-2">
-                <div class="row section-heading-wrap slide-anim" data-scroll-repeat>
+                <div class="row section-heading-wrap slide-anim" data-scroll-repeat data-direction="left">
                     <div class="shape"><img src="{{ asset('assets/img/shapes/section-heading.png') }}" alt="" aria-hidden="true"></div>
                     <div class="col-lg-4 col-md-12">
                         <div class="section-heading mb-0">
@@ -154,11 +154,12 @@
     <!-- Coal Quality Section -->
     <section id="home-coal-products" class="about-section coal-quality-section overflow-hidden" aria-labelledby="coal-quality-heading">
         <div class="about-bg" style="background-image: url('{{ asset('assets/img/bg-img/our-coal-background-v2.png') }}');" aria-hidden="true"></div>
+        <div class="coal-quality-wordmark" aria-hidden="true">CDE</div>
 
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <div class="about-content white-content slide-anim" data-scroll-repeat>
+                    <div class="about-content white-content slide-anim" data-scroll-repeat data-direction="left">
                         <div class="section-heading white-content mb-30">
                             <h4 class="sub-heading">{{ __('PRODUCT & QUALITY') }}</h4>
                             <h2 id="coal-quality-heading" class="section-title cursor-effect">{{ __('Our Coal') }}<br> {{ __('Is Characterised') }} <span>{{ __('By Consistent') }} <br> {{ __('High Quality.') }}</span></h2>
@@ -167,40 +168,35 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <dl class="coal-quality-grid">
-                        <div class="coal-quality-card slide-anim" data-scroll-repeat>
-                            <dt class="coal-quality-label">
+                    <div class="coal-quality-grid">
+                        <div class="coal-quality-item slide-anim" data-scroll-repeat data-direction="right">
+                          <button type="button" class="coal-quality-card" aria-pressed="false">
+                            <span class="coal-quality-label">
                                 <span class="coal-quality-icon" aria-hidden="true"><i class="fa-regular fa-temperature-high"></i></span>
                                 <span>{{ __('High AFT') }}</span>
-                            </dt>
-                            <dd class="coal-quality-value"><span class="coal-quality-symbol">&gt;</span>1,300<span class="coal-quality-unit">&deg;C</span></dd>
-
+                            </span>
+                            <span class="coal-quality-value"><span class="coal-quality-symbol">&gt;</span><span class="coal-quality-number">1,300</span><span class="coal-quality-unit">&deg;C</span></span>
+                          </button>
                         </div>
-                        <div class="coal-quality-card slide-anim" data-scroll-repeat data-delay="0.08">
-                            <dt class="coal-quality-label">
+                        <div class="coal-quality-item slide-anim" data-scroll-repeat data-direction="right" data-delay="0.08">
+                          <button type="button" class="coal-quality-card" aria-pressed="false">
+                            <span class="coal-quality-label">
                                 <span class="coal-quality-icon" aria-hidden="true"><i class="fa-regular fa-flask"></i></span>
                                 <span>{{ __('Low Sulphur') }}</span>
-                            </dt>
-                            <dd class="coal-quality-value"><span class="coal-quality-symbol">&lt;</span>0,25<span class="coal-quality-unit">%</span></dd>
-
+                            </span>
+                            <span class="coal-quality-value"><span class="coal-quality-symbol">&lt;</span><span class="coal-quality-number">0,25</span><span class="coal-quality-unit">%</span></span>
+                          </button>
                         </div>
-                        <div class="coal-quality-card slide-anim" data-scroll-repeat data-delay="0.16">
-                            <dt class="coal-quality-label">
+                        <div class="coal-quality-item coal-quality-item-wide slide-anim" data-scroll-repeat data-direction="right" data-delay="0.16">
+                          <button type="button" class="coal-quality-card" aria-pressed="false">
+                            <span class="coal-quality-label">
                                 <span class="coal-quality-icon" aria-hidden="true"><i class="fa-regular fa-mountain"></i></span>
                                 <span>GAR &ndash; CDE</span>
-                            </dt>
-                            <dd class="coal-quality-value">5,100</dd>
-
+                            </span>
+                            <span class="coal-quality-value"><span class="coal-quality-number">5,100</span></span>
+                          </button>
                         </div>
-                        <div class="coal-quality-card slide-anim" data-scroll-repeat data-delay="0.24">
-                            <dt class="coal-quality-label">
-                                <span class="coal-quality-icon" aria-hidden="true"><i class="fa-regular fa-mountain"></i></span>
-                                <span>GAR &ndash; CES</span>
-                            </dt>
-                            <dd class="coal-quality-value">4,800</dd>
-
-                        </div>
-                    </dl>
+                    </div>
                 </div>
             </div>
         </div>
@@ -233,5 +229,8 @@
 
     <!-- Core Values: Antra service layout with the SUCCESS values -->
     @include('partials.home-core-values-section')
+
+    {{-- Photo Gallery: Antra's two staggered photo rows. --}}
+    @include('partials.home-photo-gallery-section')
 
 </x-layouts.public>

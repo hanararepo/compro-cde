@@ -1,3 +1,5 @@
+import { scrollPageTo } from './public-scroll';
+
 // Keep Antra's dropdowns usable with a mouse, keyboard, and its mobile menu.
 const desktopDropdowns = document.querySelectorAll('.header-menu-wrap .menu-item-has-children');
 
@@ -68,8 +70,10 @@ jQuery(() => {
 const scrollToCoalProducts = (smooth) => {
     const target = document.querySelector('#home-coal-products');
     if (!target) return;
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    target.scrollIntoView({ behavior: smooth && !reducedMotion ? 'smooth' : 'instant' });
+    scrollPageTo(target, {
+        immediate: !smooth,
+        offset: -(parseFloat(getComputedStyle(target).scrollMarginTop) || 0),
+    });
 };
 
 document.addEventListener('click', (event) => {

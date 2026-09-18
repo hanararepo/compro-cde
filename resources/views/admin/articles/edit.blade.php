@@ -339,6 +339,7 @@
             box-shadow: 0 0 0 4px #d1fae5;
         }
         .ql-wrapper .ql-toolbar.ql-snow {
+            font-family: var(--font-site-stack);
             border: none;
             border-bottom: 1px solid #e2e8f0;
             background: #f8fafc;
@@ -347,7 +348,7 @@
         .ql-wrapper .ql-container.ql-snow {
             border: none;
             font-size: 0.9rem;
-            font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+            font-family: var(--font-site-stack);
             min-height: 320px;
         }
         .ql-wrapper .ql-editor {

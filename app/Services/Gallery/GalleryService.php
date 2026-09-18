@@ -7,7 +7,10 @@ use App\Models\Gallery;
 use App\Models\User;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Intervention\Image\Encoders\AutoEncoder;
 use Intervention\Image\Laravel\Facades\Image;
+use RuntimeException;
 
 class GalleryService
 {
@@ -140,28 +143,59 @@ class GalleryService
     }
 
     /**
-     * Generate a thumbnail (max 800px wide, aspect ratio preserved) and store it
+     * Generate a thumbnail (max 1600px wide, aspect ratio preserved) and store it
      * under galleries/thumbnails/. Returns the relative storage path.
      *
-     * Using scale(800) instead of cover() to:
-     * - Preserve the original aspect ratio (no forced crop)
-     * - Keep image sharp at display size (~300–600px on grid)
-     * - Still reduce file size significantly vs. the original
+     * Keep enough detail for large gallery tiles and high-density screens,
+     * without cropping or enlarging smaller originals.
      */
     private function generateThumbnail(UploadedFile $file): string
     {
         $thumbnailPath = 'galleries/thumbnails/'.$file->hashName();
 
         try {
-            $image = Image::decode($file->getRealPath())
-                ->scaleDown(width: 800);   // max 800px lebar, tinggi menyesuaikan rasio
-
-            Storage::disk('public')->put($thumbnailPath, $image->encode()->toString());
+            $thumbnail = $this->encodeThumbnail($file->getRealPath());
+            if (! Storage::disk('public')->put($thumbnailPath, $thumbnail)) {
+                throw new RuntimeException('Unable to store gallery thumbnail.');
+            }
         } catch (\Throwable) {
             $thumbnailPath = $file->store('galleries/thumbnails', 'public');
         }
 
         return $thumbnailPath;
+    }
+
+    /**
+     * Rebuild from the original, using a fresh URL to bypass cached thumbnails.
+     * Keep the previous file intact until the new thumbnail has been saved.
+     */
+    public function regenerateThumbnail(Gallery $gallery): string
+    {
+        $disk = Storage::disk('public');
+        $source = $disk->get($gallery->image_path);
+        if ($source === null) {
+            throw new RuntimeException('Original gallery image is missing.');
+        }
+
+        $thumbnail = $this->encodeThumbnail($source);
+        $extension = pathinfo($gallery->image_path, PATHINFO_EXTENSION);
+        $thumbnailPath = 'galleries/thumbnails/'.Str::uuid().'.'.$extension;
+
+        if (! $disk->put($thumbnailPath, $thumbnail)) {
+            throw new RuntimeException('Unable to store gallery thumbnail.');
+        }
+
+        $gallery->updateQuietly(['thumbnail_path' => $thumbnailPath]);
+
+        return $thumbnailPath;
+    }
+
+    private function encodeThumbnail(string $source): string
+    {
+        return Image::decode($source)
+            ->scaleDown(width: 1600)
+            ->encode(new AutoEncoder(quality: 90))
+            ->toString();
     }
 
     /**

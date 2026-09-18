@@ -97,4 +97,75 @@ if (insightsSlider) {
     });
 }
 
+// Antra's alternating gallery movement, without cloning photos or links.
+const homePhotoGallery = document.querySelector('.home-photo-gallery');
+
+if (homePhotoGallery) {
+    gsap.matchMedia().add('(min-width: 768px) and (prefers-reduced-motion: no-preference)', () => {
+        homePhotoGallery.querySelectorAll('.home-photo-gallery-row').forEach((row, index) => {
+            const track = row.querySelector('.gallery-scroll-wrap');
+            const distance = () => Math.max(0, track.scrollWidth - row.clientWidth);
+
+            gsap.fromTo(track, { x: () => index % 2 ? -distance() : 0 }, {
+                x: () => index % 2 ? 0 : -distance(),
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: homePhotoGallery,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 0.6,
+                    invalidateOnRefresh: true,
+                },
+            });
+        });
+    });
+}
+
+// Touch screens use a tap to toggle the same highlight as desktop hover.
+const valueCards = [...document.querySelectorAll('.home-value-card')];
+
+if (valueCards.length) {
+    const mobileValues = window.matchMedia('(max-width: 767px)');
+    const setPressed = (card, pressed) => card.setAttribute('aria-pressed', String(pressed));
+    const toggleValue = (card) => {
+        if (!mobileValues.matches) return;
+        const pressed = card.getAttribute('aria-pressed') !== 'true';
+        valueCards.forEach((other) => setPressed(other, other === card && pressed));
+    };
+    const syncValueControls = () => {
+        valueCards.forEach((card) => {
+            if (mobileValues.matches) {
+                card.setAttribute('role', 'button');
+                card.setAttribute('tabindex', '0');
+                setPressed(card, false);
+            } else {
+                ['role', 'tabindex', 'aria-pressed'].forEach((attribute) => card.removeAttribute(attribute));
+            }
+        });
+    };
+
+    valueCards.forEach((card) => {
+        card.addEventListener('click', () => toggleValue(card));
+        card.addEventListener('keydown', (event) => {
+            if (!mobileValues.matches || !['Enter', ' '].includes(event.key)) return;
+            event.preventDefault();
+            if (!event.repeat) toggleValue(card);
+        });
+    });
+    mobileValues.addEventListener('change', syncValueControls);
+    syncValueControls();
+}
+
+// Native buttons support mouse, touch, Enter and Space. A second click clears the highlight.
+const coalQualityCards = [...document.querySelectorAll('.coal-quality-card')];
+
+coalQualityCards.forEach((card) => {
+    card.addEventListener('click', () => {
+        const selected = card.getAttribute('aria-pressed') !== 'true';
+        coalQualityCards.forEach((other) => {
+            other.setAttribute('aria-pressed', String(other === card && selected));
+        });
+    });
+});
+
 Alpine.start();

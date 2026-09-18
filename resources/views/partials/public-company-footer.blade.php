@@ -19,6 +19,13 @@
 
 <!-- Company Footer -->
 <footer class="footer-section company-footer overflow-hidden">
+    <div class="footer-bg" aria-hidden="true">
+        <picture>
+            <source media="(max-width: 767px)" srcset="{{ asset('assets/img/bg-img/footer-mine-mobile.webp') }}">
+            <img src="{{ asset('assets/img/bg-img/footer-mine.webp') }}" alt="" width="1920" height="1440" loading="lazy" decoding="async">
+        </picture>
+    </div>
+    <div class="footer-shade" aria-hidden="true"></div>
     <div class="container container-2">
         <div class="row footer-wrap">
 
@@ -37,13 +44,13 @@
                         </div>
                     </div>
                     @if($siteTagline)
-                        <p class="mb-10 text-white-50">{{ $siteTagline }}</p>
+                        <p class="mb-10 footer-muted">{{ $siteTagline }}</p>
                     @endif
                     @if($siteAddress)
-                        <p class="footer-location mb-0 text-white-50">{{ $siteAddress }}</p>
+                        <p class="footer-location mb-0 footer-muted">{{ $siteAddress }}</p>
                     @endif
                     @if($siteCity)
-                        <p class="mb-0 text-white-50">{{ $siteCity }}</p>
+                        <p class="mb-0 footer-muted">{{ $siteCity }}</p>
                     @endif
                 </div>
             </div>
@@ -89,7 +96,7 @@
                             <a class="mail" href="mailto:{{ $siteEmail }}">{{ $siteEmail }}</a>
                         @endif
                         @if($siteHours)
-                            <p class="mt-20 mb-0 text-white-50">{{ $siteHours }}</p>
+                            <p class="mt-20 mb-0 footer-muted">{{ $siteHours }}</p>
                         @endif
                         @if($footerSocialLinks)
                             <ul class="social-list">
@@ -117,4 +124,5 @@
             </div>
         </div>
     </div>
+    <div class="footer-text" aria-hidden="true"><span>CDE</span></div>
 </footer>

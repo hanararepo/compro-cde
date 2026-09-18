@@ -10,7 +10,7 @@
     {{-- Non-home pages: apply 'fixed' immediately so background appears on first paint,
          without waiting for JS. 'no-sticky-anim' suppresses the slide-down animation
          that would otherwise play on initial render. --}}
-    <div class="primary-header {{ !request()->routeIs('home') ? 'fixed no-sticky-anim' : '' }}">
+    <div class="primary-header {{ !request()->routeIs('home') ? 'fixed no-sticky-anim' : '' }}" @if(!request()->routeIs('home')) data-sticky-always @endif>
         <div class="container">
             <div class="primary-header-inner">
                 <div class="header-left-wrap">

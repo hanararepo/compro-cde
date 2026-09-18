@@ -60,7 +60,7 @@
                     </svg>
                 </div>
             @endif
-            <span class="font-bold text-lg {{ $sidebar['logo_text'] }} tracking-tight">CDE GROUP</span>
+            <span class="font-bold text-lg {{ $sidebar['logo_text'] }} tracking-tight">CDE</span>
         </a>
     </div>
 
