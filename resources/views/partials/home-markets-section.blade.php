@@ -19,7 +19,7 @@
 <section id="home-markets" class="home-markets-section" aria-labelledby="home-markets-heading" data-market-network data-region-label="{{ __('Asia') }}">
     <div class="container container-2">
         <div class="home-markets-layout">
-            <div class="home-markets-copy">
+            <div class="home-markets-copy slide-anim" data-scroll-repeat data-direction="left">
                 <div class="section-heading">
                     <h4 class="sub-heading">{{ __('Our Footprint. Your Opportunity.') }}</h4>
                     <h2 id="home-markets-heading" class="section-title">{{ __('Strategic Coverage') }}<br><span>{{ __('Across Key Asian Markets') }}</span></h2>
@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            <figure class="home-markets-atlas" aria-label="{{ __('Connections from Indonesia to Asian markets') }}">
+            <figure class="home-markets-atlas slide-anim" data-scroll-repeat data-direction="right" data-delay="0.12" aria-label="{{ __('Connections from Indonesia to Asian markets') }}">
             
                 <svg class="home-markets-map" viewBox="0 0 850 700" aria-hidden="true" focusable="false">
                     <defs>

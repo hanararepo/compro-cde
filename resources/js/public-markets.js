@@ -9,7 +9,8 @@ if (network) {
         network.querySelectorAll('[data-map-route], [data-map-point], [data-map-country]').forEach((el) => {
             el.classList.remove('is-active');
         });
-        network.querySelector('[data-market-destination]').textContent = network.dataset.regionLabel;
+        const dest = network.querySelector('[data-market-destination]');
+        if (dest) dest.textContent = network.dataset.regionLabel;
     };
 
     /** Aktifkan satu negara */
@@ -19,9 +20,12 @@ if (network) {
             const target = element.dataset.mapRoute || element.dataset.mapPoint || element.dataset.mapCountry;
             element.classList.toggle('is-active', target === code || (code === 'IDN' && !!element.dataset.mapRoute));
         });
-        network.querySelector('[data-market-destination]').textContent = code === 'IDN'
-            ? network.dataset.regionLabel
-            : button.dataset.marketName;
+        const dest = network.querySelector('[data-market-destination]');
+        if (dest) {
+            dest.textContent = code === 'IDN'
+                ? network.dataset.regionLabel
+                : button.dataset.marketName;
+        }
     };
 
     buttons.forEach((button) => {

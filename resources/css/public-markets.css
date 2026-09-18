@@ -7,7 +7,7 @@
 
 .home-markets-layout { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.45fr); gap: clamp(32px, 5vw, 88px); align-items: center; }
 .home-markets-copy .section-heading { margin-bottom: 24px; }
-.home-markets-copy .section-title { font-size: clamp(36px, 3.5vw, 60px); line-height: 1.1; letter-spacing: -0.045em; color: #153e2c; }
+.home-markets-copy .section-title { font-size: clamp(36px, 3.5vw, 60px); line-height: 1.1; letter-spacing: -0.045em; color: var(--tl-color-heading-primary, #191919); }
 .home-markets-copy .section-title span { color: #329947; }
 .home-markets-description { max-width: 460px; font-size: 16px; line-height: 1.8; color: #607166; margin: 0; }
 .home-markets-stats { display: flex; gap: 30px; margin: 30px 0; padding-bottom: 26px; border-bottom: 1px solid #d4dfd3; }
