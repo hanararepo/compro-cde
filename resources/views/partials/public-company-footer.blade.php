@@ -29,20 +29,22 @@
     <div class="container container-2">
         <div class="row footer-wrap">
 
-            {{-- Col 1: Logo & Address --}}
+            {{-- Row 1: Logo sendiri --}}
+            <div class="col-12 footer-logo-row">
+                <div class="footer-logo">
+                    <a href="{{ route('home') }}">
+                        @if($siteLogo)
+                            <img src="{{ $siteLogo }}" alt="{{ $siteName }}">
+                        @else
+                            <img src="{{ asset('assets/img/logo/logo-2.png') }}" alt="{{ $siteName }}">
+                        @endif
+                    </a>
+                </div>
+            </div>
+
+            {{-- Row 2 Col 1: Alamat --}}
             <div class="col-lg-3 col-md-6">
                 <div class="footer-widget">
-                    <div class="widget-header">
-                        <div class="footer-logo">
-                            <a href="{{ route('home') }}">
-                                @if($siteLogo)
-                                    <img src="{{ $siteLogo }}" alt="{{ $siteName }}">
-                                @else
-                                    <img src="{{ asset('assets/img/logo/logo-2.png') }}" alt="{{ $siteName }}">
-                                @endif
-                            </a>
-                        </div>
-                    </div>
                     @if($siteTagline)
                         <p class="mb-10 footer-muted">{{ $siteTagline }}</p>
                     @endif
@@ -55,7 +57,7 @@
                 </div>
             </div>
 
-            {{-- Col 2: Quick Links --}}
+            {{-- Row 2 Col 2: Quick Links --}}
             <div class="col-lg-3 col-md-6">
                 <div class="footer-widget footer-col-2">
                     <h4 class="text-white mb-20" style="font-size: 18px;">{{ __('Quick Links') }}</h4>
@@ -69,7 +71,7 @@
                 </div>
             </div>
 
-            {{-- Col 3: Coal Products --}}
+            {{-- Row 2 Col 3: Coal Products --}}
             <div class="col-lg-3 col-md-6">
                 <div class="footer-widget footer-col-2">
                     <h4 class="text-white mb-20" style="font-size: 18px;">{{ __('Coal Products') }}</h4>
@@ -83,7 +85,7 @@
                 </div>
             </div>
 
-            {{-- Col 4: Contact --}}
+            {{-- Row 2 Col 4: Contact --}}
             @if($sitePhone || $siteEmail || $siteHours || $footerSocialLinks)
             <div class="col-lg-3 col-md-6">
                 <div class="footer-widget">
