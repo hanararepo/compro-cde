@@ -13,6 +13,7 @@ import './template/banner-process.js';
 import './template/contact.js';
 import './template/main.js';
 import './public-navigation.js';
+import './public-markets.js';
 
 // Keep a usable thumbnail when a video has no full-resolution YouTube poster.
 document.querySelectorAll('[data-video-poster]').forEach((poster) => {

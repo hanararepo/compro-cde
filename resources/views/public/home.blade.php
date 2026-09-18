@@ -202,6 +202,8 @@
         </div>
     </section>
 
+    @include('partials.home-markets-section')
+
     <!-- CSR & Environment Articles -->
     @include('partials.home-article-section', [
         'sectionId' => 'home-csr',

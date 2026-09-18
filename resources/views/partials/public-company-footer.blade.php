@@ -36,7 +36,7 @@
                         <div class="footer-logo">
                             <a href="{{ route('home') }}">
                                 @if($siteLogo)
-                                    <img src="{{ $siteLogo }}" alt="{{ $siteName }}" style="max-height: 48px;">
+                                    <img src="{{ $siteLogo }}" alt="{{ $siteName }}">
                                 @else
                                     <img src="{{ asset('assets/img/logo/logo-2.png') }}" alt="{{ $siteName }}">
                                 @endif

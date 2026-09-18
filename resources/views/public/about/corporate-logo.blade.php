@@ -60,14 +60,7 @@
                             <div class="logo-card-footer">
                                 <h2 class="logo-entity-name">{{ $siteName }}</h2>
                                 <p class="logo-entity-desc">{{ __('Energy, Coal Mining & Sustainable Solutions') }}</p>
-                                @if(!empty($siteLogo))
-                                    <a href="{{ $siteLogo }}"
-                                       download="{{ Str::slug($siteName) }}-logo.png"
-                                       class="logo-download-btn">
-                                        <i class="fa-solid fa-download" aria-hidden="true"></i>
-                                        <span>{{ __('Download Logo Asset') }}</span>
-                                    </a>
-                                @endif
+
                             </div>
                         </div>
                     </div>
@@ -110,25 +103,6 @@
                                 <p class="philosophy-text">
                                     {{ __("It is the embodiment of a honeycomb storage form that is shaped like a hexagon. In this case, the honeycomb with its hexagonal shape provides effectiveness with great results maximum. This philosophy is a guideline for the CDE Group to always prioritize the values of People, Committed, Teamwork to meet the world's energy needs which are constantly increasing and always consistent to continue to grow to face competition in the future") }}
                                 </p>
-
-                                {{-- Three Core Value Tags --}}
-                                <div class="philosophy-values-wrap">
-                                    <span class="philosophy-values-label">{{ __('Core Values in Hexagon:') }}</span>
-                                    <div class="philosophy-value-pills">
-                                        <div class="value-pill">
-                                            <i class="fa-solid fa-users" aria-hidden="true"></i>
-                                            <span>{{ __('People') }}</span>
-                                        </div>
-                                        <div class="value-pill">
-                                            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
-                                            <span>{{ __('Committed') }}</span>
-                                        </div>
-                                        <div class="value-pill">
-                                            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
-                                            <span>{{ __('Teamwork') }}</span>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </article>
 

@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="hMuyZb6U8XUjvL6oYKOKHel9UL7NCnh8Cr4ppn24">
+
+    
+            <link rel="icon" type="image/x-icon" href="https://hanara.learnbydoing.site/storage/settings/RWW6mWX1lQ9UdtGblrqhSRuQFJaGz5NTUrrslUf8.png">
+        <link rel="shortcut icon" href="https://hanara.learnbydoing.site/storage/settings/RWW6mWX1lQ9UdtGblrqhSRuQFJaGz5NTUrrslUf8.png">
+    
+    <title>PT Cakrawala Dinamika Energi — Modern CMS</title>
+            <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+        <meta name="description" content="Enterprise grade Content Management System with multilingual support, ACL roles, and editorial approval workflow.">
+    <meta name="keywords" content="laravel, cms, content management, php 8.3, tailwindcss">
+    <link rel="canonical" href="http://localhost:8000">
+
+    
+    <link rel="alternate" hreflang="en" href="http://localhost:8000">
+    <link rel="alternate" hreflang="id" href="http://localhost:8000/locale/id">
+    <link rel="alternate" hreflang="x-default" href="http://localhost:8000">
+
+    
+    <meta property="og:site_name" content="PT Cakrawala Dinamika Energi">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:8000">
+    <meta property="og:title" content="PT Cakrawala Dinamika Energi — Modern CMS">
+    <meta property="og:description" content="Enterprise grade Content Management System with multilingual support, ACL roles, and editorial approval workflow.">
+        <meta property="og:locale" content="en">
+
+    
+                
+    
+    <link rel="preload" as="font" href="http://localhost:8000/build/assets/golos-text-400-900-normal-BS5oQT7X.woff2" type="font/woff2" crossorigin="anonymous" />
+<style>
+@font-face {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("/build/assets/golos-text-400-900-normal-BS5oQT7X.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.font-site {
+  font-family: var(--font-site);
+}
+
+:root {
+  --font-site: "Golos Text";
+}
+</style>
+    <!-- Compiled Template CSS via Vite -->
+    <link rel="preload" as="style" href="http://localhost:8000/build/assets/public-DohSZMon.css" /><link rel="stylesheet" href="http://localhost:8000/build/assets/public-DohSZMon.css" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PT Cakrawala Dinamika Energi",
+    "url": "https://hanara.learnbydoing.site",
+    "logo": "https://hanara.learnbydoing.site/storage/settings/aX52Nv7nRcWshuMfgAcaecDasna7eJfi3FF2mpO3.png",
+    "description": "Enterprise grade Content Management System with multilingual support, ACL roles, and editorial approval workflow.",
+    "sameAs": [],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "(+62 21) 2233 8024",
+        "contactType": "customer service"
+    },
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jakarta Office :\r\nRukan Cordoba Blok C No. 20\r\nKel. Kamal Muara, Kec. Penjaringan\r\nPIK - Jakarta Utara\r\n\r\nBengkulu Mine Office :\r\nDs. Air Sebayur\r\nKec. Pinang Raya, Kab. Bengkulu Utara\r\nBengkulu"
+    }
+}
+</script>
+
+    
+    </head>
+<body>
+
+            <div class="preloader overflow-hidden" role="status" aria-label="Loading...">
+    <div class="site-name" aria-hidden="true"><span>PT Cakrawala Dinamika Energi</span></div>
+    <div class="preloader-gutters" aria-hidden="true">
+                    <div class="bar">
+                <div class="inner-bar"></div>
+            </div>
+                    <div class="bar">
+                <div class="inner-bar"></div>
+            </div>
+                    <div class="bar">
+                <div class="inner-bar"></div>
+            </div>
+                    <div class="bar">
+                <div class="inner-bar"></div>
+            </div>
+                    <div class="bar">
+                <div class="inner-bar"></div>
+            </div>
+                    <div class="bar">
+                <div class="inner-bar"></div>
+            </div>
+                    <div class="bar">
+                <div class="inner-bar"></div>
+            </div>
+                    <div class="bar">
+                <div class="inner-bar"></div>
+            </div>
+            </div>
+</div>
+<noscript>
+    <style>.preloader { display: none; }</style>
+</noscript>
+    
+    <!-- Header Section -->
+    <!-- Main Header -->
+<header class="header sticky-active">
+    
+    <div class="primary-header " >
+        <div class="container">
+            <div class="primary-header-inner">
+                <div class="header-left-wrap">
+                    <div class="header-logo d-lg-block">
+                        <a href="http://localhost:8000">
+                                                            <img src="https://hanara.learnbydoing.site/storage/settings/aX52Nv7nRcWshuMfgAcaecDasna7eJfi3FF2mpO3.png" alt="PT Cakrawala Dinamika Energi" height="50" loading="eager">
+                                                    </a>
+                    </div>
+                    <!-- Navigation Links Partial -->
+                    <!-- Desktop Navbar Menu Items -->
+<div class="header-menu-wrap">
+    <div class="mobile-menu-items">
+        <ul>
+            <li class="active">
+                <a href="http://localhost:8000">Home</a>
+            </li>
+            <li class="menu-item-has-children " data-nav-item="about">
+                <a href="javascript:void(0);" role="button" aria-expanded="false" style="cursor: default;" onclick="event.preventDefault();">About Us</a>
+                <ul class="sub-menu">
+                                            <li class="">
+                            <a href="http://localhost:8000/about-us/introduction" >Introduction</a>
+                        </li>
+                                            <li class="">
+                            <a href="http://localhost:8000/about-us/vision-mission" >Vision &amp; Mission</a>
+                        </li>
+                                            <li class="">
+                            <a href="http://localhost:8000/about-us/awards-certificates" >Awards &amp; Certification</a>
+                        </li>
+                                            <li class="">
+                            <a href="http://localhost:8000/about-us/corporate-logo" >Corporate Logo</a>
+                        </li>
+                                            <li class="">
+                            <a href="http://localhost:8000/about-us/photo-gallery" >Photo Gallery</a>
+                        </li>
+                                    </ul>
+            </li>
+            <li class="menu-item-has-children " data-nav-item="coal-products">
+                <a href="javascript:void(0);" role="button"  aria-expanded="false"  style="cursor: default;" onclick="event.preventDefault();">Coal Products</a>
+                                    <ul class="sub-menu">
+                                                                                <li class="">
+                                <a href="http://localhost:8000/coal-products/cde-gar-5200"
+                                   >CDE GAR 5200</a>
+                            </li>
+                                                                                <li class="">
+                                <a href="http://localhost:8000/coal-products/cde-gar-5100"
+                                   >CDE GAR 5100</a>
+                            </li>
+                                            </ul>
+                            </li>
+            <li class="menu-item-has-children " data-nav-item="news">
+                <a href="javascript:void(0);" role="button"  aria-expanded="false"  style="cursor: default;" onclick="event.preventDefault();">News</a>
+                                    <ul class="sub-menu">
+                                                    <li class="">
+                                <a href="http://localhost:8000/csr-environment"
+                                   >CSR &amp; Environment</a>
+                            </li>
+                                                    <li class="">
+                                <a href="http://localhost:8000/insights-trends"
+                                   >Insights &amp; Trends</a>
+                            </li>
+                                            </ul>
+                            </li>
+            <li class="">
+                <a href="http://localhost:8000/careers">Careers</a>
+            </li>
+            <li class="">
+                <a href="http://localhost:8000/contact">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- /.header-menu-wrap -->
+                </div>
+
+                <div class="header-right-wrap">
+                    <nav class="header-language-switcher" aria-label="Language">
+                                                    <a href="http://localhost:8000/locale/id"
+                               lang="id"
+                               hreflang="id"
+                               aria-label="Bahasa Indonesia"
+                               >ID</a>
+                                                            <span aria-hidden="true">/</span>
+                                                                                <a href="http://localhost:8000/locale/en"
+                               lang="en"
+                               hreflang="en"
+                               aria-label="English"
+                                aria-current="true" >EN</a>
+                                                                        </nav>
+
+                    <button class="mobile-side-menu-toggle" type="button" aria-label="Toggle navigation">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Popup Search Box -->
+<div id="popup-search-box">
+    <div class="box-inner-wrap d-flex align-items-center">
+        <form id="form" action="http://localhost:8000/news" method="get" role="search">
+            <input id="popup-search" type="text" name="search" placeholder="Type keywords here...">
+        </form>
+        <div class="search-close"><i class="fa-sharp fa-regular fa-xmark"></i></div>
+    </div>
+</div>
+
+<!-- Mobile Side Menu -->
+<div class="mobile-side-menu">
+    <div class="side-menu-content">
+        <div class="side-menu-head">
+            <a href="http://localhost:8000">
+                                    <img src="https://hanara.learnbydoing.site/storage/settings/aX52Nv7nRcWshuMfgAcaecDasna7eJfi3FF2mpO3.png" alt="PT Cakrawala Dinamika Energi" style="max-height: 40px;">
+                            </a>
+            <button class="mobile-side-menu-close" type="button" aria-label="Close navigation">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="side-menu-wrap"></div>
+    </div>
+</div>
+<div class="mobile-side-menu-overlay"></div>
+
+    <!-- Native page flow, with wheel smoothing synchronized to section reveals. -->
+    <div id="antra-smooth-wrapper">
+        <div id="antra-smooth-content">
+            <!-- Main Content Slot -->
+            <main>
+                <!-- Hero Slider Section -->
+        <section class="slider-section home-hero overflow-hidden">
+        <div class="antra-slider swiper-container">
+            <div class="swiper-wrapper">
+                                <div class="swiper-slide" data-slider-id="1">
+                    <div class="slider-item">
+                        <div class="home-hero-media" aria-hidden="true">
+                            <picture>
+                                                                    <source media="(max-width: 767px)" srcset="http://localhost:8000/storage/sliders/mobile/Qa6iOCuABQZIqA1b6QImRblzjy5juNaKDFhXFcdL.jpg">
+                                                                <img src="http://localhost:8000/storage/sliders/desktop/XXAg2fPIQbWrwKyuS43tPqPKnhYstTD1gPpLNrJj.png"
+                                     alt=""
+                                     loading="eager"
+                                     fetchpriority="high"
+                                     decoding="async">
+                            </picture>
+                        </div>
+                        <div class="container slider-container">
+                            <div class="slider-content-wrap">
+                                <div class="slider-content">
+                                    <div class="section-heading white-content">
+                                        <h4 class="sub-heading" data-animation="antra-fadeInDown" data-delay="0ms" data-duration="2000ms">Committed</h4>
+                                                                                    <h2 class="section-title cursor-effect text-white" data-animation="antra-fadeInDown" data-delay="0ms" data-duration="2000ms">Commitment to sustainability and profitability</h2>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="swiper-slide" data-slider-id="2">
+                    <div class="slider-item">
+                        <div class="home-hero-media" aria-hidden="true">
+                            <picture>
+                                                                    <source media="(max-width: 767px)" srcset="http://localhost:8000/storage/sliders/mobile/4WxNhUx9ofm4pdIudv0CP7dVdRCWtCchMEilCQxX.jpg">
+                                                                <img src="http://localhost:8000/storage/sliders/desktop/YVLmrnVE23YSerh9eU8DA37cR5DmaJjCc86jNfO9.png"
+                                     alt=""
+                                     loading="lazy"
+                                     fetchpriority="auto"
+                                     decoding="async">
+                            </picture>
+                        </div>
+                        <div class="container slider-container">
+                            <div class="slider-content-wrap">
+                                <div class="slider-content">
+                                    <div class="section-heading white-content">
+                                        <h4 class="sub-heading" data-animation="antra-fadeInDown" data-delay="0ms" data-duration="2000ms">TeamWork</h4>
+                                                                                    <h2 class="section-title cursor-effect text-white" data-animation="antra-fadeInDown" data-delay="0ms" data-duration="2000ms">Honest communication demonstrates care and concern for one another.</h2>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+                            <div class="antra-swiper-pagination home-hero-pagination"></div>
+                    </div>
+    </section>
+        <!-- ./ slider-section -->
+
+            <section class="home-video-section pt-150 pb-150 overflow-hidden tl-bg-color" aria-labelledby="home-video-heading">
+            <div class="container container-2">
+                <div class="row section-heading-wrap slide-anim" data-scroll-repeat data-direction="left">
+                    <div class="shape"><img src="http://localhost:8000/assets/img/shapes/section-heading.png" alt="" aria-hidden="true"></div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="section-heading mb-0">
+                            <h4 class="sub-heading">Video Gallery</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12">
+                        <div class="section-heading section-heading-2 mb-0">
+                            <h2 id="home-video-heading" class="section-title cursor-effect title-2">A Closer Look<br> <span>At Our Company</span></h2>
+                            <p class="home-video-description">Meet our people, explore our operations, and discover the story behind our company. Take a closer look through our videos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-video-slider swiper-container slide-anim" data-scroll-repeat data-delay="0.12">
+                    <div class="swiper-wrapper">
+                                                    <article class="video-section swiper-slide" data-gallery-video-id="1" aria-labelledby="home-video-title-1">
+                                <div class="bg-img" aria-hidden="true">
+                                    <img src="https://img.youtube.com/vi/vBlyTby1HvE/maxresdefault.jpg"
+                                         data-video-poster
+                                         data-fallback="https://img.youtube.com/vi/vBlyTby1HvE/hqdefault.jpg"
+                                         alt="" width="1280" height="720" loading="lazy" decoding="async">
+                                </div>
+                                <div class="video-content">
+                                    <div class="play-btn">
+                                        <a class="video-popup"
+                                           href="https://www.youtube.com/embed/vBlyTby1HvE"
+                                           data-vbtype="video"
+                                           data-autoplay="true"
+                                           data-gall="home-videos"
+                                           data-maxwidth="1200px"
+                                           aria-label="Play video: Company Profile">
+                                            <i class="fa-solid fa-play" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="home-video-meta">
+                                        <span class="home-video-watch">Watch Video</span>
+                                        <h3 id="home-video-title-1" class="home-video-name">Company Profile</h3>
+                                    </div>
+                                </div>
+                            </article>
+                                            </div>
+                                    </div>
+            </div>
+        </section>
+        <!-- Coal Quality Section -->
+    <section id="home-coal-products" class="about-section coal-quality-section overflow-hidden" aria-labelledby="coal-quality-heading">
+        <div class="about-bg" style="background-image: url('http://localhost:8000/assets/img/bg-img/our-coal-background-v2.png');" aria-hidden="true"></div>
+        <div class="coal-quality-wordmark" aria-hidden="true">CDE</div>
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content white-content slide-anim" data-scroll-repeat data-direction="left">
+                        <div class="section-heading white-content mb-30">
+                            <h4 class="sub-heading">PRODUCT &amp; QUALITY</h4>
+                            <h2 id="coal-quality-heading" class="section-title cursor-effect">Our Coal<br> Is Characterised <span>By Consistent <br> High Quality.</span></h2>
+                        </div>
+                        <p>These attributes position our coal as a reliable and competitive fuel source for a wide range of industrial and power generation applications.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="coal-quality-grid">
+                        <div class="coal-quality-item slide-anim" data-scroll-repeat data-direction="right">
+                          <button type="button" class="coal-quality-card" aria-pressed="false">
+                            <span class="coal-quality-label">
+                                <span class="coal-quality-icon" aria-hidden="true"><i class="fa-regular fa-temperature-high"></i></span>
+                                <span>High AFT</span>
+                            </span>
+                            <span class="coal-quality-value"><span class="coal-quality-symbol">&gt;</span><span class="coal-quality-number">1,300</span><span class="coal-quality-unit">&deg;C</span></span>
+                          </button>
+                        </div>
+                        <div class="coal-quality-item slide-anim" data-scroll-repeat data-direction="right" data-delay="0.08">
+                          <button type="button" class="coal-quality-card" aria-pressed="false">
+                            <span class="coal-quality-label">
+                                <span class="coal-quality-icon" aria-hidden="true"><i class="fa-regular fa-flask"></i></span>
+                                <span>Low Sulphur</span>
+                            </span>
+                            <span class="coal-quality-value"><span class="coal-quality-symbol">&lt;</span><span class="coal-quality-number">0,25</span><span class="coal-quality-unit">%</span></span>
+                          </button>
+                        </div>
+                        <div class="coal-quality-item coal-quality-item-wide slide-anim" data-scroll-repeat data-direction="right" data-delay="0.16">
+                          <button type="button" class="coal-quality-card" aria-pressed="false">
+                            <span class="coal-quality-label">
+                                <span class="coal-quality-icon" aria-hidden="true"><i class="fa-regular fa-mountain"></i></span>
+                                <span>GAR &ndash; CDE</span>
+                            </span>
+                            <span class="coal-quality-value"><span class="coal-quality-number">5,100</span></span>
+                          </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="home-markets" class="home-markets-section" aria-labelledby="home-markets-heading" data-market-network data-region-label="Asia">
+    <div class="container container-2">
+        <div class="home-markets-layout">
+            <div class="home-markets-copy">
+                <div class="section-heading">
+                    <h4 class="sub-heading">Our Market Reach</h4>
+                    <h2 id="home-markets-heading" class="section-title">From Indonesia.<br><span>Across Asia.</span></h2>
+                </div>
+                <p class="home-markets-description">Connecting Indonesian coal resources with key markets across Asia. A regional perspective, built on lasting connections.</p>
+                <div class="home-markets-stats">
+                    <div><strong>12</strong><span>Countries connected</span></div>
+                    <div><strong>01</strong><span>Connected region</span></div>
+                </div>
+                <p class="home-markets-hint" id="home-markets-hint">Explore a country to see its connection.</p>
+                <div class="home-markets-countries" role="group" aria-label="Explore our markets" aria-describedby="home-markets-hint">
+                                            <button type="button" class="home-market-button" data-market="IDN" data-market-name="Indonesia" aria-pressed="false">
+                            <span class="home-market-dot" aria-hidden="true"></span>
+                            <span>Indonesia</span>
+                            <span class="home-market-origin">Origin</span>                        </button>
+                                            <button type="button" class="home-market-button" data-market="CHN" data-market-name="China" aria-pressed="true">
+                            <span class="home-market-dot" aria-hidden="true"></span>
+                            <span>China</span>
+                                                    </button>
+                                            <button type="button" class="home-market-button" data-market="IND" data-market-name="India" aria-pressed="false">
+                            <span class="home-market-dot" aria-hidden="true"></span>
+                            <span>India</span>
+                                                    </button>
+                                            <button type="button" class="home-market-button" data-market="PAK" data-market-name="Pakistan" aria-pressed="false">
+                            <span class="home-market-dot" aria-hidden="true"></span>
+                            <span>Pakistan</span>
+                                                    </button>
+                                            <button type="button" class="home-market-button" data-market="BGD" data-market-name="Bangladesh" aria-pressed="false">
+                            <span class="home-market-dot" aria-hidden="true"></span>
+                            <span>Bangladesh</span>
+                                                    </button>
+                                            <button type="button" class="home-market-button" data-market="KOR" data-market-name="South Korea" aria-pressed="false">
+                            <span class="home-market-dot" aria-hidden="true"></span>
+                            <span>South Korea</span>
+                                                    </button>
+                                            <button type="button" class="home-market-button" data-market="TWN" data-market-name="Taiwan" aria-pressed="false">
+                            <span class="home-market-dot" aria-hidden="true"></span>
+                            <span>Taiwan</span>
+                                                    </button>
+                                            <button type="button" class="home-market-button" data-market="THA" data-market-name="Thailand" aria-pressed="false">
+                            <span class="home-market-dot" aria-hidden="true"></span>
+                            <span>Thailand</span>
+                                                    </button>
+                                            <button type="button" class="home-market-button" data-market="KHM" data-market-name="Cambodia" aria-pressed="false">
+                            <span class="home-market-dot" aria-hidden="true"></span>
+                            <span>Cambodia</span>
+                                                    </button>
+                                            <button type="button" class="home-market-button" data-market="VNM" data-market-name="Vietnam" aria-pressed="false">
+                            <span class="home-market-dot" aria-hidden="true"></span>
+                            <span>Vietnam</span>
+                                                    </button>
+                                            <button type="button" class="home-market-button" data-market="MYS" data-market-name="Malaysia" aria-pressed="false">
+                            <span class="home-market-dot" aria-hidden="true"></span>
+                            <span>Malaysia</span>
+                                                    </button>
+                                            <button type="button" class="home-market-button" data-market="PHL" data-market-name="Philippines" aria-pressed="false">
+                            <span class="home-market-dot" aria-hidden="true"></span>
+                            <span>Philippines</span>
+                                                    </button>
+                                    </div>
+            </div>
+
+            <figure class="home-markets-atlas" aria-label="Connections from Indonesia to Asian markets">
+                <div class="home-markets-atlas-top"><span><i class="fa-regular fa-globe" aria-hidden="true"></i> Regional connections</span><span>ASIA / 12</span></div>
+                <svg class="home-markets-map" viewBox="0 0 850 700" aria-hidden="true" focusable="false">
+                    <defs>
+                        <pattern id="market-map-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 H 0 V 40" fill="none" stroke="#a4d5b6" stroke-opacity=".07"/></pattern>
+                        <radialGradient id="market-map-glow"><stop stop-color="#337849" stop-opacity=".35"/><stop offset="1" stop-color="#102c23" stop-opacity="0"/></radialGradient>
+                    </defs>
+                    <rect width="850" height="700" fill="url(#market-map-grid)"/>
+                    <ellipse cx="440" cy="410" rx="410" ry="340" fill="url(#market-map-glow)"/>
+                    <g class="market-map-land"><path class="market-map-country" data-map-country="KAZ" d="M273.6,57.9L266.0,64.5L257.7,65.4L257.2,75.5L251.6,80.0L231.8,76.7L224.6,94.6L219.5,96.8L199.7,100.8L208.7,118.2L201.8,120.8L202.6,126.5L196.4,125.0L191.4,121.4L176.6,120.4L160.0,120.1L156.4,121.2L142.1,117.0L136.5,119.1L134.9,125.0L118.4,121.5L111.9,123.0L109.6,127.3L103.9,129.2L90.7,136.2L86.3,143.3L82.6,143.4L79.9,138.6L67.1,138.3L65.1,130.1L60.2,130.1L61.0,120.0L49.0,112.7L31.9,113.5L20.1,115.0L10.6,105.9L2.4,102.2L-13.1,95.0L-15.0,94.1L-40.7,100.0L-40.3,136.9L-45.4,137.4L-52.4,129.6L-59.2,126.8L-70.6,128.8L-75.0,132.2L-75.5,129.7L-73.1,125.6L-75.0,122.1L-86.6,118.7L-91.1,109.7L-96.6,107.2L-96.9,103.9L-87.2,104.9L-86.8,97.5L-78.3,95.9L-69.6,97.4L-67.8,87.7L-69.6,81.5L-79.6,82.0L-88.1,79.5L-99.7,83.9L-109.0,86.0L-114.1,84.4L-113.1,79.2L-119.4,72.6L-126.8,72.8L-135.3,66.1L-129.6,58.5L-132.5,56.4L-124.5,45.5L-114.2,51.3L-113.0,43.9L-92.3,33.1L-76.7,32.8L-54.7,39.7L-42.8,43.8L-32.2,39.6L-16.4,39.4L-3.6,44.5L-0.7,41.6L13.4,42.0L15.9,37.3L-0.3,30.4L9.3,25.5L7.4,22.8L17.0,20.2L9.8,13.4L14.4,9.9L51.8,6.5L56.7,4.0L81.7,0.3L90.7,-3.9L108.7,-1.7L111.8,8.7L122.2,6.2L135.1,9.6L134.3,15.1L143.8,14.5L168.9,5.1L165.3,8.2L178.0,16.0L200.4,41.4L205.7,36.1L219.5,41.9L233.8,39.3L239.4,41.1L244.2,46.9L251.2,48.8L255.4,53.1L268.3,51.7L273.6,57.9Z"/>
+<path class="market-map-country" data-map-country="UZB" d="M-40.3,136.9L-40.7,100.0L-15.0,94.1L-13.1,95.0L2.4,102.2L10.6,105.9L20.1,115.0L31.9,113.5L49.0,112.7L61.0,120.0L60.2,130.1L65.1,130.1L67.1,138.3L79.9,138.6L82.6,143.4L86.3,143.3L90.7,136.2L103.9,129.2L109.6,127.3L112.6,128.3L104.2,134.8L111.6,138.6L118.7,136.1L130.6,141.3L117.7,148.5L110.1,147.6L106.0,147.8L104.6,145.0L106.7,140.4L93.3,142.7L90.1,149.1L85.4,154.7L77.0,154.2L74.4,158.6L81.8,161.0L83.9,168.4L78.3,178.6L70.8,176.4L65.2,176.4L65.5,170.3L52.2,166.0L41.7,161.1L35.2,156.4L23.7,149.5L18.8,139.2L15.5,137.3L4.7,137.8L0.8,135.7L-0.2,127.8L-13.7,122.5L-22.1,128.3L-30.7,131.7L-29.0,136.8L-40.3,136.9Z"/>
+<path class="market-map-country" data-map-country="PNG" d="M810.0,576.0L827.4,582.9L845.8,588.6L852.7,593.7L858.3,598.8L859.8,604.7L876.5,610.8L878.9,616.1L869.7,617.2L871.9,623.9L880.8,630.4L887.3,641.0L893.1,640.7L892.7,645.1L900.4,646.8L897.4,648.7L908.0,652.9L906.9,655.8L900.3,656.5L897.8,653.9L889.2,652.8L879.1,651.3L871.4,644.9L865.7,639.4L860.5,630.7L847.4,626.3L839.0,629.2L832.9,632.5L834.1,639.8L826.3,643.3L820.7,641.6L810.3,641.2L810.2,608.6L810.0,576.0Z"/>
+<path class="market-map-country is-market" data-map-country="IDN" d="M810.0,576.0L810.2,608.6L810.3,641.2L801.4,633.0L791.3,631.0L788.8,633.8L776.1,634.1L780.4,626.0L786.7,623.2L784.1,612.3L779.3,603.9L759.9,595.5L751.6,594.6L736.6,585.4L733.7,590.2L729.8,591.1L727.6,587.5L727.5,583.1L719.9,578.2L730.7,574.6L737.8,574.8L737.0,572.1L722.3,572.1L718.4,566.2L709.4,564.3L705.2,559.4L718.7,557.0L723.8,553.7L739.9,557.8L741.4,561.5L744.2,577.7L754.6,583.7L762.9,573.1L774.4,567.0L783.3,567.0L791.8,570.5L799.3,574.1L810.0,576.0ZM649.7,638.9L650.7,640.9L650.9,643.9L644.4,651.4L635.8,653.6L634.6,652.4L635.5,649.0L639.8,642.9L649.7,638.9ZM742.1,619.0L741.1,611.4L742.9,607.8L745.0,604.5L747.3,607.4L747.2,612.1L742.1,619.0ZM578.8,508.6L573.1,517.7L580.5,527.1L578.8,531.7L590.0,541.0L578.1,542.2L574.8,549.0L575.2,558.0L565.6,564.9L565.3,574.8L561.5,590.1L560.0,586.6L548.6,591.1L544.7,585.0L537.6,584.4L532.6,581.2L520.7,584.8L517.0,579.9L510.5,580.5L502.2,579.3L500.7,565.9L495.7,563.1L490.9,554.6L489.5,545.8L490.7,536.6L496.6,529.9L498.3,536.6L505.1,542.3L511.6,540.2L518.0,541.0L523.8,535.9L528.6,535.0L538.1,537.8L546.2,535.7L551.3,521.8L555.2,518.3L558.7,506.9L570.2,506.9L578.8,508.6ZM693.7,578.0L704.7,580.9L708.3,588.6L699.9,584.5L691.6,583.6L685.9,584.3L679.0,583.9L681.4,578.4L693.7,578.0ZM668.7,587.9L661.8,586.1L659.9,581.8L670.0,581.3L672.5,584.6L668.7,587.9ZM679.3,528.3L680.0,533.7L685.9,534.6L686.9,538.7L686.4,547.4L681.2,546.4L679.7,552.5L683.8,557.8L681.0,559.0L677.0,552.7L674.0,539.9L676.0,531.9L679.3,528.3ZM629.3,541.2L640.8,540.8L650.7,533.6L652.4,535.8L644.4,545.7L636.9,547.6L627.2,545.7L610.6,546.2L601.8,547.6L600.4,555.2L609.4,564.1L614.8,559.6L633.4,556.2L632.6,560.8L628.2,559.3L623.9,565.2L615.1,569.0L624.5,581.9L622.7,585.3L631.7,596.8L631.6,603.4L626.3,606.3L622.4,602.8L627.2,594.6L617.4,598.5L614.9,595.7L616.2,591.9L609.0,586.0L609.7,576.3L603.1,579.3L603.9,591.0L604.3,605.3L598.0,606.7L593.7,603.8L596.5,594.6L595.0,584.9L590.8,584.9L587.7,578.0L591.8,571.5L593.2,563.5L598.3,548.5L600.4,544.3L608.9,536.9L616.7,539.9L629.3,541.2ZM603.0,652.6L589.7,645.6L599.0,643.6L604.3,646.7L607.8,649.7L607.2,652.4L603.0,652.6ZM613.4,635.4L620.1,634.6L629.0,630.9L627.6,636.5L612.5,639.3L599.2,638.1L599.2,634.4L607.2,632.4L613.4,635.4ZM582.6,633.6L588.8,632.8L591.3,637.1L579.7,639.1L572.8,640.4L567.4,640.3L570.8,634.6L576.3,634.5L579.0,631.0L582.6,633.6ZM484.9,614.2L486.2,617.8L505.4,618.8L507.6,614.7L526.1,619.5L529.8,625.9L544.8,627.8L557.1,633.7L545.6,637.5L534.6,633.5L525.6,633.8L515.2,633.0L505.9,631.2L494.3,627.4L486.9,626.4L482.8,627.7L464.5,623.5L462.8,619.2L453.7,618.5L460.5,609.0L472.7,609.5L480.7,613.5L484.9,614.2ZM443.7,560.8L445.4,567.8L448.9,573.4L456.2,574.3L461.1,580.6L458.6,593.1L458.2,608.5L447.1,608.7L438.7,600.4L425.8,592.2L421.6,586.1L414.0,578.0L409.0,570.5L401.4,556.5L392.6,548.2L389.7,539.6L386.0,531.8L377.0,525.5L371.8,516.9L364.2,511.3L353.8,500.3L352.9,495.2L359.4,495.6L374.8,497.5L383.7,507.3L391.4,514.1L396.9,518.3L406.4,529.0L416.6,529.2L425.0,536.0L430.8,544.4L438.4,549.0L434.4,557.1L440.1,560.6L443.7,560.8Z"/>
+<path class="market-map-country" data-map-country="RUS" d="M-109.0,86.0L-113.5,91.9L-123.2,93.6L-133.2,103.9L-124.1,113.4L-125.1,120.1L-114.2,131.9L-114.2,131.9L-120.1,135.9L-121.8,138.5L-126.3,137.8L-133.1,131.7L-136.0,131.4L-142.2,129.1L-145.3,125.0L-154.6,122.9L-160.7,124.5L-162.4,122.6L-176.1,117.8L-190.8,116.2L-199.2,114.5L-200.4,115.7L-213.2,107.2L-224.6,103.4L-233.2,97.6L-226.0,96.0L-217.7,87.6L-223.3,83.6L-208.5,79.6L-208.8,77.4L-217.8,79.0L-217.4,74.5L-212.3,71.7L-202.6,71.0L-201.0,67.7L-203.3,62.2L-199.2,56.9L-199.3,54.0L-214.1,50.7L-219.9,50.8L-226.1,46.2L-233.7,47.7L-246.4,44.2L-246.2,42.3L-249.8,37.9L-257.8,37.4L-258.6,34.3L-256.1,32.3L-262.5,26.6L-272.8,27.6L-275.9,27.1L-278.4,29.4L-282.1,29.0L-282.1,29.0L-284.6,22.6L-286.9,19.3L-285.0,18.3L-277.0,18.7L-273.1,16.5L-275.9,13.8L-282.7,12.1L-282.1,10.3L-286.2,8.4L-292.4,1.9L-290.3,-0.8L-291.3,-5.5L-301.0,-7.9L-306.3,-6.7L-307.7,-9.2L-318.2,-11.7L-321.4,-17.6L-322.3,-22.4L-327.1,-24.7L-322.8,-27.9L-325.8,-37.2L-318.7,-43.0L-320.2,-44.8L-320.2,-44.8L-308.8,-50.3L-319.3,-55.0L-319.3,-55.0L-297.9,-67.8L-288.6,-73.6L-284.8,-78.7L-299.6,-85.5L-295.6,-92.0L-304.6,-99.5L-297.8,-108.1L-309.5,-119.4L-300.2,-127.0L-315.5,-133.6L-314.1,-140.6L-306.0,-141.6L-289.0,-145.6L-289.0,-145.6L-278.7,-149.1L-262.2,-143.0L-234.9,-140.6L-197.1,-129.3L-189.4,-124.6L-188.7,-117.9L-199.8,-112.7L-216.2,-110.0L-260.8,-117.6L-268.2,-116.3L-251.9,-109.0L-251.2,-104.4L-250.6,-94.1L-237.7,-91.1L-229.9,-88.5L-228.6,-93.3L-234.6,-97.6L-228.2,-101.4L-204.1,-95.2L-195.6,-97.6L-202.4,-105.0L-179.1,-114.8L-169.8,-114.2L-160.5,-110.7L-154.7,-117.6L-163.0,-123.5L-158.1,-129.5L-165.5,-135.7L-137.5,-132.5L-131.8,-126.9L-144.4,-125.7L-144.4,-120.1L-136.5,-116.7L-121.1,-118.8L-118.6,-125.2L-97.7,-130.0L-62.8,-138.6L-55.3,-138.1L-65.1,-132.0L-52.7,-131.0L-45.6,-134.4L-26.8,-134.7L-12.0,-138.8L-0.6,-132.8L10.8,-139.4L0.3,-145.2L5.5,-148.5L35.0,-145.5L48.9,-142.3L85.1,-130.9L91.8,-136.2L81.6,-141.4L81.4,-143.6L69.3,-144.5L72.6,-149.3L67.2,-157.1L66.9,-160.3L85.4,-169.3L92.0,-178.4L99.4,-180.4L125.9,-177.8L128.0,-172.2L118.5,-164.1L124.7,-160.9L127.9,-153.9L125.6,-140.2L136.7,-134.1L132.4,-127.4L112.8,-113.2L124.2,-111.7L128.2,-115.3L139.2,-117.9L141.9,-122.8L150.5,-127.6L144.7,-133.3L149.4,-139.9L138.4,-140.7L136.0,-146.3L144.0,-156.3L131.0,-164.5L148.9,-171.2L146.6,-178.3L151.6,-178.5L156.8,-173.0L152.9,-163.4L163.6,-161.5L159.0,-168.7L175.8,-172.7L196.5,-173.2L215.0,-167.5L206.1,-175.8L205.1,-186.5L222.5,-188.5L246.6,-188.1L268.2,-189.4L260.1,-194.6L271.7,-201.2L283.2,-201.4L302.6,-206.4L329.0,-207.7L332.3,-210.5L358.6,-211.4L366.8,-209.2L389.2,-214.5L407.6,-214.3L410.4,-218.6L419.9,-222.9L443.5,-227.0L460.7,-223.7L447.0,-221.3L469.7,-219.7L472.4,-214.8L481.5,-217.2L510.8,-217.1L533.3,-212.2L541.3,-208.5L538.9,-203.3L527.8,-200.3L501.5,-194.8L494.0,-191.8L506.4,-190.4L521.2,-187.9L530.2,-189.8L535.3,-183.4L539.7,-185.9L555.7,-187.5L587.8,-185.9L590.2,-181.2L632.0,-179.7L632.6,-187.4L653.8,-185.6L669.8,-185.7L685.9,-180.4L690.5,-174.0L684.6,-169.8L697.2,-161.9L712.9,-157.9L722.5,-168.4L738.6,-163.9L755.6,-166.6L775.0,-163.5L782.3,-166.3L798.7,-164.9L791.5,-174.2L804.7,-178.5L895.0,-172.0L903.5,-166.1L929.7,-158.4L970.1,-160.3L990.0,-158.7L998.3,-154.5L997.1,-147.2L1009.4,-144.4L1022.8,-146.4L1040.5,-146.7L1059.4,-144.7L1078.4,-145.8L1095.8,-136.9L1108.2,-140.1L1100.1,-146.5L1104.5,-151.0L1136.4,-148.2L1157.2,-148.8L1186.0,-144.0L1200.0,-139.6L1200.0,-99.8L1199.9,-99.7L1187.1,-95.3L1174.1,-96.1L1183.1,-90.8L1189.1,-82.5L1193.7,-79.8L1194.9,-75.7L1192.3,-73.0L1173.6,-75.2L1145.7,-67.7L1136.8,-66.5L1121.5,-59.5L1107.0,-53.4L1103.3,-48.8L1089.0,-55.7L1062.9,-47.9L1058.4,-51.6L1048.8,-47.3L1035.4,-48.7L1032.2,-42.1L1020.2,-32.4L1020.5,-28.4L1031.9,-26.2L1030.6,-11.6L1021.3,-11.2L1017.0,-2.9L1021.2,1.4L1003.7,6.6L1000.2,18.0L985.3,20.4L982.3,30.6L967.9,39.9L964.2,33.0L959.9,18.4L954.3,-3.8L959.1,-17.7L967.6,-23.6L968.1,-28.3L983.6,-30.6L1001.5,-43.1L1018.7,-53.4L1036.7,-61.4L1044.7,-75.5L1032.6,-74.7L1026.6,-66.4L1001.2,-55.4L993.0,-67.7L967.2,-64.3L942.2,-47.6L950.4,-41.4L928.1,-38.8L912.7,-37.8L913.4,-45.0L897.8,-46.6L885.4,-41.6L854.9,-43.4L822.0,-40.4L789.6,-20.9L751.3,2.7L767.0,4.0L771.9,10.2L781.6,12.4L788.0,7.5L799.0,8.1L813.5,19.1L813.8,27.6L806.0,37.6L805.1,49.5L800.6,65.5L785.5,80.0L782.2,86.9L768.6,98.6L755.2,110.1L748.7,116.0L735.4,121.9L729.1,122.0L722.8,117.2L709.4,124.5L707.8,127.8L707.8,127.8L707.8,127.8L707.8,127.8L706.4,126.0L706.4,126.0L706.3,121.0L711.4,120.7L712.9,108.9L710.3,100.3L718.8,96.8L731.0,98.6L737.7,88.8L741.1,77.9L745.0,74.2L750.3,65.2L733.7,68.2L725.1,72.1L709.9,72.1L705.8,62.7L694.0,55.6L676.6,52.4L672.9,42.6L669.4,36.5L665.6,32.2L659.5,22.1L650.7,18.4L635.7,15.4L622.5,15.7L610.0,17.5L601.8,22.5L607.3,24.8L607.4,30.4L601.8,33.6L592.8,44.2L592.9,48.6L578.8,54.9L566.8,51.1L554.9,51.9L549.6,48.6L543.6,47.5L529.0,54.6L515.8,56.2L506.6,58.7L494.0,57.1L484.8,57.2L478.7,52.1L468.9,47.3L458.9,45.9L446.2,47.2L436.8,49.1L422.6,44.9L420.7,37.4L408.9,34.8L399.8,33.7L388.6,29.5L378.3,39.9L382.3,45.8L372.6,52.7L358.1,50.2L348.2,49.9L341.5,45.2L331.0,45.0L322.3,42.0L307.1,46.7L288.1,55.3L277.5,57.0L273.6,57.9L268.3,51.7L255.4,53.1L251.2,48.8L244.2,46.9L239.4,41.1L233.8,39.3L219.5,41.9L205.7,36.1L200.4,41.4L178.0,16.0L165.3,8.2L168.9,5.1L143.8,14.5L134.3,15.1L135.1,9.6L122.2,6.2L111.8,8.7L108.7,-1.7L90.7,-3.9L81.7,0.3L56.7,4.0L51.8,6.5L14.4,9.9L9.8,13.4L17.0,20.2L7.4,22.8L9.3,25.5L-0.3,30.4L15.9,37.3L13.4,42.0L-0.7,41.6L-3.6,44.5L-16.4,39.4L-32.2,39.6L-42.8,43.8L-54.7,39.7L-76.7,32.8L-92.3,33.1L-113.0,43.9L-114.2,51.3L-124.5,45.5L-132.5,56.4L-129.6,58.5L-135.3,66.1L-126.8,72.8L-119.4,72.6L-113.1,79.2L-114.1,84.4L-109.0,86.0ZM829.1,13.0L832.6,22.6L832.4,32.4L836.5,42.5L846.5,60.2L831.7,56.9L825.6,71.4L835.3,81.6L835.1,88.6L827.5,82.6L820.9,90.3L819.1,81.9L820.2,72.2L819.0,61.4L821.4,53.8L821.8,40.5L815.9,30.6L816.8,17.0L826.1,12.4L822.1,7.7L826.5,6.3L829.1,13.0Z"/>
+<path class="market-map-country" data-map-country="TLS" d="M649.7,638.9L650.9,636.6L659.5,634.3L666.4,634.0L669.6,632.7L673.4,634.0L669.7,636.7L659.3,641.1L650.9,643.9L650.7,640.9L649.7,638.9Z"/>
+<path class="market-map-country" data-map-country="OMN" d="M-47.9,322.9L-47.7,318.9L-44.7,314.8L-44.7,310.7L-40.2,308.7L-42.0,307.3L-41.1,300.8L-36.0,300.8L-31.5,307.6L-26.0,311.2L-18.6,312.5L-12.7,314.3L-8.2,320.1L-5.5,323.4L-1.9,324.7L-1.9,326.9L-5.6,332.9L-7.2,335.7L-11.4,338.9L-15.1,345.7L-19.7,345.2L-21.7,347.6L-23.3,352.6L-22.1,359.3L-23.1,360.6L-27.7,360.5L-33.9,364.3L-34.9,369.1L-37.2,371.2L-43.4,371.2L-47.3,373.7L-47.3,377.7L-52.1,380.5L-57.6,379.6L-64.3,382.9L-68.9,383.5L-72.2,376.5L-80.0,360.0L-50.0,350.0L-43.3,330.0L-47.9,322.9Z"/>
+<path class="market-map-country is-market" data-map-country="KHM" d="M425.8,428.1L423.5,416.1L429.9,407.7L442.8,405.8L452.2,407.3L460.4,411.2L465.0,404.3L473.8,408.0L476.1,414.6L474.9,426.6L458.1,434.3L462.5,440.4L452.0,441.1L443.3,445.1L435.0,443.7L430.9,438.5L425.8,428.1Z"/>
+<path class="market-map-country is-market" data-map-country="THA" d="M452.2,407.3L442.8,405.8L429.9,407.7L423.5,416.1L425.8,428.1L416.9,423.5L408.3,423.7L409.8,415.9L401.0,415.9L400.2,426.9L394.8,441.5L391.5,450.4L392.2,457.6L398.7,457.9L402.8,467.0L404.6,475.7L410.2,481.4L416.2,482.6L421.4,487.8L418.1,491.9L411.5,493.1L410.8,488.0L402.6,483.6L400.9,485.4L396.9,481.5L395.2,476.6L389.9,470.9L385.0,466.2L383.4,472.1L381.5,466.5L382.6,460.3L385.5,450.7L390.4,440.4L395.9,431.1L392.0,422.0L392.1,417.3L391.0,411.7L384.3,403.8L381.9,398.8L385.4,396.9L389.0,388.2L384.9,381.6L378.6,374.3L373.8,365.5L378.0,363.7L382.5,352.9L389.6,352.5L395.4,348.1L401.2,345.8L405.5,348.9L406.1,354.9L412.8,355.4L410.4,365.9L410.6,374.9L421.1,368.9L424.1,370.7L430.0,370.4L432.0,366.9L439.6,367.6L447.2,375.7L447.8,385.6L455.9,394.3L455.4,402.8L452.2,407.3Z"/>
+<path class="market-map-country" data-map-country="LAO" d="M473.8,408.0L465.0,404.3L460.4,411.2L452.2,407.3L455.4,402.8L455.9,394.3L447.8,385.6L447.2,375.7L439.6,367.6L432.0,366.9L430.0,370.4L424.1,370.7L421.1,368.9L410.6,374.9L410.4,365.9L412.8,355.4L406.1,354.9L405.5,348.9L401.2,345.8L403.3,342.1L411.8,335.6L412.7,338.0L418.0,338.3L416.5,326.8L421.7,325.4L427.5,333.2L432.0,342.3L444.4,342.4L448.2,351.1L441.8,353.8L439.0,357.3L450.9,363.3L459.3,375.1L465.6,384.0L473.1,390.9L475.6,398.0L473.8,408.0Z"/>
+<path class="market-map-country" data-map-country="MMR" d="M401.2,345.8L395.4,348.1L389.6,352.5L382.5,352.9L378.0,363.7L373.8,365.5L378.6,374.3L384.9,381.6L389.0,388.2L385.4,396.9L381.9,398.8L384.3,403.8L391.0,411.7L392.1,417.3L392.0,422.0L395.9,431.1L390.4,440.4L385.5,450.7L384.6,443.2L387.6,435.6L384.3,429.7L385.1,418.8L381.0,413.6L377.8,401.6L376.0,389.0L371.6,380.7L365.1,385.7L353.7,392.9L348.1,392.0L341.9,389.6L345.3,377.2L343.2,367.9L335.4,356.3L336.6,352.7L330.8,351.4L323.7,343.3L323.0,335.2L326.5,336.8L326.7,329.6L331.7,327.2L330.6,323.0L332.9,319.6L333.3,309.2L341.1,311.5L345.5,303.2L346.0,298.4L351.6,290.0L351.2,284.3L364.2,277.4L371.3,279.2L370.5,273.0L374.0,271.2L373.3,267.4L379.1,266.6L382.5,272.5L386.8,274.9L387.1,282.6L386.7,290.8L377.2,299.2L376.0,311.0L386.6,309.4L389.0,318.6L395.3,320.5L392.4,328.8L399.8,332.6L404.2,334.4L411.5,331.5L411.8,335.6L403.3,342.1L401.2,345.8Z"/>
+<path class="market-map-country is-market" data-map-country="VNM" d="M443.3,445.1L452.0,441.1L462.5,440.4L458.1,434.3L474.9,426.6L476.1,414.6L473.8,408.0L475.6,398.0L473.1,390.9L465.6,384.0L459.3,375.1L450.9,363.3L439.0,357.3L441.8,353.8L448.2,351.1L444.4,342.4L432.0,342.3L427.5,333.2L421.7,325.4L427.1,322.9L435.0,323.0L444.8,321.8L453.3,316.5L458.1,320.2L467.3,322.1L465.7,327.8L470.4,331.9L480.5,334.5L467.2,343.0L458.8,352.5L456.6,359.4L464.3,370.0L473.6,383.0L482.7,389.2L488.8,397.2L493.4,415.7L492.0,433.3L483.7,439.9L472.2,446.4L464.1,454.7L451.6,464.0L448.0,457.6L450.8,450.8L443.3,445.1Z"/>
+<path class="market-map-country" data-map-country="PRK" d="M707.8,127.8L707.8,127.8L707.8,127.8L707.8,127.8ZM706.4,126.0L706.4,126.0L707.8,127.8L704.0,127.2L699.7,130.6L696.7,134.0L697.1,141.2L691.9,143.4L690.1,145.1L686.3,148.1L679.7,149.7L675.3,152.4L675.0,156.8L673.9,157.9L677.8,159.5L683.5,163.9L682.1,166.3L677.8,167.0L670.7,167.4L666.8,172.0L662.4,171.6L661.7,172.5L656.9,170.6L655.7,172.5L652.8,173.3L652.4,171.4L649.8,170.5L647.1,168.9L649.9,164.5L652.2,163.3L651.3,161.5L653.9,156.1L653.2,154.5L647.4,153.4L642.7,150.7L650.8,144.3L661.8,138.9L668.7,131.8L673.4,135.0L682.1,135.3L680.5,130.1L696.0,125.8L699.9,120.1L706.4,126.0Z"/>
+<path class="market-map-country is-market" data-map-country="KOR" d="M661.7,172.5L662.4,171.6L666.8,172.0L670.7,167.4L677.8,167.0L682.1,166.3L683.5,163.9L692.1,175.7L694.6,182.2L694.7,193.7L690.9,199.2L681.9,201.1L673.9,205.2L664.9,206.1L663.7,200.7L665.6,193.2L661.2,182.7L668.6,181.1L661.7,172.5Z"/>
+<path class="market-map-country" data-map-country="MNG" d="M277.5,57.0L288.1,55.3L307.1,46.7L322.3,42.0L331.0,45.0L341.5,45.2L348.2,49.9L358.1,50.2L372.6,52.7L382.3,45.8L378.3,39.9L388.6,29.5L399.8,33.7L408.9,34.8L420.7,37.4L422.6,44.9L436.8,49.1L446.2,47.2L458.9,45.9L468.9,47.3L478.7,52.1L484.8,57.2L494.0,57.1L506.6,58.7L515.8,56.2L529.0,54.6L543.6,47.5L549.6,48.6L554.9,51.9L566.8,51.1L561.9,58.7L554.9,68.6L557.4,72.7L563.1,71.5L573.0,73.0L580.6,69.3L588.7,72.5L597.7,79.5L596.6,83.1L588.7,81.9L574.2,83.3L567.2,86.1L559.9,92.7L544.6,96.6L534.6,101.9L524.4,99.9L518.7,99.0L513.5,105.4L516.7,109.3L518.3,112.6L511.3,115.9L504.1,121.3L492.4,124.8L477.4,125.2L461.3,128.7L449.6,134.0L445.2,130.9L433.1,130.9L418.3,124.9L408.5,123.4L395.2,124.8L374.5,122.5L363.5,122.7L357.6,116.8L353.1,107.6L346.9,106.5L334.8,100.2L321.3,98.8L309.5,97.1L305.9,92.8L309.7,81.1L302.8,73.1L288.5,69.3L280.1,64.0L277.5,57.0Z"/>
+<path class="market-map-country is-market" data-map-country="IND" d="M373.3,267.4L374.0,271.2L370.5,273.0L371.3,279.2L364.2,277.4L351.2,284.3L351.6,290.0L346.0,298.4L345.5,303.2L341.1,311.5L333.3,309.2L332.9,319.6L330.6,323.0L331.7,327.2L326.7,329.6L321.5,313.7L318.7,313.8L317.1,320.1L311.6,315.0L314.7,309.3L319.2,308.7L323.8,300.2L318.0,298.5L308.7,298.7L299.2,297.3L298.3,290.3L293.6,289.9L285.6,285.5L282.1,292.3L289.3,297.6L283.1,301.3L280.8,305.0L287.0,307.7L285.3,313.7L288.8,321.2L290.3,329.4L288.9,333.1L282.1,333.0L269.8,335.0L270.3,342.6L265.0,348.5L250.6,355.2L239.4,367.0L231.9,373.3L221.9,379.8L221.9,384.4L216.9,386.9L207.9,390.5L203.2,391.0L200.3,398.6L202.3,411.6L202.9,419.9L198.6,429.4L198.6,446.4L193.4,446.9L188.9,454.5L191.9,457.8L182.8,460.7L179.4,467.5L175.4,470.3L165.9,461.0L161.3,447.0L157.5,436.9L154.0,432.2L148.6,422.6L146.2,410.1L144.4,403.8L135.3,390.1L131.2,370.7L128.2,357.9L128.2,345.8L126.3,336.4L111.8,342.4L104.7,341.2L91.6,329.1L96.4,325.5L93.5,321.6L81.8,313.1L88.4,306.4L110.4,306.4L108.4,297.8L102.8,292.8L101.7,285.1L95.1,280.6L106.2,270.1L117.8,270.9L128.2,260.4L134.5,250.2L144.2,240.2L144.1,233.1L152.6,227.3L144.5,222.4L141.0,215.6L137.5,206.8L142.4,202.5L157.6,205.0L168.7,203.5L178.4,195.1L189.1,206.8L188.1,214.9L192.1,220.1L191.8,225.2L184.6,223.8L187.4,234.8L197.2,241.2L211.1,248.2L204.8,252.7L200.9,262.1L210.6,265.8L220.0,270.7L233.0,276.4L246.8,277.7L252.5,282.7L260.2,283.7L272.3,286.0L280.6,285.9L281.7,281.9L280.4,275.5L281.2,271.2L287.3,269.1L288.1,277.0L288.4,279.0L297.4,282.8L303.7,281.2L312.2,281.9L320.3,281.6L321.0,275.5L317.0,272.3L325.0,271.0L334.1,263.6L345.7,257.2L354.0,259.7L361.2,255.5L365.9,261.7L362.5,265.9L373.3,267.4Z"/>
+<path class="market-map-country is-market" data-map-country="BGD" d="M326.7,329.6L326.5,336.8L323.0,335.2L323.7,343.3L320.8,338.1L320.3,333.0L318.3,328.2L314.2,322.3L305.0,321.9L305.9,326.1L302.7,331.6L298.5,329.6L297.0,331.4L294.2,330.3L290.3,329.4L288.8,321.2L285.3,313.7L287.0,307.7L280.8,305.0L283.1,301.3L289.3,297.6L282.1,292.3L285.6,285.5L293.6,289.9L298.3,290.3L299.2,297.3L308.7,298.7L318.0,298.5L323.8,300.2L319.2,308.7L314.7,309.3L311.6,315.0L317.1,320.1L318.7,313.8L321.5,313.7L326.7,329.6Z"/>
+<path class="market-map-country" data-map-country="BTN" d="M317.0,272.3L321.0,275.5L320.3,281.6L312.2,281.9L303.7,281.2L297.4,282.8L288.4,279.0L288.1,277.0L294.8,269.6L300.2,267.0L307.3,269.4L312.6,269.6L317.0,272.3Z"/>
+<path class="market-map-country" data-map-country="NPL" d="M281.2,271.2L280.4,275.5L281.7,281.9L280.6,285.9L272.3,286.0L260.2,283.7L252.5,282.7L246.8,277.7L233.0,276.4L220.0,270.7L210.6,265.8L200.9,262.1L204.8,252.7L211.1,248.2L215.3,245.8L223.3,248.8L233.4,255.4L239.0,256.8L242.3,261.6L250.1,263.6L258.2,268.0L269.5,270.3L281.2,271.2Z"/>
+<path class="market-map-country is-market" data-map-country="PAK" d="M178.4,195.1L168.7,203.5L157.6,205.0L142.4,202.5L137.5,206.8L141.0,215.6L144.5,222.4L152.6,227.3L144.1,233.1L144.2,240.2L134.5,250.2L128.2,260.4L117.8,270.9L106.2,270.1L95.1,280.6L101.7,285.1L102.8,292.8L108.4,297.8L110.4,306.4L88.4,306.4L81.8,313.1L74.4,310.6L71.5,303.4L63.7,295.7L45.3,297.6L29.1,297.8L15.0,299.2L18.7,287.6L33.2,282.4L32.3,277.8L27.6,276.2L27.3,267.4L17.7,263.0L13.7,257.0L8.7,251.7L25.5,256.8L35.5,255.3L41.5,256.6L43.5,254.4L50.5,255.3L63.5,251.1L63.8,242.6L69.4,237.0L76.8,237.0L77.9,234.2L85.6,232.9L89.3,233.8L93.2,231.0L92.6,225.0L96.9,218.9L103.2,216.4L99.3,209.8L108.8,210.1L111.6,206.5L111.2,202.7L116.1,198.5L115.0,193.5L112.6,189.3L118.5,184.9L129.2,182.8L140.7,181.6L145.8,179.8L151.6,178.7L159.0,183.3L161.9,191.0L178.4,195.1Z"/>
+<path class="market-map-country" data-map-country="AFG" d="M65.2,176.4L70.8,176.4L78.3,178.6L81.4,179.8L88.6,176.6L92.0,178.5L95.2,173.9L101.2,174.1L102.7,172.6L103.8,168.6L108.1,165.1L113.5,167.4L112.4,170.5L115.4,170.9L114.5,179.3L118.4,182.6L121.9,180.5L126.4,179.5L132.6,175.0L139.5,175.8L149.8,175.8L151.6,178.7L145.8,179.8L140.7,181.6L129.2,182.8L118.5,184.9L112.6,189.3L115.0,193.5L116.1,198.5L111.2,202.7L111.6,206.5L108.8,210.1L99.3,209.8L103.2,216.4L96.9,218.9L92.6,225.0L93.2,231.0L89.3,233.8L85.6,232.9L77.9,234.2L76.8,237.0L69.4,237.0L63.8,242.6L63.5,251.1L50.5,255.3L43.5,254.4L41.5,256.6L35.5,255.3L25.5,256.8L8.7,251.7L17.8,242.6L17.0,236.2L9.4,234.5L8.6,228.2L5.4,220.2L9.6,214.7L5.3,213.2L8.0,206.0L12.1,193.5L22.3,197.3L29.8,196.0L31.9,191.4L39.8,189.9L45.5,186.9L47.5,178.9L55.9,176.9L57.5,173.4L62.2,176.1L65.2,176.4Z"/>
+<path class="market-map-country" data-map-country="TJK" d="M78.3,178.6L83.9,168.4L81.8,161.0L74.4,158.6L77.0,154.2L85.4,154.7L90.1,149.1L93.3,142.7L106.7,140.4L104.6,145.0L106.0,147.8L110.1,147.6L106.5,150.6L95.6,149.0L94.6,154.7L105.5,154.0L117.8,157.2L136.8,155.7L139.3,164.9L142.6,163.9L148.6,166.2L148.3,170.1L149.8,175.8L139.5,175.8L132.6,175.0L126.4,179.5L121.9,180.5L118.4,182.6L114.5,179.3L115.4,170.9L112.4,170.5L113.5,167.4L108.1,165.1L103.8,168.6L102.7,172.6L101.2,174.1L95.2,173.9L92.0,178.5L88.6,176.6L81.4,179.8L78.3,178.6Z"/>
+<path class="market-map-country" data-map-country="KGZ" d="M109.6,127.3L111.9,123.0L118.4,121.5L134.9,125.0L136.5,119.1L142.1,117.0L156.4,121.2L160.0,120.1L176.6,120.4L191.4,121.4L196.4,125.0L202.6,126.5L201.2,128.8L185.4,134.2L181.9,138.1L169.0,139.3L165.3,145.7L154.7,144.4L147.8,146.3L138.2,151.1L139.6,153.4L136.8,155.7L117.8,157.2L105.5,154.0L94.6,154.7L95.6,149.0L106.5,150.6L110.1,147.6L117.7,148.5L130.6,141.3L118.7,136.1L111.6,138.6L104.2,134.8L112.6,128.3L109.6,127.3Z"/>
+<path class="market-map-country" data-map-country="TKM" d="M-75.0,132.2L-70.6,128.8L-59.2,126.8L-52.4,129.6L-45.4,137.4L-40.3,136.9L-29.0,136.8L-30.7,131.7L-22.1,128.3L-13.7,122.5L-0.2,127.8L0.8,135.7L4.7,137.8L15.5,137.3L18.8,139.2L23.7,149.5L35.2,156.4L41.7,161.1L52.2,166.0L65.5,170.3L65.2,176.4L62.2,176.1L57.5,173.4L55.9,176.9L47.5,178.9L45.5,186.9L39.8,189.9L31.9,191.4L29.8,196.0L22.3,197.3L12.1,193.5L11.2,185.1L3.8,184.7L-7.7,175.9L-15.6,174.8L-26.7,169.7L-33.8,168.8L-38.2,170.6L-44.9,170.4L-52.0,176.1L-60.8,178.0L-62.6,170.9L-61.2,160.5L-69.0,157.1L-66.4,150.2L-73.1,149.7L-70.8,141.2L-61.4,143.7L-52.6,140.5L-59.9,134.5L-62.8,128.8L-70.8,131.3L-71.9,138.6L-75.0,132.2Z"/>
+<path class="market-map-country" data-map-country="IRN" d="M-114.3,250.7L-119.9,245.5L-120.0,240.1L-123.1,240.2L-121.5,232.9L-126.7,225.3L-138.9,219.8L-145.8,210.3L-143.5,202.5L-138.5,199.1L-139.2,193.2L-145.8,190.2L-152.3,178.3L-152.3,178.3L-157.7,170.3L-155.8,167.2L-158.9,155.7L-152.1,152.9L-150.5,156.6L-145.4,161.3L-138.6,162.6L-134.9,162.3L-123.1,154.9L-119.4,154.2L-116.4,157.1L-119.9,162.1L-113.7,167.3L-111.2,166.8L-108.0,174.2L-98.5,176.3L-91.6,181.3L-77.4,183.0L-61.7,180.3L-60.8,178.0L-52.0,176.1L-44.9,170.4L-38.2,170.6L-33.8,168.8L-26.7,169.7L-15.6,174.8L-7.7,175.9L3.8,184.7L11.2,185.1L12.1,193.5L8.0,206.0L5.3,213.2L9.6,214.7L5.4,220.2L8.6,228.2L9.4,234.5L17.0,236.2L17.8,242.6L8.7,251.7L13.7,257.0L17.7,263.0L27.3,267.4L27.6,276.2L32.3,277.8L33.2,282.4L18.7,287.6L15.0,299.2L-3.8,296.2L-14.7,293.9L-26.0,292.6L-30.3,280.3L-35.1,278.6L-42.8,280.4L-52.8,285.2L-65.1,281.9L-75.2,274.2L-84.8,271.3L-91.5,261.9L-98.8,248.5L-104.2,250.1L-110.6,246.8L-114.3,250.7Z"/>
+<path class="market-map-country" data-map-country="AUS" d="M661.5,872.2L650.9,877.3L642.2,879.6L640.3,884.8L636.6,888.9L628.1,889.1L621.8,890.0L613.0,888.2L605.8,889.3L598.9,889.8L593.0,895.1L590.1,894.6L585.1,897.5L580.2,900.6L573.0,900.3L566.3,900.3L555.6,893.9L550.3,892.0L550.5,886.2L555.5,884.9L557.1,882.6L556.8,879.0L558.0,872.1L556.9,866.1L551.6,856.0L550.0,850.3L550.4,844.6L546.4,838.1L546.2,835.2L541.7,831.2L540.5,823.3L534.8,815.4L533.4,811.2L537.8,815.5L534.4,806.2L539.4,809.1L542.3,813.0L542.2,807.9L537.2,800.0L536.3,796.8L533.9,793.8L535.0,788.1L537.1,785.6L538.4,780.6L537.4,774.8L541.5,767.6L542.3,775.2L546.5,768.3L554.6,765.0L559.5,760.7L567.1,757.0L571.7,756.2L574.4,757.5L582.3,753.7L588.4,752.6L589.9,750.4L592.5,749.5L598.1,749.8L608.6,746.8L614.0,742.4L616.6,737.1L622.4,732.0L622.9,728.0L623.1,722.5L630.1,714.1L634.3,722.7L638.6,720.7L635.0,716.0L638.2,711.1L642.6,713.3L643.8,705.7L649.3,700.8L651.7,696.8L656.7,695.1L656.9,692.3L661.3,693.5L661.4,691.0L665.8,689.5L670.7,688.2L678.0,692.8L683.6,698.7L689.9,698.8L696.2,699.7L694.1,694.2L698.9,686.2L703.4,683.6L701.8,681.1L706.2,675.4L712.2,671.8L717.4,673.0L725.8,671.1L725.6,666.0L718.2,662.7L723.6,661.3L730.2,663.8L735.5,667.9L743.9,670.4L746.8,669.4L753.0,672.5L758.8,669.6L762.6,670.5L764.9,668.6L769.5,673.5L766.9,678.9L763.1,682.9L759.6,683.2L760.8,687.2L757.8,692.2L754.3,697.2L755.0,700.0L763.0,705.5L770.7,708.7L775.8,712.2L783.0,718.1L785.9,718.1L791.1,720.6L792.6,723.7L802.2,727.1L808.8,723.7L810.7,718.3L812.7,713.9L814.0,708.4L817.0,700.4L815.6,695.6L816.4,692.7L815.2,687.0L816.5,679.4L818.4,677.4L816.9,674.1L819.3,668.8L821.2,663.3L821.4,660.4L825.2,656.7L828.0,661.6L828.7,667.8L831.2,669.1L831.6,673.3L835.2,678.3L836.0,684.0L835.6,687.6L839.2,695.5L845.6,691.7L848.9,695.9L853.7,699.8L852.7,704.3L854.9,712.9L856.4,717.8L858.9,719.1L861.6,727.6L860.6,732.8L863.9,739.6L874.7,744.8L881.8,749.6L888.5,753.9L887.2,756.3L892.9,762.6L896.8,773.4L900.8,771.2L904.8,775.6L907.3,774.0L909.0,784.6L916.1,790.8L920.7,794.6L928.6,802.7L931.4,810.7L931.6,816.4L930.9,822.6L935.7,831.1L935.1,840.0L933.4,844.6L930.7,853.5L930.9,859.2L928.9,866.4L924.5,875.5L917.1,880.4L913.4,888.2L910.1,893.1L907.1,901.7L903.3,906.7L900.8,914.2L899.5,921.1L900.0,924.3L894.2,927.7L883.0,928.1L873.8,932.2L869.2,936.1L863.2,940.4L854.9,935.9L848.8,934.2L850.3,929.0L844.9,930.9L836.1,938.1L827.5,935.4L821.8,933.8L816.1,933.1L806.4,930.2L799.9,924.0L798.1,916.4L795.7,911.4L790.8,907.3L781.2,906.1L784.5,901.3L782.1,893.8L777.2,900.8L768.3,902.6L773.5,897.1L775.0,891.3L778.9,886.4L778.1,879.0L770.0,887.5L763.7,890.9L759.9,898.9L752.1,894.8L752.4,889.5L746.1,882.2L740.9,878.5L742.7,876.2L729.9,870.1L722.9,869.8L713.3,865.0L695.4,865.9L682.4,869.5L671.0,872.8L661.5,872.2Z"/>
+<path class="market-map-country" data-map-country="LKA" d="M217.9,474.8L216.4,485.2L212.2,488.0L203.5,490.3L198.7,482.4L197.0,468.0L201.5,451.8L208.4,457.3L213.0,464.4L217.9,474.8Z"/>
+<path class="market-map-country is-market is-active" data-map-country="CHN" d="M494.8,368.0L486.6,364.9L486.3,356.3L491.2,351.8L502.1,349.0L507.9,349.2L510.1,353.0L505.7,357.4L503.4,363.2L494.8,368.0ZM202.6,126.5L201.8,120.8L208.7,118.2L199.7,100.8L219.5,96.8L224.6,94.6L231.8,76.7L251.6,80.0L257.2,75.5L257.7,65.4L266.0,64.5L273.6,57.9L277.5,57.0L280.1,64.0L288.5,69.3L302.8,73.1L309.7,81.1L305.9,92.8L309.5,97.1L321.3,98.8L334.8,100.2L346.9,106.5L353.1,107.6L357.6,116.8L363.5,122.7L374.5,122.5L395.2,124.8L408.5,123.4L418.3,124.9L433.1,130.9L445.2,130.9L449.6,134.0L461.3,128.7L477.4,125.2L492.4,124.8L504.1,121.3L511.3,115.9L518.3,112.6L516.7,109.3L513.5,105.4L518.7,99.0L524.4,99.9L534.6,101.9L544.6,96.6L559.9,92.7L567.2,86.1L574.2,83.3L588.7,81.9L596.6,83.1L597.7,79.5L588.7,72.5L580.6,69.3L573.0,73.0L563.1,71.5L557.4,72.7L554.9,68.6L561.9,58.7L566.8,51.1L578.8,54.9L592.9,48.6L592.8,44.2L601.8,33.6L607.4,30.4L607.3,24.8L601.8,22.5L610.0,17.5L622.5,15.7L635.7,15.4L650.7,18.4L659.5,22.1L665.6,32.2L669.4,36.5L672.9,42.6L676.6,52.4L694.0,55.6L705.8,62.7L709.9,72.1L725.1,72.1L733.7,68.2L750.3,65.2L745.0,74.2L741.1,77.9L737.7,88.8L731.0,98.6L718.8,96.8L710.3,100.3L712.9,108.9L711.4,120.7L706.3,121.0L706.4,126.0L699.9,120.1L696.0,125.8L680.5,130.1L682.1,135.3L673.4,135.0L668.7,131.8L661.8,138.9L650.8,144.3L642.7,150.7L628.7,153.6L621.3,158.3L610.5,161.0L615.9,156.4L613.8,152.5L621.7,145.8L616.4,140.5L607.7,144.1L596.4,151.0L590.2,157.5L580.4,158.0L575.3,162.6L580.6,169.4L588.8,171.0L589.1,175.5L597.0,178.4L608.2,171.3L617.1,175.2L623.6,175.5L625.2,180.7L611.0,183.5L606.4,188.9L596.6,193.9L591.5,200.9L602.3,206.4L606.2,216.2L612.3,225.4L619.1,233.1L618.9,240.5L612.6,243.2L615.0,248.6L620.9,251.7L619.4,259.8L616.8,267.7L611.3,268.6L604.0,279.5L595.9,292.6L586.6,304.5L572.8,313.8L558.9,322.2L547.6,323.3L541.5,327.8L538.1,324.5L532.4,329.5L518.4,334.5L507.9,336.0L504.4,346.6L498.9,347.2L496.3,339.9L498.6,336.0L485.2,332.8L480.5,334.5L470.4,331.9L465.7,327.8L467.3,322.1L458.1,320.2L453.3,316.5L444.8,321.8L435.0,323.0L427.1,322.9L421.7,325.4L416.5,326.8L418.0,338.3L412.7,338.0L411.8,335.6L411.5,331.5L404.2,334.4L399.8,332.6L392.4,328.8L395.3,320.5L389.0,318.6L386.6,309.4L376.0,311.0L377.2,299.2L386.7,290.8L387.1,282.6L386.8,274.9L382.5,272.5L379.1,266.6L373.3,267.4L362.5,265.9L365.9,261.7L361.2,255.5L354.0,259.7L345.7,257.2L334.1,263.6L325.0,271.0L317.0,272.3L312.6,269.6L307.3,269.4L300.2,267.0L294.8,269.6L288.1,277.0L287.3,269.1L281.2,271.2L269.5,270.3L258.2,268.0L250.1,263.6L242.3,261.6L239.0,256.8L233.4,255.4L223.3,248.8L215.3,245.8L211.1,248.2L197.2,241.2L187.4,234.8L184.6,223.8L191.8,225.2L192.1,220.1L188.1,214.9L189.1,206.8L178.4,195.1L161.9,191.0L159.0,183.3L151.6,178.7L149.8,175.8L148.3,170.1L148.6,166.2L142.6,163.9L139.3,164.9L136.8,155.7L139.6,153.4L138.2,151.1L147.8,146.3L154.7,144.4L165.3,145.7L169.0,139.3L181.9,138.1L185.4,134.2L201.2,128.8L202.6,126.5Z"/>
+<path class="market-map-country is-market" data-map-country="TWN" d="M617.8,306.1L611.8,322.1L607.5,330.3L602.2,321.9L601.1,314.4L606.9,304.6L615.0,297.0L619.5,300.0L617.8,306.1Z"/>
+<path class="market-map-country is-market" data-map-country="PHL" d="M608.3,423.0L603.2,415.3L611.8,415.7L615.3,419.3L612.6,427.9L608.3,423.0ZM625.9,450.2L628.4,447.4L629.5,441.2L635.0,440.6L633.4,447.3L640.8,437.7L639.8,447.2L636.2,450.5L633.1,456.8L630.0,459.8L623.8,452.9L625.9,450.2ZM663.8,465.9L664.8,472.5L665.4,478.1L662.0,487.3L658.3,477.1L653.6,482.1L656.8,489.5L654.0,494.2L642.2,488.4L639.4,481.1L642.4,476.4L636.1,471.7L633.0,475.8L628.3,475.4L620.9,481.0L619.2,478.1L623.1,469.7L629.4,466.8L634.9,463.1L638.4,467.6L646.0,464.9L647.6,460.4L654.7,460.1L654.1,452.4L662.2,457.1L663.1,462.2L663.8,465.9ZM585.0,456.8L571.7,466.3L576.6,459.3L583.9,453.2L589.9,446.2L595.1,436.3L596.9,444.5L590.3,450.0L585.0,456.8ZM623.4,367.8L621.7,371.9L625.2,379.1L622.5,387.4L616.6,390.7L615.1,398.8L617.3,406.7L622.6,407.8L627.0,406.6L639.5,412.2L638.6,417.6L641.8,420.0L640.8,424.6L633.0,419.7L629.3,414.5L626.7,418.1L620.3,412.2L611.3,413.6L606.3,411.4L606.8,407.3L609.9,404.7L606.9,402.4L605.6,406.0L600.7,400.3L599.2,395.9L598.8,386.4L602.9,389.7L603.9,374.0L607.2,364.9L613.2,365.0L619.4,367.8L622.5,365.2L623.4,367.8ZM620.4,435.8L618.8,431.1L624.8,434.2L631.2,434.2L631.0,438.3L626.4,442.6L620.0,445.6L619.7,440.9L620.4,435.8ZM655.0,428.4L657.8,439.5L650.1,436.9L650.3,440.2L652.8,446.4L648.0,448.7L647.6,441.6L644.6,441.1L643.0,435.0L648.9,435.8L648.8,432.1L642.7,424.4L652.3,424.6L655.0,428.4Z"/>
+<path class="market-map-country is-market" data-map-country="MYS" d="M400.9,485.4L402.6,483.6L410.8,488.0L411.5,493.1L418.1,491.9L421.4,487.8L423.7,488.7L429.6,494.8L433.8,501.4L434.4,508.2L433.3,512.7L434.3,516.2L435.0,522.1L438.5,524.8L442.5,533.7L442.3,537.1L435.2,537.7L425.7,530.3L413.9,522.4L412.7,517.3L407.0,510.6L405.6,502.3L402.0,496.9L403.1,489.6L400.9,485.4ZM578.8,508.6L570.2,506.9L558.7,506.9L555.2,518.3L551.3,521.8L546.2,535.7L538.1,537.8L528.6,535.0L523.8,535.9L518.0,541.0L511.6,540.2L505.1,542.3L498.3,536.6L496.6,529.9L504.0,533.4L511.7,531.5L513.7,523.0L518.0,521.1L530.0,519.0L537.1,511.1L542.0,504.7L546.6,509.9L548.7,506.5L553.5,506.8L554.1,500.4L554.5,495.5L562.2,488.6L567.3,480.8L571.3,480.7L576.4,485.8L576.9,490.1L583.5,492.9L591.8,495.9L591.1,499.8L584.4,500.3L586.2,505.2L578.8,508.6Z"/>
+<path class="market-map-country" data-map-country="BRN" d="M554.5,495.5L554.1,500.4L553.5,506.8L548.7,506.5L546.6,509.9L542.0,504.7L546.0,501.0L554.5,495.5Z"/>
+<path class="market-map-country" data-map-country="JPN" d="M818.8,158.2L809.6,168.3L809.8,178.6L806.0,186.6L807.7,191.6L802.5,198.6L789.8,203.3L772.2,203.9L757.9,215.4L751.2,211.5L750.8,204.0L733.4,206.2L721.6,211.0L709.9,211.1L720.0,218.5L713.3,235.5L706.9,239.7L702.0,235.8L704.5,226.8L698.1,223.9L694.1,217.0L703.5,214.0L708.8,207.7L718.8,202.5L726.2,195.7L746.1,192.7L756.8,194.7L767.2,177.0L773.9,181.7L788.6,171.7L794.3,167.8L800.5,155.6L798.8,144.4L803.1,138.0L813.7,136.2L819.1,150.1L818.8,158.2ZM846.1,110.4L853.2,106.2L855.4,117.4L840.6,120.1L831.8,130.0L816.1,123.2L810.7,134.2L799.6,134.3L798.2,124.4L803.1,116.7L813.8,116.1L816.7,102.3L819.7,94.5L831.4,104.9L839.1,108.3L846.1,110.4ZM723.7,215.4L729.2,209.4L734.9,210.6L739.0,206.4L746.4,208.5L747.7,211.9L742.0,218.0L737.9,214.8L732.8,217.1L730.1,223.0L723.6,220.1L723.7,215.4Z"/>
+</g>
+                    <g class="market-map-routes">
+                                                                                                                                        <g data-map-route="CHN" class="market-map-route is-active" style="--route-delay: -0.7s">
+                                <path class="market-route-line" d="M 430 588 Q 490 309 440 200"/>
+                                <path class="market-route-flow" d="M 430 588 Q 490 309 440 200" pathLength="100"/>
+                            </g>
+                                                                                                            <g data-map-route="IND" class="market-map-route " style="--route-delay: -1.4s">
+                                <path class="market-route-line" d="M 430 588 Q 365 374 190 330"/>
+                                <path class="market-route-flow" d="M 430 588 Q 365 374 190 330" pathLength="100"/>
+                            </g>
+                                                                                                            <g data-map-route="PAK" class="market-map-route " style="--route-delay: -2.1s">
+                                <path class="market-route-line" d="M 430 588 Q 315 334 90 250"/>
+                                <path class="market-route-flow" d="M 430 588 Q 315 334 90 250" pathLength="100"/>
+                            </g>
+                                                                                                            <g data-map-route="BGD" class="market-map-route " style="--route-delay: -2.8s">
+                                <path class="market-route-line" d="M 430 588 Q 421.5 364 303 310"/>
+                                <path class="market-route-flow" d="M 430 588 Q 421.5 364 303 310" pathLength="100"/>
+                            </g>
+                                                                                                            <g data-map-route="KOR" class="market-map-route " style="--route-delay: -3.5s">
+                                <path class="market-route-line" d="M 430 588 Q 610 304 680 190"/>
+                                <path class="market-route-flow" d="M 430 588 Q 610 304 680 190" pathLength="100"/>
+                            </g>
+                                                                                                            <g data-map-route="TWN" class="market-map-route " style="--route-delay: -4.2s">
+                                <path class="market-route-line" d="M 430 588 Q 575 364 610 310"/>
+                                <path class="market-route-flow" d="M 430 588 Q 575 364 610 310" pathLength="100"/>
+                            </g>
+                                                                                                            <g data-map-route="THA" class="market-map-route " style="--route-delay: -4.9s">
+                                <path class="market-route-line" d="M 430 588 Q 475 404 410 390"/>
+                                <path class="market-route-flow" d="M 430 588 Q 475 404 410 390" pathLength="100"/>
+                            </g>
+                                                                                                            <g data-map-route="KHM" class="market-map-route " style="--route-delay: -5.6s">
+                                <path class="market-route-line" d="M 430 588 Q 495 420 450 422"/>
+                                <path class="market-route-flow" d="M 430 588 Q 495 420 450 422" pathLength="100"/>
+                            </g>
+                                                                                                            <g data-map-route="VNM" class="market-map-route " style="--route-delay: -6.3s">
+                                <path class="market-route-line" d="M 430 588 Q 510 399 480 380"/>
+                                <path class="market-route-flow" d="M 430 588 Q 510 399 480 380" pathLength="100"/>
+                            </g>
+                                                                                                            <g data-map-route="MYS" class="market-map-route " style="--route-delay: -7s">
+                                <path class="market-route-line" d="M 430 588 Q 480 464 420 510"/>
+                                <path class="market-route-flow" d="M 430 588 Q 480 464 420 510" pathLength="100"/>
+                            </g>
+                                                                                                            <g data-map-route="PHL" class="market-map-route " style="--route-delay: -7.7s">
+                                <path class="market-route-line" d="M 430 588 Q 585 424 630 430"/>
+                                <path class="market-route-flow" d="M 430 588 Q 585 424 630 430" pathLength="100"/>
+                            </g>
+                                            </g>
+                                                                    <g data-map-point="IDN" class="market-map-point  is-origin" transform="translate(430 588)">
+                            <circle class="market-point-ring" r="12"/>
+                            <circle class="market-point-core" r="4.5"/>
+                            <text class="market-point-label" y="-20" text-anchor="middle">Indonesia</text>
+                        </g>
+                                                                    <g data-map-point="CHN" class="market-map-point is-active " transform="translate(440 200)">
+                            <circle class="market-point-ring" r="12"/>
+                            <circle class="market-point-core" r="4.5"/>
+                            <text class="market-point-label" y="-20" text-anchor="middle">China</text>
+                        </g>
+                                                                    <g data-map-point="IND" class="market-map-point  " transform="translate(190 330)">
+                            <circle class="market-point-ring" r="12"/>
+                            <circle class="market-point-core" r="4.5"/>
+                            <text class="market-point-label" y="-20" text-anchor="middle">India</text>
+                        </g>
+                                                                    <g data-map-point="PAK" class="market-map-point  " transform="translate(90 250)">
+                            <circle class="market-point-ring" r="12"/>
+                            <circle class="market-point-core" r="4.5"/>
+                            <text class="market-point-label" y="-20" text-anchor="middle">Pakistan</text>
+                        </g>
+                                                                    <g data-map-point="BGD" class="market-map-point  " transform="translate(303 310)">
+                            <circle class="market-point-ring" r="12"/>
+                            <circle class="market-point-core" r="4.5"/>
+                            <text class="market-point-label" y="-20" text-anchor="middle">Bangladesh</text>
+                        </g>
+                                                                    <g data-map-point="KOR" class="market-map-point  " transform="translate(680 190)">
+                            <circle class="market-point-ring" r="12"/>
+                            <circle class="market-point-core" r="4.5"/>
+                            <text class="market-point-label" y="-20" text-anchor="middle">South Korea</text>
+                        </g>
+                                                                    <g data-map-point="TWN" class="market-map-point  " transform="translate(610 310)">
+                            <circle class="market-point-ring" r="12"/>
+                            <circle class="market-point-core" r="4.5"/>
+                            <text class="market-point-label" y="-20" text-anchor="middle">Taiwan</text>
+                        </g>
+                                                                    <g data-map-point="THA" class="market-map-point  " transform="translate(410 390)">
+                            <circle class="market-point-ring" r="12"/>
+                            <circle class="market-point-core" r="4.5"/>
+                            <text class="market-point-label" y="-20" text-anchor="middle">Thailand</text>
+                        </g>
+                                                                    <g data-map-point="KHM" class="market-map-point  " transform="translate(450 422)">
+                            <circle class="market-point-ring" r="12"/>
+                            <circle class="market-point-core" r="4.5"/>
+                            <text class="market-point-label" y="-20" text-anchor="middle">Cambodia</text>
+                        </g>
+                                                                    <g data-map-point="VNM" class="market-map-point  " transform="translate(480 380)">
+                            <circle class="market-point-ring" r="12"/>
+                            <circle class="market-point-core" r="4.5"/>
+                            <text class="market-point-label" y="-20" text-anchor="middle">Vietnam</text>
+                        </g>
+                                                                    <g data-map-point="MYS" class="market-map-point  " transform="translate(420 510)">
+                            <circle class="market-point-ring" r="12"/>
+                            <circle class="market-point-core" r="4.5"/>
+                            <text class="market-point-label" y="-20" text-anchor="middle">Malaysia</text>
+                        </g>
+                                                                    <g data-map-point="PHL" class="market-map-point  " transform="translate(630 430)">
+                            <circle class="market-point-ring" r="12"/>
+                            <circle class="market-point-core" r="4.5"/>
+                            <text class="market-point-label" y="-20" text-anchor="middle">Philippines</text>
+                        </g>
+                                        <text class="market-map-ocean" x="120" y="510" text-anchor="middle">INDIAN OCEAN</text>
+                    <text class="market-map-ocean" x="735" y="430" text-anchor="middle">PACIFIC OCEAN</text>
+                </svg>
+                <figcaption class="home-markets-caption">
+                    <div><span class="home-markets-caption-label">Explore the connection</span><strong>Indonesia <span aria-hidden="true">↗</span> <span data-market-destination>China</span></strong></div>
+                    <span class="home-markets-live"><span aria-hidden="true"></span>One region. Many opportunities.</span>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+    <!-- CSR & Environment Articles -->
+    <section id="home-csr" class="blog-section pt-150 pb-120 tl-bg-color" aria-labelledby="home-csr-heading">
+    <div class="container container-2">
+        <div class="row section-heading-wrap slide-anim" data-scroll-repeat>
+            <div class="shape"><img src="http://localhost:8000/assets/img/shapes/section-heading.png" alt="" aria-hidden="true"></div>
+            <div class="col-lg-4 col-md-12">
+                <div class="section-heading mb-0">
+                    <h4 class="sub-heading">Latest Update</h4>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 home-updates-heading d-flex justify-content-between align-items-end flex-wrap gap-4">
+                <div class="section-heading section-heading-2 mb-0">
+                    <h2 id="home-csr-heading" class="section-title cursor-effect title-2">CSR <span>ENVIRONMENT</span></h2>
+                    <p class="home-updates-description">Discover our efforts to support local communities and care for the environment. Through our CSR initiatives, we aim to create lasting value for people and future generations.</p>
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="http://localhost:8000/csr-environment" class="tl-primary-btn mt-2">View All <span class="icon"><i class="fa-regular fa-arrow-right" aria-hidden="true"></i></span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-40">
+                            <div class="col-lg-4 col-md-6 mb-40">
+                    <article class="post-card slide-anim" data-scroll-repeat data-direction="left" data-delay="0">
+                        <div class="post-thumb">
+                            <a href="http://localhost:8000/csr-environment/reforestation-program-restoring-mining-land">
+                                <img src="http://localhost:8000/storage/articles/thumbnails/kAFTN90299rQqp3RNlcIc5H8oJrteS2NEQLmLjjX.jpg"
+                                     alt="Reforestation Program: Restoring Mining Land to Its Natural State" loading="lazy" decoding="async">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li>Sep 06, 2026</li>
+                            </ul>
+                            <h3 class="title">
+                                <a href="http://localhost:8000/csr-environment/reforestation-program-restoring-mining-land">Reforestation Program: Restoring Mining Land to Its Natural State</a>
+                            </h3>
+                            <p>Our Commitment to Restoring NatureMining activities inevitably alter the landscape, but responsible...</p>
+                        </div>
+                    </article>
+                </div>
+                            <div class="col-lg-4 col-md-6 mb-40">
+                    <article class="post-card slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.08">
+                        <div class="post-thumb">
+                            <a href="http://localhost:8000/csr-environment/biodiversity-conservation-protecting-endemic-species">
+                                <img src="http://localhost:8000/storage/articles/thumbnails/SepIEIWT4LvNJawwLbK0l7X9EjVIAvhdgDGgq8sr.jpg"
+                                     alt="Biodiversity Conservation: Protecting Endemic Species in Our Operational Area" loading="lazy" decoding="async">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li>Aug 28, 2026</li>
+                            </ul>
+                            <h3 class="title">
+                                <a href="http://localhost:8000/csr-environment/biodiversity-conservation-protecting-endemic-species">Biodiversity Conservation: Protecting Endemic Species in Our Operational Area</a>
+                            </h3>
+                            <p>A Responsibility Beyond ComplianceOperating in the biodiverse rainforests of South Kalimantan demand...</p>
+                        </div>
+                    </article>
+                </div>
+                            <div class="col-lg-4 col-md-6 mb-40">
+                    <article class="post-card slide-anim" data-scroll-repeat data-direction="right" data-delay="0.16">
+                        <div class="post-thumb">
+                            <a href="http://localhost:8000/csr-environment/community-solar-program-powering-villages-clean-energy">
+                                <img src="http://localhost:8000/storage/articles/thumbnails/pfQQ4zTcKUQqUSC99MUQ6ZSmJAxiZh4yG2Yz3vkL.jpg"
+                                     alt="Community Solar Program: Powering 3 Villages with Clean Energy" loading="lazy" decoding="async">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li>Aug 25, 2026</li>
+                            </ul>
+                            <h3 class="title">
+                                <a href="http://localhost:8000/csr-environment/community-solar-program-powering-villages-clean-energy">Community Solar Program: Powering 3 Villages with Clean Energy</a>
+                            </h3>
+                            <p>Bringing Light to Remote CommunitiesThree villages adjacent to CDE&#039;s operational area — Desa Mangkau...</p>
+                        </div>
+                    </article>
+                </div>
+                    </div>
+    </div>
+</section>
+
+    <!-- Insights & Trends Articles -->
+    <section id="home-insights" class="gallary-section-2 home-insights-section pt-130 pb-130 overflow-hidden" aria-labelledby="home-insights-heading">
+    <div class="bg-img home-insights-background" aria-hidden="true"></div>
+    <div class="container container-2">
+        <div class="row align-items-center gy-5">
+            <div class="col-lg-4 col-md-12">
+                <div class="gallary-left-content home-insights-intro slide-anim" data-scroll-repeat data-direction="left">
+                    <div class="section-heading white-content mb-0">
+                        <h4 class="sub-heading">Latest Articles</h4>
+                        <h2 id="home-insights-heading" class="section-title cursor-effect title-2">Insights &amp;<br> <span>Trends</span></h2>
+                        <p>Explore perspectives on the coal industry, energy, and developments shaping the sector. Find insights and trends to help you understand the opportunities and challenges ahead.</p>
+                    </div>
+                    <a href="http://localhost:8000/insights-trends" class="tl-primary-btn white-btn home-insights-all">View All <span class="icon"><i class="fa-regular fa-arrow-right" aria-hidden="true"></i></span></a>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                                    <div class="gallary-carousel-wrap home-insights-rail slide-anim" data-scroll-repeat data-direction="right" data-delay="0.12">
+                        <div class="home-insights-slider swiper" aria-label="Insights &amp; Trends">
+                            <div class="swiper-wrapper">
+                                                                    <article class="swiper-slide home-insights-item" data-insights-article-id="22">
+                                        <a class="home-insights-card" href="http://localhost:8000/insights-trends/esg-reporting-standards-mining-sector-indonesia" aria-labelledby="home-insights-title-22">
+                                            <div class="home-insights-card-media">
+                                                                                                    <img class="home-insights-thumbnail" src="http://localhost:8000/storage/articles/thumbnails/ASIKs9p2Blv4yEaQjIxPjnKWdVWNL44ILb1kKtc1.jpg" alt="" loading="lazy" decoding="async">
+                                                                                            </div>
+                                            <div class="home-insights-card-content">
+                                                <h3 id="home-insights-title-22" class="home-insights-title">ESG Reporting Standards: What Indonesian Coal Miners Must Prepare For</h3>
+                                                <div class="home-insights-card-footer">
+                                                    <time datetime="2026-09-12">12 Sep 2026</time>
+                                                    <span class="home-insights-read">Read Article <i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </article>
+                                                                    <article class="swiper-slide home-insights-item" data-insights-article-id="24">
+                                        <a class="home-insights-card" href="http://localhost:8000/insights-trends/safety-culture-excellence-zero-harm-journey" aria-labelledby="home-insights-title-24">
+                                            <div class="home-insights-card-media">
+                                                                                                    <img class="home-insights-thumbnail" src="http://localhost:8000/storage/articles/thumbnails/SqUOhZeuVNIVQPdUoN6SaJ9mSI7R3KJszuYzN1oR.jpg" alt="" loading="lazy" decoding="async">
+                                                                                            </div>
+                                            <div class="home-insights-card-content">
+                                                <h3 id="home-insights-title-24" class="home-insights-title">Safety Culture Excellence: CDE&#039;s Journey Toward Zero Harm</h3>
+                                                <div class="home-insights-card-footer">
+                                                    <time datetime="2026-09-11">11 Sep 2026</time>
+                                                    <span class="home-insights-read">Read Article <i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </article>
+                                                                    <article class="swiper-slide home-insights-item" data-insights-article-id="20">
+                                        <a class="home-insights-card" href="http://localhost:8000/insights-trends/global-coal-demand-outlook-2025-2030" aria-labelledby="home-insights-title-20">
+                                            <div class="home-insights-card-media">
+                                                                                                    <img class="home-insights-thumbnail" src="http://localhost:8000/storage/articles/thumbnails/eKh5ZwqAEykeGQnYNqSr7FdbFVBbkgy8ZdiBC4yB.jpg" alt="" loading="lazy" decoding="async">
+                                                                                            </div>
+                                            <div class="home-insights-card-content">
+                                                <h3 id="home-insights-title-20" class="home-insights-title">Global Coal Demand Outlook 2025-2030: What Miners Need to Know</h3>
+                                                <div class="home-insights-card-footer">
+                                                    <time datetime="2026-08-20">20 Aug 2026</time>
+                                                    <span class="home-insights-read">Read Article <i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </article>
+                                                            </div>
+                        </div>
+                                                    <div class="swiper-arrow home-insights-navigation">
+                                <button class="swiper-nav home-insights-prev" type="button" aria-label="Previous article"><i class="fa-regular fa-arrow-left" aria-hidden="true"></i></button>
+                                <button class="swiper-nav home-insights-next" type="button" aria-label="Next article"><i class="fa-regular fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <section id="home-company" class="about-section-7 home-company-section pt-130 pb-130" aria-labelledby="home-company-heading">
+    <div class="container container-2">
+        <div class="row section-heading-wrap ml-0 mw-100 slide-anim" data-scroll-repeat>
+            <div class="shape"><img src="http://localhost:8000/assets/img/shapes/section-heading.png" alt="" aria-hidden="true"></div>
+            <div class="col-lg-4 col-md-12">
+                <div class="section-heading mb-0">
+                    <h4 class="sub-heading">About Us</h4>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="section-heading section-heading-2 mb-0">
+                    <h2 id="home-company-heading" class="section-title cursor-effect title-2">Our <span>Company</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row about-wrap-7">
+            <div class="col-lg-4">
+                <figure class="home-company-visual slide-anim" data-scroll-repeat data-direction="left">
+                    <img class="home-company-pit"
+                         src="http://localhost:8000/assets/img/bg-img/vision-mine-refined.webp"
+                         alt="Aerial view of an open-pit coal mine"
+                         width="1122" height="1402" loading="lazy" decoding="async">
+                </figure>
+            </div>
+            <div class="col-lg-8">
+                <div class="about-content-7">
+                    <div class="left-content home-company-copy slide-anim" data-scroll-repeat data-direction="right" data-delay="0.12">
+                        <p>PT. Cakrawala Dinamika Energi, PT. Cereno Energi Selaras, and PT. Mitra Padjadjaaran Prima are a group of Penanaman Modal Asing (PMA) coal mining company located in North Bengkulu, Bengkulu, Indonesia. We have a total mining concession rights of 6342 Hectares where PT. CDE has 2000 Hectares, PT. CES has 2342 Hectares and PT. MPP has 2000 Hectares respectively.</p>
+                        <p>PT. CDE commenced its mining operations since 2018 while PT. CES commenced its mining operations in 2019. Our vast experience as a mining contractor during our early years working in both Kalimantan and Bengkulu, have allowed us to manage and operate the coal mines effectively and sustainably.</p>
+                        <p>Both PT. CDE and PT. CES produces mainly the mid-calorific thermal coal of 4600 GAR (ARB) and 4800 GAR (ARB). Low sulphur content of less than 0.25% and Ash Fusion Temperature (AFT) of above 1300 degrees are some of the uniqueness of our coal.</p>
+                        <p>Good working principles and strong customers relationships have allowed us to export our thermal coal to both domestically and the international markets throughout Asia, mainly to countries like India, Pakistan, Thailand and Malaysia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <section id="home-bod" class="bod-section pt-130 pb-130 overflow-hidden" aria-labelledby="bod-heading">
+    <div class="container container-2">
+
+        
+        <div class="row section-heading-wrap ml-0 mw-100 slide-anim" data-scroll-repeat>
+            <div class="shape">
+                <img src="http://localhost:8000/assets/img/shapes/section-heading.png" alt="" aria-hidden="true">
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="section-heading mb-0">
+                    <h4 class="sub-heading">Our Leadership</h4>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="section-heading section-heading-2 mb-0">
+                    <h2 id="bod-heading" class="section-title cursor-effect title-2">
+                        Board of <span>Directors</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        <div class="row justify-content-center g-4 bod-grid">
+
+             
+            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-direction="left" data-delay="0.08">
+                <div class="bod-card">
+                    <div class="bod-img-wrap">
+                        <img
+                            src="http://localhost:8000/assets/img/images/DAVIDHENDRICKSIREGAR_COO_CDE.png"
+                            alt="David Hendrick Siregar"
+                            loading="lazy"
+                            decoding="async"
+                            class="bod-img"
+                        >
+                        <div class="bod-overlay">
+                            <span class="bod-overlay-role">Chief Operating Officer (COO)</span>
+                        </div>
+                    </div>
+                    <div class="bod-info">
+                        <h3 class="bod-name">David Hendrick Siregar</h3>
+                        <span class="bod-role">Chief Operating Officer (COO)</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.0">
+                <div class="bod-card">
+                    <div class="bod-img-wrap">
+                        <img
+                            src="http://localhost:8000/assets/img/images/ADITYA_RAHMAN_CEO_CDE.png"
+                            alt="Aditya Rahman"
+                            loading="lazy"
+                            decoding="async"
+                            class="bod-img"
+                        >
+                        <div class="bod-overlay">
+                            <span class="bod-overlay-role">Chief Executive Officer (CEO)</span>
+                        </div>
+                    </div>
+                    <div class="bod-info">
+                        <h3 class="bod-name">Aditya Rahman</h3>
+                        <span class="bod-role">Chief Executive Officer (CEO)</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-direction="right" data-delay="0.16">
+                <div class="bod-card">
+                    <div class="bod-img-wrap">
+                        <img
+                            src="http://localhost:8000/assets/img/images/AFANSURYADI_CSO_CCM_GROUP.png"
+                            alt="Afan Suryadi"
+                            loading="lazy"
+                            decoding="async"
+                            class="bod-img"
+                        >
+                        <div class="bod-overlay">
+                            <span class="bod-overlay-role">Chief Sales Officer (CSO)</span>
+                        </div>
+                    </div>
+                    <div class="bod-info">
+                        <h3 class="bod-name">Afan Suryadi</h3>
+                        <span class="bod-role">Chief Sales Officer (CSO)</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+</section>
+
+    
+    <section id="home-vision-mission" class="home-vision-mission" aria-labelledby="home-vision-mission-heading">
+    <div class="container container-2">
+        <div class="home-purpose-heading section-heading slide-anim" data-scroll-repeat data-direction="bottom">
+            <h4 class="sub-heading">About Us</h4>
+            <h2 id="home-vision-mission-heading" class="section-title">Our Vision &amp; <span>Mission</span></h2>
+        </div>
+
+        <div class="home-purpose-grid">
+            <article class="home-vision-card slide-anim" data-scroll-repeat aria-labelledby="home-vision-heading" data-direction="left">
+                <img class="home-vision-image" src="http://localhost:8000/assets/img/bg-img/vision-mining-sky.webp" alt="" width="1122" height="1402" loading="lazy" decoding="async">
+                <div class="home-vision-caption" aria-hidden="true"><span></span> North Bengkulu, Bengkulu, Indonesia</div>
+                <div class="home-vision-copy">
+                    <span class="home-vision-rule" aria-hidden="true"></span>
+                    <h3 id="home-vision-heading" class="home-vision-heading">Our Vision</h3>
+                    <p class="home-vision-statement">To become a global force that provides sustainable energy and investment solutions, creates national prosperity, advances society and preserves the earth.</p>
+                </div>
+            </article>
+            <div class="home-mission-panel">
+                <h3 id="home-mission-heading" class="home-mission-heading">Our Mission</h3>
+                <ol class="home-mission-list" aria-labelledby="home-mission-heading" role="list">
+                                            <li class="home-mission-item slide-anim" data-scroll-repeat data-direction="right" data-offset="32" data-delay="0">
+                            <span class="home-mission-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 10-12h-7l1-8Z"/></svg></span>
+                            <div class="home-mission-content">
+                                <p>Providing innovative, safe, and sustainable energy products, services, and solutions to meet the world&#039;s evolving needs.</p>
+                            </div>
+                        </li>
+                                            <li class="home-mission-item slide-anim" data-scroll-repeat data-direction="right" data-offset="32" data-delay="0.04">
+                            <span class="home-mission-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M5 15l5-5 4 3 6-8M15 5h5v5"/></svg></span>
+                            <div class="home-mission-content">
+                                <p>Investing strategically in value-added sectors that strengthen energy security and drive national economic growth.</p>
+                            </div>
+                        </li>
+                                            <li class="home-mission-item slide-anim" data-scroll-repeat data-direction="right" data-offset="32" data-delay="0.08">
+                            <span class="home-mission-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg></span>
+                            <div class="home-mission-content">
+                                <p>Improving the well-being of local communities through job creation, skills training, and empowerment programs.</p>
+                            </div>
+                        </li>
+                                            <li class="home-mission-item slide-anim" data-scroll-repeat data-direction="right" data-offset="32" data-delay="0.12">
+                            <span class="home-mission-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 3c-8-1-15 3-15 10a6 6 0 0 0 6 6c7 0 10-8 9-16ZM3 21l11-11"/></svg></span>
+                            <div class="home-mission-content">
+                                <p>Maintaining environmental sustainability by implementing environmentally friendly technologies and principles of social responsibility.</p>
+                            </div>
+                        </li>
+                                            <li class="home-mission-item slide-anim" data-scroll-repeat data-direction="right" data-offset="32" data-delay="0.16">
+                            <span class="home-mission-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7l-9-4ZM8 12l3 3 5-6"/></svg></span>
+                            <div class="home-mission-content">
+                                <p>Building a corporate culture based on integrity, team unity, compliance, and synergy to develop a resilient and dedicated team.</p>
+                            </div>
+                        </li>
+                                    </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Core Values: Antra service layout with the SUCCESS values -->
+    <section id="home-core-values" class="home-core-values" aria-labelledby="home-core-values-heading">
+    <div class="container container-2">
+        <div class="home-values-heading slide-anim" data-scroll-repeat data-offset="32" data-duration="0.85">
+            <div class="section-heading mb-0">
+                <h4 class="sub-heading">Our Culture</h4>
+                <h2 id="home-core-values-heading" class="section-title">Core <span>Values</span></h2>
+            </div>
+            <div class="home-values-wordmark" aria-hidden="true">SUCCESS<span></span></div>
+        </div>
+
+        <ul class="home-values-grid" role="list" tabindex="0" aria-labelledby="home-core-values-heading">
+                            <li class="home-value-item slide-anim" data-scroll-repeat data-direction="bottom" data-offset="36" data-duration="0.85" data-delay="0">
+                    <div class="home-value-card">
+                        <div class="home-value-top">
+                            <span class="home-value-letter" aria-hidden="true">S</span>
+                            <svg class="home-value-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4C12 2 4 6 4 13a7 7 0 0 0 7 7c7 0 10-8 9-16ZM4 20l10-10"/></svg>
+                        </div>
+                        <div class="home-value-content">
+                            <h3>Sustainability</h3>
+                            <p>Maintaining environmental sustainability and resources.</p>
+                        </div>
+                        <span class="home-value-accent" aria-hidden="true"></span>
+                    </div>
+                </li>
+                            <li class="home-value-item slide-anim" data-scroll-repeat data-direction="bottom" data-offset="36" data-duration="0.85" data-delay="0.07">
+                    <div class="home-value-card">
+                        <div class="home-value-top">
+                            <span class="home-value-letter" aria-hidden="true">U</span>
+                            <svg class="home-value-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg>
+                        </div>
+                        <div class="home-value-content">
+                            <h3>Unity</h3>
+                            <p>Strengthening togetherness, cohesion, and loyalty within the organization.</p>
+                        </div>
+                        <span class="home-value-accent" aria-hidden="true"></span>
+                    </div>
+                </li>
+                            <li class="home-value-item slide-anim" data-scroll-repeat data-direction="bottom" data-offset="36" data-duration="0.85" data-delay="0.14">
+                    <div class="home-value-card">
+                        <div class="home-value-top">
+                            <span class="home-value-letter" aria-hidden="true">C</span>
+                            <svg class="home-value-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-9-5.5-9-12a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-9 12-9 12ZM8 12h8M12 8v8"/></svg>
+                        </div>
+                        <div class="home-value-content">
+                            <h3>Contribution</h3>
+                            <p>Providing real benefits to society and the country.</p>
+                        </div>
+                        <span class="home-value-accent" aria-hidden="true"></span>
+                    </div>
+                </li>
+                            <li class="home-value-item slide-anim" data-scroll-repeat data-direction="bottom" data-offset="36" data-duration="0.85" data-delay="0.21">
+                    <div class="home-value-card">
+                        <div class="home-value-top">
+                            <span class="home-value-letter" aria-hidden="true">C</span>
+                            <svg class="home-value-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7l-9-4ZM8 12l3 3 5-6"/></svg>
+                        </div>
+                        <div class="home-value-content">
+                            <h3>Compliance</h3>
+                            <p>Comply with all laws, regulations and industry standards.</p>
+                        </div>
+                        <span class="home-value-accent" aria-hidden="true"></span>
+                    </div>
+                </li>
+                            <li class="home-value-item slide-anim" data-scroll-repeat data-direction="bottom" data-offset="36" data-duration="0.85" data-delay="0.28">
+                    <div class="home-value-card">
+                        <div class="home-value-top">
+                            <span class="home-value-letter" aria-hidden="true">E</span>
+                            <svg class="home-value-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg>
+                        </div>
+                        <div class="home-value-content">
+                            <h3>Excellence</h3>
+                            <p>Pursuing the best quality and performance without compromise.</p>
+                        </div>
+                        <span class="home-value-accent" aria-hidden="true"></span>
+                    </div>
+                </li>
+                            <li class="home-value-item slide-anim" data-scroll-repeat data-direction="bottom" data-offset="36" data-duration="0.85" data-delay="0.35">
+                    <div class="home-value-card">
+                        <div class="home-value-top">
+                            <span class="home-value-letter" aria-hidden="true">S</span>
+                            <svg class="home-value-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m10 13 4-4M8 16l-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0M16 8l1-1a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0"/></svg>
+                        </div>
+                        <div class="home-value-content">
+                            <h3>Synergy</h3>
+                            <p>Creating productive collaborations with partners and stakeholders.</p>
+                        </div>
+                        <span class="home-value-accent" aria-hidden="true"></span>
+                    </div>
+                </li>
+                            <li class="home-value-item slide-anim" data-scroll-repeat data-direction="bottom" data-offset="36" data-duration="0.85" data-delay="0.42">
+                    <div class="home-value-card">
+                        <div class="home-value-top">
+                            <span class="home-value-letter" aria-hidden="true">S</span>
+                            <svg class="home-value-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v4H8V3ZM8 5H5v16h14V5h-3M8 12h8M8 16h5"/></svg>
+                        </div>
+                        <div class="home-value-content">
+                            <h3>Standards</h3>
+                            <p>Conduct operations according to the highest mining, safety and operational standards.</p>
+                        </div>
+                        <span class="home-value-accent" aria-hidden="true"></span>
+                    </div>
+                </li>
+                    </ul>
+    </div>
+</section>
+
+    
+    <section id="home-photo-gallery" class="gallary-section home-photo-gallery" aria-labelledby="home-photo-gallery-heading">
+        <h2 id="home-photo-gallery-heading" class="visually-hidden">Photo Gallery</h2>
+        <div class="gallary-text" aria-hidden="true"><span>Gallery</span></div>
+
+                    <div class="gallary-wrap home-photo-gallery-row wrap-1">
+                <div class="gallery-scroll-wrap home-photo-gallery-full-row" style="--gallery-columns: 4">
+                                                                    <div class="gallary-scroll-item" data-gallery-photo-id="18">
+                            <a href="http://localhost:8000/storage/galleries/FnsgxmLPOzSkRFoxrC4lbJALMnm58XzstPCVjpxK.jpg" class="venobox home-photo-gallery-link"
+                               data-gall="home-photo-gallery" data-vbtype="image"
+                               title="Mine Exploration Activities" aria-label="Mine Exploration Activities">
+                                <img src="http://localhost:8000/storage/galleries/thumbnails/777d66de-8a8a-4d56-a091-f98d1061c6bb.jpg" alt="Mine Exploration Activities"
+                                     width="680" height="440" loading="lazy" decoding="async">
+                                <span class="home-photo-gallery-caption" aria-hidden="true">
+                                    <span>Mine Exploration Activities</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 12h8m-4-4v8"/></svg>
+                                </span>
+                            </a>
+                        </div>
+                                                                    <div class="gallary-scroll-item" data-gallery-photo-id="17">
+                            <a href="http://localhost:8000/storage/galleries/1536E2jPbMiPiqXOgkKXLyvnMeLcFgr3S1d5B4ZL.jpg" class="venobox home-photo-gallery-link"
+                               data-gall="home-photo-gallery" data-vbtype="image"
+                               title="Safety Talk K3" aria-label="Safety Talk K3">
+                                <img src="http://localhost:8000/storage/galleries/thumbnails/1e323fae-cf5c-4d52-8cfb-437bc99581ee.jpg" alt="Safety Talk K3"
+                                     width="680" height="440" loading="lazy" decoding="async">
+                                <span class="home-photo-gallery-caption" aria-hidden="true">
+                                    <span>Safety Talk K3</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 12h8m-4-4v8"/></svg>
+                                </span>
+                            </a>
+                        </div>
+                                                                    <div class="gallary-scroll-item" data-gallery-photo-id="16">
+                            <a href="http://localhost:8000/storage/galleries/UGj1xrEWkqtZBmWk3o2l9ykIATqY0X3kh1nsqGVF.jpg" class="venobox home-photo-gallery-link"
+                               data-gall="home-photo-gallery" data-vbtype="image"
+                               title="OHT 773E" aria-label="OHT 773E">
+                                <img src="http://localhost:8000/storage/galleries/thumbnails/67082098-7014-46df-aaf2-1a30a50a68f8.jpg" alt="OHT 773E"
+                                     width="680" height="440" loading="lazy" decoding="async">
+                                <span class="home-photo-gallery-caption" aria-hidden="true">
+                                    <span>OHT 773E</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 12h8m-4-4v8"/></svg>
+                                </span>
+                            </a>
+                        </div>
+                                                                    <div class="gallary-scroll-item" data-gallery-photo-id="15">
+                            <a href="http://localhost:8000/storage/galleries/NPtNmwjZuS1iC3a3WPGNHfYRumXZdYsYPF3aVSkO.jpg" class="venobox home-photo-gallery-link"
+                               data-gall="home-photo-gallery" data-vbtype="image"
+                               title="Fleet Training" aria-label="Fleet Training">
+                                <img src="http://localhost:8000/storage/galleries/thumbnails/330bace9-3686-45ee-a669-9e1b0003c425.jpg" alt="Fleet Training"
+                                     width="680" height="440" loading="lazy" decoding="async">
+                                <span class="home-photo-gallery-caption" aria-hidden="true">
+                                    <span>Fleet Training</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 12h8m-4-4v8"/></svg>
+                                </span>
+                            </a>
+                        </div>
+                                    </div>
+            </div>
+                    <div class="gallary-wrap home-photo-gallery-row gallery-scroll-direction-ltr">
+                <div class="gallery-scroll-wrap home-photo-gallery-full-row" style="--gallery-columns: 4">
+                                                                    <div class="gallary-scroll-item" data-gallery-photo-id="14">
+                            <a href="http://localhost:8000/storage/galleries/RgxBNiJlJ3UNHnBJ9srncCpzbRgscbJwq73hFk45.jpg" class="venobox home-photo-gallery-link"
+                               data-gall="home-photo-gallery" data-vbtype="image"
+                               title="Safety Talk K3" aria-label="Safety Talk K3">
+                                <img src="http://localhost:8000/storage/galleries/thumbnails/f0cebad8-cf54-4b07-8333-cd6c2035f152.jpg" alt="Safety Talk K3"
+                                     width="680" height="440" loading="lazy" decoding="async">
+                                <span class="home-photo-gallery-caption" aria-hidden="true">
+                                    <span>Safety Talk K3</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 12h8m-4-4v8"/></svg>
+                                </span>
+                            </a>
+                        </div>
+                                                                    <div class="gallary-scroll-item" data-gallery-photo-id="13">
+                            <a href="http://localhost:8000/storage/galleries/tfnNsHZvEM4ytnS0DaNzCUIrkCWKOYu3vGZGhkbf.jpg" class="venobox home-photo-gallery-link"
+                               data-gall="home-photo-gallery" data-vbtype="image"
+                               title="Visit to SDN 204 North Bengkulu" aria-label="Visit to SDN 204 North Bengkulu">
+                                <img src="http://localhost:8000/storage/galleries/thumbnails/b1c243eb-3b52-4bf1-82e1-a1f7790386b7.jpg" alt="Visit to SDN 204 North Bengkulu"
+                                     width="680" height="440" loading="lazy" decoding="async">
+                                <span class="home-photo-gallery-caption" aria-hidden="true">
+                                    <span>Visit to SDN 204 North Bengkulu</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 12h8m-4-4v8"/></svg>
+                                </span>
+                            </a>
+                        </div>
+                                                                    <div class="gallary-scroll-item" data-gallery-photo-id="12">
+                            <a href="http://localhost:8000/storage/galleries/JkuVZUodl9c2SV8UGQweOE96Cfqm4Ktyj7gjTNKW.jpg" class="venobox home-photo-gallery-link"
+                               data-gall="home-photo-gallery" data-vbtype="image"
+                               title="Mine Exploration Activities" aria-label="Mine Exploration Activities">
+                                <img src="http://localhost:8000/storage/galleries/thumbnails/0ce88b3c-3282-4692-9002-1ccb246cc174.jpg" alt="Mine Exploration Activities"
+                                     width="680" height="440" loading="lazy" decoding="async">
+                                <span class="home-photo-gallery-caption" aria-hidden="true">
+                                    <span>Mine Exploration Activities</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 12h8m-4-4v8"/></svg>
+                                </span>
+                            </a>
+                        </div>
+                                                                    <div class="gallary-scroll-item" data-gallery-photo-id="11">
+                            <a href="http://localhost:8000/storage/galleries/yBHu3PkJ7FyTrGZd15WsmJhyBE6zgtz4uzLzzOch.jpg" class="venobox home-photo-gallery-link"
+                               data-gall="home-photo-gallery" data-vbtype="image"
+                               title="Open Pit Mining" aria-label="Open Pit Mining">
+                                <img src="http://localhost:8000/storage/galleries/thumbnails/1bf8f2df-df3c-43c3-82b8-e35fc606fd59.jpg" alt="Open Pit Mining"
+                                     width="680" height="440" loading="lazy" decoding="async">
+                                <span class="home-photo-gallery-caption" aria-hidden="true">
+                                    <span>Open Pit Mining</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 12h8m-4-4v8"/></svg>
+                                </span>
+                            </a>
+                        </div>
+                                    </div>
+            </div>
+            </section>
+            </main>
+
+            <!-- Footer Section -->
+            <!-- Company Footer -->
+<footer class="footer-section company-footer overflow-hidden">
+    <div class="footer-bg" aria-hidden="true">
+        <picture>
+            <source media="(max-width: 767px)" srcset="http://localhost:8000/assets/img/bg-img/footer-mine-mobile.webp">
+            <img src="http://localhost:8000/assets/img/bg-img/footer-mine.webp" alt="" width="1920" height="1440" loading="lazy" decoding="async">
+        </picture>
+    </div>
+    <div class="footer-shade" aria-hidden="true"></div>
+    <div class="container container-2">
+        <div class="row footer-wrap">
+
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                    <div class="widget-header">
+                        <div class="footer-logo">
+                            <a href="http://localhost:8000">
+                                                                    <img src="https://hanara.learnbydoing.site/storage/settings/aX52Nv7nRcWshuMfgAcaecDasna7eJfi3FF2mpO3.png" alt="PT Cakrawala Dinamika Energi">
+                                                            </a>
+                        </div>
+                    </div>
+                                                                <p class="footer-location mb-0 footer-muted">Jakarta Office :
+Rukan Cordoba Blok C No. 20
+Kel. Kamal Muara, Kec. Penjaringan
+PIK - Jakarta Utara
+
+Bengkulu Mine Office :
+Ds. Air Sebayur
+Kec. Pinang Raya, Kab. Bengkulu Utara
+Bengkulu</p>
+                                                                <p class="mb-0 footer-muted">Jakarta Utara</p>
+                                    </div>
+            </div>
+
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget footer-col-2">
+                    <h4 class="text-white mb-20" style="font-size: 18px;">Quick Links</h4>
+                    <ul class="footer-list">
+                        <li><a href="http://localhost:8000">Home</a></li>
+                        <li><a href="http://localhost:8000/about-us/awards-certificates">Awards &amp; Certification</a></li>
+                        <li><a href="http://localhost:8000/about-us/photo-gallery">Gallery</a></li>
+                        <li><a href="http://localhost:8000/careers">Careers</a></li>
+                        <li><a href="http://localhost:8000/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget footer-col-2">
+                    <h4 class="text-white mb-20" style="font-size: 18px;">Coal Products</h4>
+                    <ul class="footer-list">
+                                                    <li>
+                                <a href="http://localhost:8000/coal-products/cde-gar-5200">CDE GAR 5200</a>
+                            </li>
+                                                    <li>
+                                <a href="http://localhost:8000/coal-products/cde-gar-5100">CDE GAR 5100</a>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+
+            
+                        <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                    <h4 class="text-white mb-20" style="font-size: 18px;">Contact Us</h4>
+                    <div class="footer-address">
+                                                    <a class="number" href="tel:+622122338024">(+62 21) 2233 8024</a>
+                                                                            <a class="mail" href="mailto:info@cde-coal.com">info@cde-coal.com</a>
+                                                                                                    <ul class="social-list">
+                                                                    <li>
+                                        <a href="https://facebook.com/hanaracms" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://instagram.com/hanaracms" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://linkedin.com/company/hanaracms" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://youtube.com/@hanaracms" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                                            </ul>
+                                            </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="copyright-area">
+        <div class="container">
+            <div class="copyright-content text-center">
+                <p>&copy; 2026 PT Cakrawala Dinamika Energi. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-text" aria-hidden="true"><span>CDE</span></div>
+</footer>
+        </div>
+    </div>
+
+    <!-- Vendor JavaScripts (jQuery, GSAP, Swiper, etc.) -->
+    <script src="http://localhost:8000/assets/js/vendor/jquary-3.7.1.min.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/bootstrap-bundle.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/imagesloaded-pkgd.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/waypoints.min.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/venobox.min.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/odometer.min.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/meanmenu.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/jquery.isotope.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/swiper.min.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/split-type.min.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/gsap.min.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/scroll-trigger.min.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/jquery.carouselTicker.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/nice-select.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/jquery.event.move.min.js"></script>
+    <script src="http://localhost:8000/assets/js/vendor/jquery.twentytwenty.min.js"></script>
+
+    <!-- Public Vite Script (includes template main.js & Alpine.js) -->
+    <link rel="modulepreload" as="script" href="http://localhost:8000/build/assets/public-CVoify3v.js" /><link rel="modulepreload" as="script" href="http://localhost:8000/build/assets/module.esm-DpVG9Kh7.js" /><script type="module" src="http://localhost:8000/build/assets/public-CVoify3v.js"></script>
+    </body>
+</html>

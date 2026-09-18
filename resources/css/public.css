@@ -18,6 +18,7 @@
 @import './public-careers.css';
 @import 'lenis/dist/lenis.css';
 @import './typography.css';
+@import './public-markets.css';
 
 /* ==========================================================================
    Brand Green Theme Customization with Gradient
@@ -160,7 +161,10 @@
 }
 
 .company-footer .footer-wrap { padding: 100px 0 72px; }
-.company-footer .footer-widget .footer-muted { color: #c2d2c7; line-height: 1.8; }
+.company-footer .footer-widget .footer-muted { color: #fff; line-height: 1.8; }
+.company-footer .footer-widget .footer-logo { width: 200px; max-width: 100%; }
+.company-footer .footer-logo a { display: block; }
+.company-footer .footer-logo img { display: block; width: 100%; height: auto; }
 .company-footer .footer-widget.footer-col-2 { padding-left: clamp(0px, 2.5vw, 48px); }
 .company-footer .footer-widget .social-list { margin-top: 36px; gap: 10px; }
 .company-footer .social-list li:not(:last-of-type) { margin-right: 0; padding-right: 0; }
@@ -212,7 +216,12 @@
     width: fit-content;
     max-width: 100%;
     overflow-wrap: anywhere;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
 }
+
+.company-footer .footer-address .number { margin-bottom: 12px; }
 
 @media (max-width: 991px) {
     .company-footer .footer-wrap { padding: 72px 0 32px; row-gap: 40px; }
@@ -225,8 +234,6 @@
     .company-footer .footer-wrap { padding: 56px 8px 40px; row-gap: 32px; }
     .company-footer .footer-bg img { object-position: 55% center; }
     .company-footer .footer-bg::before { background: linear-gradient(180deg, rgba(4, 34, 24, 0.94), rgba(4, 34, 24, 0.84) 70%, rgba(4, 34, 24, 0.6)); }
-    .company-footer .footer-address .number,
-    .company-footer .footer-address .mail { font-size: clamp(20px, 5vw, 26px); }
     .company-footer .copyright-area { padding: 24px 16px; }
     .company-footer .footer-text { font-size: clamp(180px, 40vw, 300px); }
 }
