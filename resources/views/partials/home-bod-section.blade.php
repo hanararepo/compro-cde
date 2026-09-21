@@ -101,7 +101,7 @@
                 <div class="bod-card">
                     <div class="bod-img-wrap">
                         <img
-                            src="{{ asset('assets/img/images/YANTO_CAO_CDECES.png') }}"
+                            src="{{ asset('assets/img/images/YANTO_CAO_CDECES1.png') }}"
                             alt="Nama BOD 4"
                             loading="lazy"
                             decoding="async"
