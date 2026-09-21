@@ -79,7 +79,7 @@
                 <div class="bod-card">
                     <div class="bod-img-wrap">
                         <img
-                            src="{{ asset('assets/img/images/ADITYA_RAHMAN_CEO_CDE.png') }}"
+                            src="{{ asset('assets/img/images/ADITYARAHMAN_CEO_CDE.png') }}"
                             alt="Aditya Rahman"
                             loading="lazy"
                             decoding="async"
