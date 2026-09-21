@@ -24,33 +24,58 @@
         </div>
         {{-- ./ Section Heading --}}
 
-        {{-- BOD Cards Grid --}}
-        <div class="row justify-content-center g-4 bod-grid">
-
-             {{-- BOD Member 1 --}}
-            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-direction="left" data-delay="0.08">
-                <div class="bod-card">
+        {{-- Commissioner Row --}}
+        <div class="row justify-content-center bod-grid">
+            <div class="col-xl-4 col-lg-5 col-md-7 col-sm-9 slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.0">
+                <div class="bod-card bod-card--commissioner">
                     <div class="bod-img-wrap">
                         <img
-                            src="{{ asset('assets/img/images/DAVIDHENDRICKSIREGAR_COO_CDE.png') }}"
-                            alt="David Hendrick Siregar"
+                            src="{{ asset('assets/img/images/LEE_EE_MEING_COMISSIONER_CDE_CES.png') }}"
+                            alt="Commissioner"
                             loading="lazy"
                             decoding="async"
                             class="bod-img"
                         >
                         <div class="bod-overlay">
-                            <span class="bod-overlay-role">Chief Operating Officer (COO)</span>
+                            <span class="bod-overlay-role">Commissioner</span>
                         </div>
                     </div>
                     <div class="bod-info">
-                        <h3 class="bod-name">David Hendrick Siregar</h3>
-                        <span class="bod-role">Chief Operating Officer (COO)</span>
+                        <h3 class="bod-name">Lee Ee Meing</h3>
+                        <span class="bod-role">Commissioner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- ./ Commissioner Row --}}
+
+        {{-- BOD Cards Grid (4 members) --}}
+        <div class="row justify-content-center g-4 bod-grid bod-grid--members">
+
+            {{-- BOD Member 1 --}}
+            <div class="col-xl-3 col-md-6 slide-anim" data-scroll-repeat data-direction="left" data-delay="0.08">
+                 <div class="bod-card">
+                    <div class="bod-img-wrap">
+                        <img
+                            src="{{ asset('assets/img/images/YANTO_CAO_CDE_CES.png') }}"
+                            alt="Nama BOD 4"
+                            loading="lazy"
+                            decoding="async"
+                            class="bod-img"
+                        >
+                        <div class="bod-overlay">
+                            <span class="bod-overlay-role">Chief Administrative Officer (CAO)</span>
+                        </div>
+                    </div>
+                    <div class="bod-info">
+                        <h3 class="bod-name">Yanto</h3>
+                        <span class="bod-role">Chief Administrative Officer(CAO)</span>
                     </div>
                 </div>
             </div>
 
             {{-- BOD Member 2 --}}
-            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.0">
+            <div class="col-xl-3 col-md-6 slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.0">
                 <div class="bod-card">
                     <div class="bod-img-wrap">
                         <img
@@ -72,7 +97,29 @@
             </div>
 
             {{-- BOD Member 3 --}}
-            <div class="col-xl-4 col-md-6 slide-anim" data-scroll-repeat data-direction="right" data-delay="0.16">
+            <div class="col-xl-3 col-md-6 slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.08">
+               <div class="bod-card">
+                    <div class="bod-img-wrap">
+                        <img
+                            src="{{ asset('assets/img/images/DAVIDHENDRICKSIREGAR_COO_CDE.png') }}"
+                            alt="David Hendrick Siregar"
+                            loading="lazy"
+                            decoding="async"
+                            class="bod-img"
+                        >
+                        <div class="bod-overlay">
+                            <span class="bod-overlay-role">Chief Operating Officer (COO)</span>
+                        </div>
+                    </div>
+                    <div class="bod-info">
+                        <h3 class="bod-name">David Hendrick Siregar</h3>
+                        <span class="bod-role">Chief Operating Officer (COO)</span>
+                    </div>
+                </div>
+            </div>
+
+            {{-- BOD Member 4 --}}
+            <div class="col-xl-3 col-md-6 slide-anim" data-scroll-repeat data-direction="right" data-delay="0.16">
                 <div class="bod-card">
                     <div class="bod-img-wrap">
                         <img
@@ -90,9 +137,7 @@
                         <h3 class="bod-name">Afan Suryadi</h3>
                         <span class="bod-role">Chief Sales Officer (CSO)</span>
                     </div>
-                </div>
-            </div>
-
+                </div>    
         </div>
         {{-- ./ BOD Cards Grid --}}
 
