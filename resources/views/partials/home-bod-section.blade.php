@@ -54,32 +54,10 @@
 
             {{-- BOD Member 1 --}}
             <div class="col-xl-3 col-md-6 slide-anim" data-scroll-repeat data-direction="left" data-delay="0.08">
-                 <div class="bod-card">
-                    <div class="bod-img-wrap">
-                        <img
-                            src="{{ asset('assets/img/images/YANTO_CAO_CDE_CES.png') }}"
-                            alt="Nama BOD 4"
-                            loading="lazy"
-                            decoding="async"
-                            class="bod-img"
-                        >
-                        <div class="bod-overlay">
-                            <span class="bod-overlay-role">Chief Administrative Officer (CAO)</span>
-                        </div>
-                    </div>
-                    <div class="bod-info">
-                        <h3 class="bod-name">Yanto</h3>
-                        <span class="bod-role">Chief Administrative Officer(CAO)</span>
-                    </div>
-                </div>
-            </div>
-
-            {{-- BOD Member 2 --}}
-            <div class="col-xl-3 col-md-6 slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.0">
                 <div class="bod-card">
                     <div class="bod-img-wrap">
                         <img
-                            src="{{ asset('assets/img/images/ADITYARAHMAN_CEO_CDE.png') }}"
+                            src="{{ asset('assets/img/images/ADITYARAHMAN_CEO_CDE1.png') }}"
                             alt="Aditya Rahman"
                             loading="lazy"
                             decoding="async"
@@ -96,9 +74,9 @@
                 </div>
             </div>
 
-            {{-- BOD Member 3 --}}
-            <div class="col-xl-3 col-md-6 slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.08">
-               <div class="bod-card">
+            {{-- BOD Member 2 --}}
+            <div class="col-xl-3 col-md-6 slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.0">
+                <div class="bod-card">
                     <div class="bod-img-wrap">
                         <img
                             src="{{ asset('assets/img/images/DAVIDHENDRICKSIREGAR_COO_CDE.png') }}"
@@ -118,12 +96,34 @@
                 </div>
             </div>
 
+            {{-- BOD Member 3 --}}
+            <div class="col-xl-3 col-md-6 slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.08">
+                <div class="bod-card">
+                    <div class="bod-img-wrap">
+                        <img
+                            src="{{ asset('assets/img/images/YANTO_CAO_CDECES.png') }}"
+                            alt="Nama BOD 4"
+                            loading="lazy"
+                            decoding="async"
+                            class="bod-img"
+                        >
+                        <div class="bod-overlay">
+                            <span class="bod-overlay-role">Chief Administrative Officer (CAO)</span>
+                        </div>
+                    </div>
+                    <div class="bod-info">
+                        <h3 class="bod-name">Yanto</h3>
+                        <span class="bod-role">Chief Administrative Officer(CAO)</span>
+                    </div>
+                </div>
+            </div>
+
             {{-- BOD Member 4 --}}
             <div class="col-xl-3 col-md-6 slide-anim" data-scroll-repeat data-direction="right" data-delay="0.16">
                 <div class="bod-card">
                     <div class="bod-img-wrap">
                         <img
-                            src="{{ asset('assets/img/images/AFANSURYADI_CSO_CCM_GROUP.png') }}"
+                            src="{{ asset('assets/img/images/AFANSURYADI_CSO_CCM.png') }}"
                             alt="Afan Suryadi"
                             loading="lazy"
                             decoding="async"
@@ -137,7 +137,7 @@
                         <h3 class="bod-name">Afan Suryadi</h3>
                         <span class="bod-role">Chief Sales Officer (CSO)</span>
                     </div>
-                </div>    
+                </div>
         </div>
         {{-- ./ BOD Cards Grid --}}
 
