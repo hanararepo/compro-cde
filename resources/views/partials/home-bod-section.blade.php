@@ -1,6 +1,4 @@
-{{-- Board of Directors Section
-     Menggunakan style card dari Antra Pages Team template.
---}}
+{{-- Board of Directors --}}
 <section id="home-bod" class="bod-section pt-130 pb-130 overflow-hidden" aria-labelledby="bod-heading">
     <div class="container container-2">
 
@@ -26,23 +24,20 @@
 
         {{-- Commissioner Row --}}
         <div class="row justify-content-center bod-grid">
-            <div class="col-xl-4 col-lg-5 col-md-7 col-sm-9 slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.0">
+            <div class="col-xl-7 col-lg-8 col-md-10 slide-anim" data-scroll-repeat data-direction="bottom" data-delay="0.0">
                 <div class="bod-card bod-card--commissioner">
                     <div class="bod-img-wrap">
                         <img
                             src="{{ asset('assets/img/images/LEE_EE_MEING_COMISSIONER_CDE_CES.png') }}"
-                            alt="Commissioner"
+                            alt="Lee Ee Meing"
                             loading="lazy"
                             decoding="async"
                             class="bod-img"
                         >
-                        <div class="bod-overlay">
-                            <span class="bod-overlay-role">Commissioner</span>
-                        </div>
                     </div>
                     <div class="bod-info">
+                        <span class="bod-commissioner-label">Commissioner</span>
                         <h3 class="bod-name">Lee Ee Meing</h3>
-                        <span class="bod-role">Commissioner</span>
                     </div>
                 </div>
             </div>
@@ -63,9 +58,7 @@
                             decoding="async"
                             class="bod-img"
                         >
-                        <div class="bod-overlay">
-                            <span class="bod-overlay-role">Chief Executive Officer (CEO)</span>
-                        </div>
+                        <span class="bod-badge" aria-hidden="true">CEO</span>
                     </div>
                     <div class="bod-info">
                         <h3 class="bod-name">Aditya Rahman</h3>
@@ -85,9 +78,7 @@
                             decoding="async"
                             class="bod-img"
                         >
-                        <div class="bod-overlay">
-                            <span class="bod-overlay-role">Chief Operating Officer (COO)</span>
-                        </div>
+                        <span class="bod-badge" aria-hidden="true">COO</span>
                     </div>
                     <div class="bod-info">
                         <h3 class="bod-name">David Hendrick Siregar</h3>
@@ -102,18 +93,16 @@
                     <div class="bod-img-wrap">
                         <img
                             src="{{ asset('assets/img/images/YANTO_CAO_CDECES1.png') }}"
-                            alt="Nama BOD 4"
+                            alt="Yanto"
                             loading="lazy"
                             decoding="async"
                             class="bod-img"
                         >
-                        <div class="bod-overlay">
-                            <span class="bod-overlay-role">Chief Administrative Officer (CAO)</span>
-                        </div>
+                        <span class="bod-badge" aria-hidden="true">CAO</span>
                     </div>
                     <div class="bod-info">
                         <h3 class="bod-name">Yanto</h3>
-                        <span class="bod-role">Chief Administrative Officer(CAO)</span>
+                        <span class="bod-role">Chief Administrative Officer (CAO)</span>
                     </div>
                 </div>
             </div>
@@ -129,15 +118,14 @@
                             decoding="async"
                             class="bod-img"
                         >
-                        <div class="bod-overlay">
-                            <span class="bod-overlay-role">Chief Sales Officer (CSO)</span>
-                        </div>
+                        <span class="bod-badge" aria-hidden="true">CSO</span>
                     </div>
                     <div class="bod-info">
                         <h3 class="bod-name">Afan Suryadi</h3>
                         <span class="bod-role">Chief Sales Officer (CSO)</span>
                     </div>
                 </div>
+            </div>
         </div>
         {{-- ./ BOD Cards Grid --}}
 
