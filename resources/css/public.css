@@ -3943,7 +3943,7 @@ body:has(.cursor-effect:hover) .mt-cursor {
     order: 1;
     width: 48px;
     margin: 2px 0 0;
-    background: var(--bod-gold);
+    background: var(--tl-color-theme-primary);
 }
 
 .bod-card--commissioner .bod-info::after {
