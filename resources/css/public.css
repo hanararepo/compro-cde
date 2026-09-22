@@ -3827,7 +3827,11 @@ body:has(.cursor-effect:hover) .mt-cursor {
 
 .bod-card--commissioner .bod-img-wrap {
     flex: 0 0 46%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 5;
+}
+
+.bod-card--commissioner .bod-img {
+    object-position: center 20%;
 }
 
 .bod-img {
@@ -3923,15 +3927,15 @@ body:has(.cursor-effect:hover) .mt-cursor {
 
 .bod-commissioner-label {
     display: inline-block;
-    padding: 7px 14px;
-    border: 1px solid #d9ca9f;
-    border-radius: 30px;
-    background: #fbf8ef;
-    color: #80672f;
+    padding: 7px 12px;
+    border: 1px solid #d2e5ce;
+    border-radius: 6px;
+    background: #f3faef;
+    color: #28713a;
     font-size: 10px;
     font-weight: 600;
     line-height: 1.5;
-    letter-spacing: 2px;
+    letter-spacing: 1.6px;
     text-transform: uppercase;
 }
 
