@@ -312,14 +312,7 @@
           cursor.css("opacity", "1");
         });
 
-      // NEW: hero text effect
-      $("body")
-        .on("mouseenter.cursor", ".cursor-effect", function () {
-          cursor.addClass("cursor-lg cursor-blend");
-        })
-        .on("mouseleave.cursor", ".cursor-effect", function () {
-          cursor.removeClass("cursor-lg cursor-blend");
-        });
+
 
       window.destroyCustomCursor = function () {
         $(window).off(".cursor");

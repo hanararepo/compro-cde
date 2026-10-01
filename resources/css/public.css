@@ -3042,78 +3042,7 @@ a:hover {
     }
 }
 
-/* ==========================================================================
-   Heading Cursor Lens Overlay
-   Menyediakan efek kursor pembesar / invert yang mulus tanpa distorsi warna
-   (teks hijau tidak menjadi pink seperti pada mix-blend-mode: difference).
-   ========================================================================== */
-/* Pastikan heading dengan cursor-effect tidak meng-clip lens di tepian */
-.cursor-effect {
-    position: relative !important;
-    overflow: visible !important;
-}
 
-.cursor-lens-overlay {
-    position: absolute !important;
-    top: -60px !important;
-    left: -60px !important;
-    right: -60px !important;
-    bottom: -60px !important;
-    padding: 60px !important;
-    box-sizing: border-box !important;
-    font-family: inherit !important;
-    font-size: inherit !important;
-    font-weight: inherit !important;
-    line-height: inherit !important;
-    letter-spacing: inherit !important;
-    text-transform: inherit !important;
-    text-align: inherit !important;
-    pointer-events: none !important;
-    background-color: #000000 !important;
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
-    clip-path: circle(38px at var(--lens-x, -9999px) var(--lens-y, -9999px));
-    -webkit-clip-path: circle(38px at var(--lens-x, -9999px) var(--lens-y, -9999px));
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transition: opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0.2s !important;
-    z-index: 10 !important;
-    user-select: none !important;
-}
-
-/* Tampilkan HANYA ketika cursor-effect sedang di-hover */
-.cursor-effect:hover>.cursor-lens-overlay {
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-.section-heading .section-title .cursor-lens-overlay,
-.section-heading .section-title .cursor-lens-overlay *,
-.section-heading .section-title .cursor-lens-overlay span,
-.cursor-effect .cursor-lens-overlay,
-.cursor-effect .cursor-lens-overlay *,
-.cursor-effect .cursor-lens-overlay span,
-.cursor-lens-overlay,
-.cursor-lens-overlay * {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
-}
-
-/* Heading di section dengan background gelap */
-.section-heading.white-content .section-title .cursor-lens-overlay,
-.section-heading.white-content .section-title .cursor-lens-overlay *,
-.section-heading.white-content .section-title .cursor-lens-overlay span,
-.cursor-lens-overlay.is-dark-heading,
-.cursor-lens-overlay.is-dark-heading * {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000 !important;
-}
-
-/* Sembunyikan dot kursor bawaan saat heading di-hover */
-body:has(.cursor-effect:hover) .mt-cursor {
-    opacity: 0 !important;
-}
 
 /* ==========================================================================
    About Us — Photo Gallery (Antra Style 2)
