@@ -159,6 +159,19 @@ class SettingService
             // Appearance (Dashboard Theme)
             ['key' => 'admin_accent_color', 'group' => 'appearance', 'type' => 'select', 'label' => 'Admin Accent Color', 'default' => 'emerald'],
             ['key' => 'admin_sidebar_theme', 'group' => 'appearance', 'type' => 'select', 'label' => 'Sidebar Background Theme', 'default' => 'brand_dark'],
+
+            // Homepage Section Visibility
+            ['key' => 'homepage_section_hero', 'group' => 'homepage', 'type' => 'boolean', 'label' => 'Hero Slider', 'default' => '1'],
+            ['key' => 'homepage_section_video', 'group' => 'homepage', 'type' => 'boolean', 'label' => 'Video Gallery', 'default' => '1'],
+            ['key' => 'homepage_section_coal', 'group' => 'homepage', 'type' => 'boolean', 'label' => 'Coal Products & Quality', 'default' => '1'],
+            ['key' => 'homepage_section_markets', 'group' => 'homepage', 'type' => 'boolean', 'label' => 'Markets', 'default' => '1'],
+            ['key' => 'homepage_section_csr', 'group' => 'homepage', 'type' => 'boolean', 'label' => 'CSR & Environment', 'default' => '1'],
+            ['key' => 'homepage_section_insights', 'group' => 'homepage', 'type' => 'boolean', 'label' => 'Insights & Trends', 'default' => '1'],
+            ['key' => 'homepage_section_company', 'group' => 'homepage', 'type' => 'boolean', 'label' => 'Our Company', 'default' => '1'],
+            ['key' => 'homepage_section_bod', 'group' => 'homepage', 'type' => 'boolean', 'label' => 'Board of Directors', 'default' => '1'],
+            ['key' => 'homepage_section_vision', 'group' => 'homepage', 'type' => 'boolean', 'label' => 'Vision & Mission', 'default' => '1'],
+            ['key' => 'homepage_section_values', 'group' => 'homepage', 'type' => 'boolean', 'label' => 'Core Values', 'default' => '1'],
+            ['key' => 'homepage_section_gallery', 'group' => 'homepage', 'type' => 'boolean', 'label' => 'Photo Gallery', 'default' => '1'],
         ];
     }
 

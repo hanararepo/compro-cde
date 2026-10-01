@@ -9,6 +9,19 @@
     $sitePhone = \App\Models\Setting::get('contact_phone', '');
     $siteEmail = \App\Models\Setting::get('contact_email', '');
     $siteAddress = \App\Models\Setting::get('contact_address', '');
+
+    // Homepage section visibility
+    $showHero     = \App\Models\Setting::get('homepage_section_hero', '1');
+    $showVideo    = \App\Models\Setting::get('homepage_section_video', '1');
+    $showCoal     = \App\Models\Setting::get('homepage_section_coal', '1');
+    $showMarkets  = \App\Models\Setting::get('homepage_section_markets', '1');
+    $showCsr      = \App\Models\Setting::get('homepage_section_csr', '1');
+    $showInsights = \App\Models\Setting::get('homepage_section_insights', '1');
+    $showCompany  = \App\Models\Setting::get('homepage_section_company', '1');
+    $showBod      = \App\Models\Setting::get('homepage_section_bod', '1');
+    $showVision   = \App\Models\Setting::get('homepage_section_vision', '1');
+    $showValues   = \App\Models\Setting::get('homepage_section_values', '1');
+    $showGallery  = \App\Models\Setting::get('homepage_section_gallery', '1');
 @endphp
 
 @push('structured-data')
@@ -44,7 +57,7 @@
 <x-layouts.public :metaDescription="$homeDesc" :metaKeywords="$homeKeywords" :canonicalUrl="route('home')">
 
     <!-- Hero Slider Section -->
-    @if ($sliders->isNotEmpty())
+    @if ($showHero && $sliders->isNotEmpty())
     <section class="slider-section home-hero overflow-hidden">
         <div class="antra-slider swiper-container">
             <div class="swiper-wrapper">
@@ -89,7 +102,7 @@
     @endif
     <!-- ./ slider-section -->
 
-    @if ($galleryVideos->isNotEmpty())
+    @if ($showVideo && $galleryVideos->isNotEmpty())
         <section class="home-video-section pt-150 pb-150 overflow-hidden tl-bg-color" aria-labelledby="home-video-heading">
             <div class="container container-2">
                 <div class="row section-heading-wrap slide-anim" data-scroll-repeat data-direction="left">
@@ -151,7 +164,9 @@
             </div>
         </section>
     @endif
+
     <!-- Coal Quality Section -->
+    @if ($showCoal)
     <section id="home-coal-products" class="about-section coal-quality-section overflow-hidden" aria-labelledby="coal-quality-heading">
         <div class="about-bg" style="background-image: url('{{ asset('assets/img/bg-img/our-coal-background-v2.png') }}');" aria-hidden="true"></div>
         <div class="coal-quality-wordmark" aria-hidden="true">CDE</div>
@@ -201,38 +216,54 @@
             </div>
         </div>
     </section>
+    @endif
 
-    @include('partials.home-markets-section')
+    @if ($showMarkets)
+        @include('partials.home-markets-section')
+    @endif
 
     <!-- CSR & Environment Articles -->
-    @include('partials.home-article-section', [
-        'sectionId' => 'home-csr',
-        'spacing' => 'pt-70 pb-120',
-        'category' => $csrCategory,
-        'categorySlug' => 'csr-environment',
-        'label' => __('Latest Update'),
-        'title' => 'CSR',
-        'highlight' => __('Environment'),
-        'description' => __('Discover our efforts to support local communities and care for the environment. Through our CSR initiatives, we aim to create lasting value for people and future generations.'),
-    ])
+    @if ($showCsr)
+        @include('partials.home-article-section', [
+            'sectionId' => 'home-csr',
+            'spacing' => 'pt-70 pb-120',
+            'category' => $csrCategory,
+            'categorySlug' => 'csr-environment',
+            'label' => __('Latest Update'),
+            'title' => 'CSR',
+            'highlight' => __('Environment'),
+            'description' => __('Discover our efforts to support local communities and care for the environment. Through our CSR initiatives, we aim to create lasting value for people and future generations.'),
+        ])
+    @endif
 
     <!-- Insights & Trends Articles -->
-    @include('partials.home-insights-section')
+    @if ($showInsights)
+        @include('partials.home-insights-section')
+    @endif
 
     {{-- Our Company: Antra Home 7 About layout --}}
-    @include('partials.home-company-section')
+    @if ($showCompany)
+        @include('partials.home-company-section')
+    @endif
 
     {{-- Board of Directors --}}
-    @include('partials.home-bod-section')
+    @if ($showBod)
+        @include('partials.home-bod-section')
+    @endif
 
     {{-- Vision & Mission: adapted from Antra Home 5's process layout --}}
-    @include('partials.home-vision-mission-section')
-
+    @if ($showVision)
+        @include('partials.home-vision-mission-section')
+    @endif
 
     <!-- Core Values: Antra service layout with the SUCCESS values -->
-    @include('partials.home-core-values-section')
+    @if ($showValues)
+        @include('partials.home-core-values-section')
+    @endif
 
     {{-- Photo Gallery: Antra's two staggered photo rows. --}}
-    @include('partials.home-photo-gallery-section')
+    @if ($showGallery)
+        @include('partials.home-photo-gallery-section')
+    @endif
 
 </x-layouts.public>
