@@ -195,18 +195,12 @@
 
                                                 {{-- Delete --}}
                                                 @can('gallery-videos.delete')
-                                                    <form method="POST" action="{{ route('admin.gallery-videos.destroy', $video) }}" class="inline"
-                                                          onsubmit="return confirm('Delete this video from gallery?')">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit"
-                                                                class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-rose-50 text-rose-700 hover:bg-rose-100 border border-rose-200 transition-colors">
-                                                            <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
-                                                            </svg>
-                                                            Delete
-                                                        </button>
-                                                    </form>
+                                                    <x-delete-confirm
+                                                        :action="route('admin.gallery-videos.destroy', $video)"
+                                                        title="Delete this video?"
+                                                        :message="'The video “' . ($video->getTranslation('title', 'en', false) ?: 'Untitled') . '” will be permanently removed from the gallery.'"
+                                                        confirm="Yes, delete"
+                                                    />
                                                 @endcan
                                             @endunless
                                         </div>

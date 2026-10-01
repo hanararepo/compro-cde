@@ -28,10 +28,12 @@
                                     <a href="{{ route('admin.coal-products.edit', $product) }}" class="px-3 py-1.5 rounded-lg border border-brand-200 bg-brand-50 text-xs font-semibold text-brand-700 hover:bg-brand-100">Edit</a>
                                 @endcan
                                 @can('coal-products.delete')
-                                    <form action="{{ route('admin.coal-products.destroy', $product) }}" method="POST" onsubmit="return confirm('Delete this coal product and all its specifications?');">
-                                        @csrf @method('DELETE')
-                                        <button type="submit" class="px-3 py-1.5 rounded-lg border border-rose-200 bg-rose-50 text-xs font-semibold text-rose-600 hover:bg-rose-100">Delete</button>
-                                    </form>
+                                    <x-delete-confirm
+                                        :action="route('admin.coal-products.destroy', $product)"
+                                        title="Delete this product?"
+                                        :message="'The coal product “' . $product->name . '” and all its specifications will be permanently deleted.'"
+                                        confirm="Yes, delete"
+                                    />
                                 @endcan
                             </div>
                         </td>

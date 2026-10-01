@@ -78,18 +78,12 @@
                                 @endcan
 
                                 @can('article-tags.delete')
-                                    <form action="{{ route('admin.article-tags.destroy', $tag) }}" method="POST" class="inline-flex"
-                                          onsubmit="return confirm('Delete tag \'{{ $tag->getTranslation('name', 'en') }}\'? This will remove it from all articles.');">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit"
-                                                class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border border-rose-200 bg-rose-50 hover:bg-rose-100 text-rose-600 hover:text-rose-800 text-[11px] font-semibold transition-all shadow-xs">
-                                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
-                                            </svg>
-                                            Delete
-                                        </button>
-                                    </form>
+                                    <x-delete-confirm
+                                        :action="route('admin.article-tags.destroy', $tag)"
+                                        title="Delete this tag?"
+                                        :message="'The tag “' . $tag->getTranslation('name', 'en') . '” will be removed from all articles and permanently deleted.'"
+                                        confirm="Yes, delete"
+                                    />
                                 @endcan
                             </div>
                         </td>

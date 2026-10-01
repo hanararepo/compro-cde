@@ -5,6 +5,53 @@
 /* Prevent Alpine.js x-cloak elements from flashing before JS initializes */
 [x-cloak] { display: none !important; }
 
+/* --- Delete Confirmation Dialog (dc-dialog) -------------------------------- */
+.dc-dialog {
+    position: fixed; inset: 0; margin: auto;
+    width: min(480px, calc(100vw - 32px));
+    max-height: calc(100dvh - 40px);
+    border: 1px solid #e6eaf0; border-radius: 17px;
+    padding: 0; color: #25354c; background: #fff;
+    box-shadow: 0 25px 90px #101f393b;
+    overflow-y: auto;
+}
+.dc-dialog::backdrop { background: #15243e70; backdrop-filter: blur(4px); }
+.dc-dialog-inner { padding: 30px; }
+.dc-dialog-mark {
+    width: 50px; height: 50px; display: flex; align-items: center;
+    justify-content: center; border-radius: 14px; margin-bottom: 20px;
+    background: #fff0f2; color: #c84b5c; border: 1px solid #fbe0e5;
+}
+.dc-dialog-mark svg { width: 23px; height: 23px; }
+.dc-dialog-title { font-size: 21px; font-weight: 750; letter-spacing: -.03em; margin-bottom: 10px; }
+.dc-dialog-copy  { font-size: 13px; line-height: 1.8; color: #7b8799; overflow-wrap: anywhere; }
+.dc-dialog-warning {
+    display: flex; align-items: center; gap: 8px; border-radius: 8px;
+    padding: 11px 13px; margin-top: 18px;
+    color: #aa7750; background: #fff8ee; font-size: 11px;
+}
+.dc-dialog-warning svg { width: 16px; height: 16px; flex: none; }
+.dc-dialog-footer {
+    display: flex; justify-content: flex-end; gap: 9px;
+    padding: 17px 25px; border-top: 1px solid #e9edf3; background: #fafbfd;
+    border-radius: 0 0 17px 17px;
+}
+.dc-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 18px; border-radius: 9px; font-size: 13px; font-weight: 600;
+    border: 1px solid #dce3ed; background: #fff; color: #4b6074;
+    cursor: pointer; transition: background .15s, opacity .15s;
+}
+.dc-btn:hover { background: #f3f6fa; }
+.dc-btn:disabled { opacity: .55; cursor: not-allowed; }
+.dc-btn--danger {
+    background: #c8323f; color: #fff; border-color: #b82c38;
+}
+.dc-btn--danger:hover { background: #b82c38; }
+.dc-btn--danger svg { width: 14px; height: 14px; }
+@media (max-width: 480px) { .dc-dialog-inner { padding: 24px; } }
+/* --------------------------------------------------------------------------- */
+
 @source '../views/**/*.blade.php';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';

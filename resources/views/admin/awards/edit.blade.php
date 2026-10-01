@@ -174,13 +174,16 @@
         </form>
 
         @can('delete', $award)
-            <form action="{{ route('admin.awards.destroy', $award) }}" method="POST" onsubmit="return confirm('Permanently delete this {{ $award->type }}?');">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="w-full py-2.5 rounded-xl border border-rose-200 bg-rose-50 hover:bg-rose-100 text-rose-600 font-semibold text-sm transition-all">
-                    Delete {{ ucfirst($award->type) }}
-                </button>
-            </form>
+            <x-delete-confirm
+                :action="route('admin.awards.destroy', $award)"
+                :title="'Delete this ' . $award->type . '?'"
+                :message="'The ' . $award->type . ' “' . $award->getTranslation('title', 'en') . '” will be permanently deleted.'"
+                confirm="Yes, delete"
+                size="md"
+                triggerClass="w-full justify-center py-2.5 rounded-xl border border-rose-200 bg-rose-50 hover:bg-rose-100 text-rose-600 font-semibold text-sm transition-all"
+                :icon="false"
+                :label="'Delete ' . ucfirst($award->type)"
+            />
         @endcan
     </div>
 
