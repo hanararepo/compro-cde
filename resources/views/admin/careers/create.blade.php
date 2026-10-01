@@ -123,6 +123,8 @@
                             @error('image')<p class="text-xs text-rose-600 mt-1">{{ $message }}</p>@enderror
                         </div>
 
+                        @include('admin.careers.partials.recruitment-status')
+
                         {{-- Active Toggle --}}
                         <div class="flex items-center gap-3 pt-2">
                             <input type="hidden" name="is_active" value="0">

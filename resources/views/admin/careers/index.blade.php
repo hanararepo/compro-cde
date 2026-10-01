@@ -36,18 +36,26 @@
                     </select>
                 </div>
                 <div class="min-w-36">
-                    <label class="block text-xs font-semibold text-slate-500 mb-1">Status</label>
+                    <label class="block text-xs font-semibold text-slate-500 mb-1">Publication</label>
                     <select name="status" class="w-full px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-400 bg-slate-50">
                         <option value="">All</option>
-                        <option value="1" @selected(request('status') === '1')>Active</option>
-                        <option value="0" @selected(request('status') === '0')>Inactive</option>
+                        <option value="1" @selected(request('status') === '1')>Published</option>
+                        <option value="0" @selected(request('status') === '0')>Unpublished</option>
+                    </select>
+                </div>
+                <div class="min-w-36">
+                    <label for="recruitment-status-filter" class="block text-xs font-semibold text-slate-500 mb-1">Recruitment</label>
+                    <select id="recruitment-status-filter" name="recruitment_status" class="w-full px-3 py-2 text-sm border border-slate-200 rounded-lg bg-slate-50">
+                        <option value="">All</option>
+                        <option value="0" @selected(request('recruitment_status') === '0')>Open</option>
+                        <option value="1" @selected(request('recruitment_status') === '1')>Closed</option>
                     </select>
                 </div>
                 <div class="flex items-end gap-2">
                     <button type="submit" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold rounded-lg shadow-sm shadow-brand-600/30 transition-all">
                         Filter
                     </button>
-                    @if(request()->hasAny(['search','type','status']))
+                    @if(request()->hasAny(['search','type','status','recruitment_status']))
                         <a href="{{ route('admin.careers.index') }}" class="px-4 py-2 border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 text-sm font-medium rounded-lg transition-all">
                             Clear
                         </a>
@@ -100,19 +108,22 @@
                                     <td class="px-5 py-3.5">
                                         @if($job->is_active)
                                             <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span> Active
+                                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span> Published
                                             </span>
                                         @else
                                             <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-semibold bg-slate-100 text-slate-500 border border-slate-200">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span> Inactive
+                                                <span class="w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span> Unpublished
                                             </span>
                                         @endif
+                                        <div class="mt-1.5">
+                                            <span class="inline-flex px-2 py-0.5 rounded-md text-xs font-semibold {{ $job->is_closed ? 'bg-rose-50 text-rose-700' : 'bg-blue-50 text-blue-700' }}">{{ $job->is_closed ? 'Closed' : 'Open' }}</span>
+                                        </div>
                                     </td>
 
                                     {{-- Date --}}
                                     <td class="px-5 py-3.5 tabular-nums whitespace-nowrap">
-                                        <div class="text-xs font-medium text-slate-600">{{ $job->created_at->format('d M Y') }}</div>
-                                        <div class="text-xs text-slate-400">{{ $job->created_at->format('H:i') }}</div>
+                                        <div class="text-xs font-medium text-slate-600">{{ \App\Support\LocalTime::format($job->created_at, 'd M Y') }}</div>
+                                        <div class="text-xs text-slate-400">{{ \App\Support\LocalTime::format($job->created_at, 'H:i T') }}</div>
                                     </td>
 
                                     {{-- Actions --}}

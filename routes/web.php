@@ -291,6 +291,9 @@ Route::prefix($adminPrefix)
             Route::get('careers/{career}/applications', [JobPostingController::class, 'applications'])->name('careers.applications.index');
             Route::get('careers/{career}/applications/{application}/cv', [JobPostingController::class, 'downloadCv'])->name('careers.applications.cv');
         });
+        Route::delete('careers/{career}/applications', [JobPostingController::class, 'bulkDestroyApplications'])
+            ->middleware('permission:career-applications.delete')
+            ->name('careers.applications.bulk-destroy');
         Route::delete('careers/{career}/applications/{application}', [JobPostingController::class, 'destroyApplication'])
             ->middleware('permission:career-applications.delete')
             ->name('careers.applications.destroy');

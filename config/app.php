@@ -83,6 +83,9 @@ return [
 
     'timezone' => 'UTC',
 
+    // Display local time while keeping database timestamps in UTC.
+    'display_timezone' => env('APP_DISPLAY_TIMEZONE', 'Asia/Jakarta'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration

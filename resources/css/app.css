@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './career-applications.css';
 @import './typography.css';
 
 /* Prevent Alpine.js x-cloak elements from flashing before JS initializes */

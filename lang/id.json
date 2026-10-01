@@ -322,5 +322,14 @@
     "Malaysia": "Malaysia",
     "Vietnam": "Vietnam",
     "Thailand": "Thailand",
-    "Asia": "Asia"
+    "Asia": "Asia",
+    "The CV could not be uploaded. Please try again.": "CV belum berhasil diunggah. Silakan coba lagi.",
+    "Job Opportunities": "Daftar Lowongan",
+    ":count listed position(s)": ":count lowongan dipublikasikan",
+    "Positions": "Lowongan",
+    "Closed": "Ditutup",
+    "Applications are closed": "Penerimaan lamaran ditutup",
+    "This position is closed and no longer accepts applications.": "Lowongan ini sudah ditutup dan tidak lagi menerima lamaran.",
+    "Explore other positions": "Lihat lowongan lainnya",
+    "You have already applied for this position with this email. You may still apply for other positions.": "Anda sudah melamar posisi ini menggunakan email tersebut. Anda masih dapat melamar posisi lainnya."
 }

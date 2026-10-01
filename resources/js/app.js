@@ -1,8 +1,10 @@
 import Alpine from 'alpinejs';
 import coalProductForm from './coal-product-form.js';
+import careerApplications from './career-applications.js';
 
 window.Alpine = Alpine;
 Alpine.data('coalProductForm', coalProductForm);
+Alpine.data('careerApplications', careerApplications);
 
 document.addEventListener('alpine:init', () => {
     Alpine.data('liveTable', (baseUrl, initialFilters = {}) => ({

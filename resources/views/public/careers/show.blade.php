@@ -45,7 +45,7 @@
     ];
 @endphp
 <script type="application/ld+json">
-{!! json_encode([$jobSchema, $breadcrumbSchema], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_HEX_TAG) !!}
+{!! json_encode($career->is_closed ? [$breadcrumbSchema] : [$jobSchema, $breadcrumbSchema], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_HEX_TAG) !!}
 </script>
 @endpush
 
@@ -75,7 +75,7 @@
             <h1 id="career-detail-heading">{{ $title }}</h1>
 
             <p class="careers-hero-lead" style="font-size:15px; color:#5a7060;">
-                {{ __('Posted') }} {{ $career->created_at->format('d M Y') }}
+                {{ __('Posted') }} {{ \App\Support\LocalTime::format($career->created_at, 'd M Y') }}
             </p>
         </div>
     </section>
@@ -118,6 +118,15 @@
                 {{-- Right: Application Form --}}
                 <div class="career-detail-aside">
                     <div class="career-apply-panel">
+                        @if($career->is_closed)
+                            <div class="career-closed-panel" role="status">
+                                <span class="career-closed-icon"><i class="fa-solid fa-lock" aria-hidden="true"></i></span>
+                                <span class="career-closed-label">{{ __('Closed') }}</span>
+                                <h3>{{ __('Applications are closed') }}</h3>
+                                <p>{{ __('This position is closed and no longer accepts applications.') }}</p>
+                                <a href="{{ route('careers.index') }}" class="career-back-link">{{ __('Explore other positions') }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        @else
                         <div class="career-apply-panel-header">
                             <div class="career-apply-icon">
                                 <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
@@ -241,23 +250,6 @@
                                 @enderror
                             </div>
 
-                            {{-- LinkedIn --}}
-                            <div class="career-field">
-                                <label for="linkedin" class="career-label">
-                                    {{ __('LinkedIn Profile') }}
-                                    <span class="career-optional">({{ __('Optional') }})</span>
-                                </label>
-                                <input type="url"
-                                       id="linkedin"
-                                       name="linkedin"
-                                       value="{{ old('linkedin') }}"
-                                       placeholder="https://linkedin.com/in/username"
-                                       class="career-input @error('linkedin') career-input-error @enderror">
-                                @error('linkedin')
-                                    <p class="career-field-error">{{ $message }}</p>
-                                @enderror
-                            </div>
-
                             {{-- CV Upload --}}
                             <div class="career-field">
                                 <label class="career-label">
@@ -318,6 +310,7 @@
                                 </span>
                             </button>
                         </form>
+                        @endif
                     </div>
                 </div>
 
@@ -326,7 +319,7 @@
     </section>
 
     @push('scripts')
-        @if(config('recaptcha.site_key'))
+        @if(! $career->is_closed && config('recaptcha.site_key'))
             <script src="https://www.google.com/recaptcha/api.js?render={{ config('recaptcha.site_key') }}" defer></script>
             <script>
                 document.addEventListener('DOMContentLoaded', function () {

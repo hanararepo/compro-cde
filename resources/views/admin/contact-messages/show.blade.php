@@ -11,7 +11,7 @@
                 </a>
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Message Details</h2>
-                    <p class="text-sm text-slate-500 mt-0.5">Received on {{ $contactMessage->created_at->format('d F Y, H:i') }}</p>
+                    <p class="text-sm text-slate-500 mt-0.5">Received on {{ \App\Support\LocalTime::format($contactMessage->created_at, 'd F Y, H:i T') }}</p>
                 </div>
             </div>
 

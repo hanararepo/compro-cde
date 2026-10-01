@@ -64,14 +64,14 @@
 
             <div class="careers-section-header">
                 <div>
-                    <h2 id="open-positions-heading">{{ __('Open Positions') }}</h2>
+                    <h2 id="open-positions-heading">{{ __('Job Opportunities') }}</h2>
                     <p style="margin:0; font-size:14px; color:#6a8070;">
-                        {{ __(':count position(s) currently open', ['count' => $jobs->total()]) }}
+                        {{ __(':count listed position(s)', ['count' => $jobs->total()]) }}
                     </p>
                 </div>
                 <span class="careers-count-badge">
                     <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
-                    {{ $jobs->total() }} {{ __('Open') }}
+                    {{ $jobs->total() }} {{ __('Positions') }}
                 </span>
             </div>
 
@@ -118,6 +118,9 @@
 
                             {{-- Body --}}
                             <div class="career-card-body">
+                                @if($job->is_closed)
+                                    <span class="career-closed-badge"><i class="fa-solid fa-lock" aria-hidden="true"></i> {{ __('Closed') }}</span>
+                                @endif
                                 <h3 class="career-card-title">
                                     <a href="{{ route('careers.show', $job->getSlug()) }}" style="color:inherit; text-decoration:none;">
                                         {{ $title }}
@@ -133,7 +136,7 @@
                                     {{ $job->created_at->diffForHumans() }}
                                 </span>
                                 <a href="{{ route('careers.show', $job->getSlug()) }}" class="career-view-link">
-                                    {{ __('View & Apply') }}
+                                    {{ $job->is_closed ? __('View Details') : __('View & Apply') }}
                                     <span class="career-view-icon" aria-hidden="true">
                                         <i class="fa-solid fa-arrow-right"></i>
                                     </span>

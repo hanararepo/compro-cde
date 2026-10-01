@@ -23,6 +23,7 @@ class JobPosting extends Model
         'image',
         'type',
         'is_active',
+        'is_closed',
     ];
 
     protected function casts(): array
@@ -33,6 +34,7 @@ class JobPosting extends Model
             'description' => 'array',
             'type'        => JobType::class,
             'is_active'   => 'boolean',
+            'is_closed'   => 'boolean',
         ];
     }
 

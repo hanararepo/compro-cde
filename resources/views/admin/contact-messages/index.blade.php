@@ -90,8 +90,8 @@
                                         {{ $msg->subject }}
                                     </td>
                                     <td class="px-5 py-3.5 text-slate-500 tabular-nums text-xs whitespace-nowrap">
-                                        <div>{{ $msg->created_at->format('d M Y') }}</div>
-                                        <div class="text-slate-400">{{ $msg->created_at->format('H:i') }}</div>
+                                        <div>{{ \App\Support\LocalTime::format($msg->created_at, 'd M Y') }}</div>
+                                        <div class="text-slate-400">{{ \App\Support\LocalTime::format($msg->created_at, 'H:i T') }}</div>
                                     </td>
                                     <td class="px-5 py-3.5 text-right">
                                         <div class="flex items-center justify-end gap-2">
