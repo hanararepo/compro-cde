@@ -229,10 +229,10 @@ class JobPostingController extends Controller
     private function deletionResponse(array $result): RedirectResponse
     {
         if ($result['failed']) {
-            return back()->with('error', "{$result['deleted']} lamaran dihapus. {$result['failed']} lamaran gagal dihapus dan tetap tersimpan. Silakan coba kembali.");
+            return back()->with('error', "Deleted: {$result['deleted']}. Could not delete: {$result['failed']}. The remaining applications are retained. Please try again.");
         }
 
-        return back()->with('success', "{$result['deleted']} lamaran berhasil dihapus.");
+        return back()->with('success', $result['deleted'].' '.Str::plural('application', $result['deleted']).' deleted successfully.');
     }
 
     /**

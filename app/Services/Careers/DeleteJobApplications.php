@@ -28,7 +28,7 @@ class DeleteJobApplications
             foreach ($ids as $id) {
                 $lock = Cache::lock('career-application:'.$id, 300);
                 if (! $lock->get()) {
-                    throw ValidationException::withMessages(['ids' => 'Salah satu lamaran sedang diproses. Tunggu sebentar, lalu coba lagi.']);
+                    throw ValidationException::withMessages(['ids' => 'An application is being processed. Please wait a moment and try again.']);
                 }
                 $locks[] = $lock;
             }

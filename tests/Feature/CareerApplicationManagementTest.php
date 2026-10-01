@@ -57,7 +57,7 @@ class CareerApplicationManagementTest extends TestCase
         $keep = $this->application();
         $this->actingAs($this->admin)->from(route('admin.careers.applications.index', $this->career))
             ->delete(route('admin.careers.applications.bulk-destroy', $this->career), ['ids' => [$first->id, $second->id]])
-            ->assertRedirect()->assertSessionHas('success', '2 lamaran berhasil dihapus.');
+            ->assertRedirect()->assertSessionHas('success', '2 applications deleted successfully.');
         $this->assertModelMissing($first);
         $this->assertModelMissing($second);
         $this->assertModelExists($keep);
@@ -97,7 +97,7 @@ class CareerApplicationManagementTest extends TestCase
         $viewer->givePermissionTo('career-applications.view');
         $this->actingAs($viewer)->delete(route('admin.careers.applications.bulk-destroy', $this->career), ['ids' => [$application->id]])->assertForbidden();
         $this->get(route('admin.careers.applications.index', $this->career))->assertOk()
-            ->assertDontSee('Hapus terpilih')->assertDontSee('x-ref="deleteDialog"', false);
+            ->assertDontSee('Delete selected')->assertDontSee('x-ref="deleteDialog"', false);
         $this->assertModelExists($application);
     }
 
@@ -131,7 +131,7 @@ class CareerApplicationManagementTest extends TestCase
         $partial->shouldReceive('delete')->with($second->cv_path)->once()->andReturnUsing(fn ($path) => $disk->delete($path));
         Storage::shouldReceive('disk')->with('local')->andReturn($partial);
         $this->actingAs($this->admin)->delete(route('admin.careers.applications.bulk-destroy', $this->career), ['ids' => [$first->id, $second->id]])
-            ->assertSessionHas('error', '1 lamaran dihapus. 1 lamaran gagal dihapus dan tetap tersimpan. Silakan coba kembali.');
+            ->assertSessionHas('error', 'Deleted: 1. Could not delete: 1. The remaining applications are retained. Please try again.');
         $this->assertModelExists($first);
         $this->assertModelMissing($second);
         $this->assertFileExists($disk->path($first->cv_path));
@@ -159,7 +159,7 @@ class CareerApplicationManagementTest extends TestCase
         $this->actingAs($this->admin)->get(route('admin.careers.applications.index', [$this->career, 'status' => 'failed', 'search' => 'Rizky']))
             ->assertOk()->assertSee('Rizky Pratama')->assertDontSee('Nadia Putri')
             ->assertViewHas('stats', ['total' => 3, 'sent' => 1, 'failed' => 1, 'pending' => 1])
-            ->assertSee('Hapus terpilih')->assertSee('x-ref="deleteDialog"', false)->assertDontSee('return confirm(', false);
+            ->assertSee('Delete selected')->assertSee('x-ref="deleteDialog"', false)->assertDontSee('return confirm(', false);
     }
 
     public function test_sent_application_without_cv_can_be_deleted(): void

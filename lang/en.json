@@ -255,5 +255,11 @@
     "Malaysia": "Malaysia",
     "Vietnam": "Vietnam",
     "Thailand": "Thailand",
-    "Asia": "Asia"
+    "Asia": "Asia",
+    "CAREERS_MAIL_TO belum diisi dengan alamat email yang valid.": "CAREERS_MAIL_TO must contain a valid email address.",
+    "CAREERS_MAILER harus menggunakan layanan email pengiriman nyata.": "CAREERS_MAILER must use a live email delivery service.",
+    "CV sementara tidak ditemukan.": "The temporary CV could not be found.",
+    "Layanan email tidak mengonfirmasi pengiriman.": "The email service did not confirm delivery.",
+    "Pengiriman email gagal setelah percobaan langsung saat submit. Data lamaran dan CV tetap tersimpan; tidak ada retry terjadwal.": "Email delivery failed after the immediate submission attempts. The application and CV are retained; no scheduled retry is pending.",
+    "Email terkirim, tetapi CV gagal dihapus setelah 3 percobaan. File dan path tetap tersimpan; tidak ada retry terjadwal.": "Email sent, but CV deletion failed after 3 attempts. The file is retained; no scheduled retry is pending."
 }

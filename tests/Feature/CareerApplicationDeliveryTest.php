@@ -222,7 +222,7 @@ class CareerApplicationDeliveryTest extends TestCase
         $this->actingAs($user)->get(route('admin.careers.applications.cv', [$this->career, $application]))->assertOk();
         app(DeliverJobApplication::class)->send($application->id);
         $this->get(route('admin.careers.applications.index', $this->career))
-            ->assertOk()->assertSee('Ayu Pelamar')->assertSee('Terkirim')
+            ->assertOk()->assertSee('Ayu Pelamar')->assertSee('Sent')
             ->assertDontSee(route('admin.careers.applications.cv', [$this->career, $application]), false)
             ->assertDontSee('Kirim ulang email');
         $this->get(route('admin.careers.applications.cv', [$this->career, $application]))->assertNotFound();

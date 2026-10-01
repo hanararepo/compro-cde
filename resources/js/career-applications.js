@@ -41,9 +41,9 @@ export default function careerApplications(rows = []) {
         get deleteDescription() {
             if (this.pendingIds.length === 1) {
                 const row = this.rows.find(row => String(row.id) === this.pendingIds[0]);
-                return `Lamaran ${row?.name ?? ''} akan dihapus beserta CV yang masih tersimpan.`;
+                return `The application from ${row?.name ?? ''} and any stored CV will be deleted.`;
             }
-            return `${this.pendingIds.length} lamaran yang dipilih akan dihapus beserta CV yang masih tersimpan.`;
+            return `${this.pendingIds.length} selected applications and any stored CVs will be deleted.`;
         },
     };
 }
