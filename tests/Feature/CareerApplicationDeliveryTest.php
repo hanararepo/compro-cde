@@ -77,7 +77,7 @@ class CareerApplicationDeliveryTest extends TestCase
     private function failTransport(): void
     {
         $transport = Mockery::mock(TransportInterface::class);
-        $transport->shouldReceive('send')->andThrow(new TransportException('SMTP secret diagnostic'));
+        $transport->shouldReceive('send')->andThrow(new TransportException('Failed to authenticate SMTP secret diagnostic', 535));
         Mail::mailer('smtp')->setSymfonyTransport($transport);
     }
 
@@ -149,6 +149,8 @@ class CareerApplicationDeliveryTest extends TestCase
         $this->assertNull($application->email_next_attempt_at);
         $this->assertNull($application->email_sent_at);
         $this->assertStringNotContainsString('secret', $application->email_last_error);
+        $this->assertStringContainsString('SMTP authentication failed', $application->email_last_error);
+        $this->assertSame('recruitment@example.com', $application->email_recipient);
         Storage::disk('local')->assertExists($application->cv_path);
         $this->assertCount(0, $this->transport->messages());
     }

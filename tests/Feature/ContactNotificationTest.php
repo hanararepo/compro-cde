@@ -9,6 +9,7 @@ use App\Services\Contact\DeliverContactMessage;
 use Carbon\CarbonImmutable;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Mail\Transport\ArrayTransport;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Mail;
 use Mockery;
 use Spatie\Permission\Models\Permission;
@@ -29,7 +30,7 @@ class ContactNotificationTest extends TestCase
         Setting::flushCache();
         Setting::set('contact_email', 'public@example.com');
         Setting::set('contact_notification_email', 'inbox@example.com');
-        config(['mail.default' => 'smtp']);
+        config(['mail.default' => 'smtp', 'contact.mailer' => 'smtp']);
         $this->transport = new ArrayTransport;
         Mail::mailer('smtp')->setSymfonyTransport($this->transport);
     }
@@ -62,10 +63,22 @@ class ContactNotificationTest extends TestCase
         $this->assertCount(1, $this->transport->messages());
     }
 
+    public function test_contact_uses_smtp_even_when_the_default_mailer_is_log(): void
+    {
+        config(['mail.default' => 'log']);
+
+        $this->post(route('contact.store'), $this->payload())->assertSessionHas('success');
+
+        $message = ContactMessage::sole();
+        $this->assertSame('sent', $message->email_status);
+        $this->assertSame(1, $message->email_attempts);
+        $this->assertCount(1, $this->transport->messages());
+    }
+
     public function test_delivery_failure_retries_three_times_and_keeps_the_admin_message(): void
     {
         $transport = Mockery::mock(TransportInterface::class);
-        $transport->shouldReceive('send')->times(3)->andThrow(new TransportException('secret SMTP diagnostic'));
+        $transport->shouldReceive('send')->times(3)->andThrow(new TransportException('Failed to authenticate secret SMTP diagnostic', 535));
         Mail::mailer('smtp')->setSymfonyTransport($transport);
         $this->post(route('contact.store'), $this->payload())->assertRedirect()->assertSessionHas('success');
         $message = ContactMessage::sole();
@@ -73,6 +86,26 @@ class ContactNotificationTest extends TestCase
         $this->assertSame(3, $message->email_attempts);
         $this->assertSame($this->payload()['message'], $message->message);
         $this->assertStringNotContainsString('secret', $message->email_last_error);
+        $this->assertStringContainsString('SMTP authentication failed', $message->email_last_error);
+        $this->assertSame('inbox@example.com', $message->email_recipient);
+    }
+
+    public function test_mail_diagnostics_do_not_send_email_or_expose_credentials(): void
+    {
+        config(['mail.default' => 'log', 'careers.mailer' => 'smtp',
+            'mail.mailers.smtp.username' => 'private-user', 'mail.mailers.smtp.password' => 'private-password',
+            'mail.mailers.smtp.url' => 'smtp://private-user:private-password@example.com:587']);
+        Artisan::call('mail:diagnose');
+        $output = Artisan::output();
+        $diagnostic = json_decode($output, true, flags: JSON_THROW_ON_ERROR);
+        $this->assertSame('smtp', $diagnostic['contact']['mailer']);
+        $this->assertSame('smtp', $diagnostic['careers']['transport']);
+        $this->assertTrue($diagnostic['contact']['recipient_valid']);
+        $this->assertTrue($diagnostic['smtp']['password_configured']);
+        $this->assertTrue($diagnostic['smtp']['url_override_configured']);
+        $this->assertStringNotContainsString('private-', $output);
+        $this->assertCount(0, $this->transport->messages());
+        $this->assertDatabaseCount('contact_messages', 0);
     }
 
     public function test_a_transient_failure_succeeds_on_the_next_immediate_attempt(): void

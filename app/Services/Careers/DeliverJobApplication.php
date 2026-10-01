@@ -4,6 +4,7 @@ namespace App\Services\Careers;
 
 use App\Mail\JobApplicationReceived;
 use App\Models\JobApplication;
+use App\Support\MailDeliveryError;
 use DomainException;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
@@ -42,6 +43,7 @@ class DeliverJobApplication
                     if (! is_string($recipient) || ! filter_var($recipient, FILTER_VALIDATE_EMAIL)) {
                         throw new DomainException('CAREERS_MAIL_TO belum diisi dengan alamat email yang valid.');
                     }
+                    $application->update(['email_recipient' => $recipient]);
 
                     $mailer = config('careers.mailer');
                     $transport = config('mail.mailers.'.$mailer.'.transport');
@@ -60,13 +62,14 @@ class DeliverJobApplication
                     }
                 } catch (Throwable $exception) {
                     // Do not persist SMTP diagnostics containing credentials or applicant data.
+                    $reason = $exception instanceof DomainException ? $exception->getMessage() : MailDeliveryError::describe($exception);
                     $application->update([
                         'email_status' => 'failed',
                         'email_last_error' => $exception instanceof DomainException
-                            ? $exception->getMessage()
-                            : 'Pengiriman email gagal setelah percobaan langsung saat submit. Data lamaran dan CV tetap tersimpan; tidak ada retry terjadwal.',
+                            ? $reason
+                            : $reason.' The application and CV are retained; no scheduled retry is pending.',
                     ]);
-                    Log::warning('Career application email failed.', ['application_id' => $id, 'attempt' => $attempt, 'exception_type' => $exception::class]);
+                    Log::warning('Career application email failed.', ['application_id' => $id, 'attempt' => $attempt, 'mailer' => config('careers.mailer'), 'exception_type' => $exception::class, 'reason' => $reason]);
 
                     // Invalid configuration or missing files cannot recover in this request.
                     if ($exception instanceof DomainException || $attempt === $maxAttempts) {

@@ -5,6 +5,7 @@ namespace App\Services\Contact;
 use App\Mail\ContactMessageReceived;
 use App\Models\ContactMessage;
 use App\Models\Setting;
+use App\Support\MailDeliveryError;
 use DomainException;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
@@ -34,9 +35,10 @@ class DeliverContactMessage
                 if (! is_string($recipient) || ! filter_var($recipient, FILTER_VALIDATE_EMAIL)) {
                     throw new DomainException('Set a valid notification email in Contact Messages settings.');
                 }
-                $mailer = config('mail.default');
+                $message->update(['email_recipient' => $recipient]);
+                $mailer = config('contact.mailer', 'smtp');
                 if (! in_array(config('mail.mailers.'.$mailer.'.transport'), ['smtp', 'sendmail', 'ses', 'ses-v2', 'postmark', 'resend', 'mailgun'], true)) {
-                    throw new DomainException('Configure a live mail service to deliver contact notifications.');
+                    throw new DomainException('Set CONTACT_MAILER=smtp and configure MAIL_* in .env, then refresh the configuration cache.');
                 }
             } catch (DomainException $exception) {
                 $message->update(['email_status' => 'failed', 'email_last_error' => $exception->getMessage()]);
@@ -52,9 +54,10 @@ class DeliverContactMessage
                         throw new DomainException('The mail service did not confirm delivery.');
                     }
                 } catch (Throwable $exception) {
-                    Log::warning('Contact notification failed.', ['message_id' => $id, 'attempt' => $attempt, 'exception_type' => $exception::class]);
+                    $reason = $exception instanceof DomainException ? $exception->getMessage() : MailDeliveryError::describe($exception);
+                    Log::warning('Contact notification failed.', ['message_id' => $id, 'attempt' => $attempt, 'mailer' => $mailer, 'exception_type' => $exception::class, 'reason' => $reason]);
                     if ($exception instanceof DomainException || $attempt === 3) {
-                        $message->update(['email_status' => 'failed', 'email_last_error' => 'Email delivery failed. The message remains available in Contact Messages.']);
+                        $message->update(['email_status' => 'failed', 'email_last_error' => $reason.' The message remains available in Contact Messages.']);
 
                         return false;
                     }
