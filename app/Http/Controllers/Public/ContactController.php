@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Public;
 use App\Http\Controllers\Controller;
 use App\Models\ContactMessage;
 use App\Rules\ValidRecaptcha;
+use App\Services\Contact\DeliverContactMessage;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -22,7 +23,7 @@ class ContactController extends Controller
     /**
      * Validate and store a new contact message.
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request, DeliverContactMessage $delivery): RedirectResponse
     {
         $validated = $request->validate([
             'recaptcha_token' => ['required', 'string', new ValidRecaptcha],
@@ -32,7 +33,12 @@ class ContactController extends Controller
             'message' => ['required', 'string', 'max:5000'],
         ]);
 
-        ContactMessage::create(collect($validated)->except('recaptcha_token')->all());
+        $message = ContactMessage::create(collect($validated)->except('recaptcha_token')->all() + ['email_status' => 'pending']);
+        try {
+            $delivery->send($message->id);
+        } catch (\Throwable $exception) {
+            report($exception);
+        }
 
         return redirect()
             ->route('contact')

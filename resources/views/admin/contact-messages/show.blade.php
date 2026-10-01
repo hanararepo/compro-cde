@@ -43,6 +43,16 @@
             </div>
         </div>
 
+        <section class="rounded-2xl border border-slate-200 bg-white p-5" aria-labelledby="delivery-heading">
+            <div class="flex items-center gap-3"><h3 id="delivery-heading" class="text-sm font-semibold text-slate-900">Email delivery</h3>@include('admin.contact-messages.partials.delivery-status')</div>
+            <dl class="mt-3 grid sm:grid-cols-3 gap-4 text-sm">
+                <div><dt class="text-slate-500">Recipient</dt><dd class="mt-1 break-all">{{ $contactMessage->email_recipient ?: '—' }}</dd></div>
+                <div><dt class="text-slate-500">Sent at</dt><dd class="mt-1">{{ \App\Support\LocalTime::format($contactMessage->email_sent_at) }}</dd></div>
+                <div><dt class="text-slate-500">Attempts</dt><dd class="mt-1">{{ $contactMessage->email_attempts }}</dd></div>
+            </dl>
+            @if($contactMessage->email_last_error)<p class="mt-3 text-sm text-rose-700">{{ $contactMessage->email_last_error }}</p>@endif
+        </section>
+
         {{-- Message Card --}}
         <div class="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden">
             {{-- Sender Info Header --}}

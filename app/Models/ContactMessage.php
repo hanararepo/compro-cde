@@ -20,6 +20,11 @@ class ContactMessage extends Model
         'message',
         'is_read',
         'replied_at',
+        'email_status',
+        'email_attempts',
+        'email_recipient',
+        'email_sent_at',
+        'email_last_error',
     ];
 
     /**
@@ -30,6 +35,8 @@ class ContactMessage extends Model
         return [
             'is_read' => 'boolean',
             'replied_at' => 'datetime',
+            'email_sent_at' => 'datetime',
+            'email_attempts' => 'integer',
         ];
     }
 

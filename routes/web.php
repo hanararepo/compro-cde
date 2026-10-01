@@ -263,6 +263,8 @@ Route::prefix($adminPrefix)
 
         // Contact Messages
         Route::middleware('permission:contact-messages.view')->group(function () {
+            Route::put('contact-messages/email-settings', [ContactMessageController::class, 'updateEmailSettings'])
+                ->middleware('permission:settings.edit')->name('contact-messages.email-settings');
             Route::get('contact-messages', [ContactMessageController::class, 'index'])->name('contact-messages.index');
             Route::get('contact-messages/{contactMessage}', [ContactMessageController::class, 'show'])->name('contact-messages.show');
             Route::delete('contact-messages/{contactMessage}', [ContactMessageController::class, 'destroy'])

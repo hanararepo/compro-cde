@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\ContactMessage;
+use App\Models\Setting;
+use App\Services\ActivityLog\ActivityLogService;
+use App\Services\Contact\DeliverContactMessage;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -37,7 +40,20 @@ class ContactMessageController extends Controller
             ->paginate(20)
             ->withQueryString();
 
-        return view('admin.contact-messages.index', compact('messages'));
+        return view('admin.contact-messages.index', ['messages' => $messages, 'notificationEmail' => DeliverContactMessage::recipient()]);
+    }
+
+    public function updateEmailSettings(Request $request, ActivityLogService $activityLog): RedirectResponse
+    {
+        $this->authorize('settings.edit');
+        if (is_string($request->input('notification_email'))) {
+            $request->merge(['notification_email' => trim($request->input('notification_email'))]);
+        }
+        $validated = $request->validate(['notification_email' => ['required', 'email', 'max:254']]);
+        Setting::set('contact_notification_email', $validated['notification_email']);
+        $activityLog->log($request->user(), 'updated', 'Updated the contact notification email recipient.');
+
+        return redirect()->route('admin.contact-messages.index')->with('success', 'Notification email settings saved.');
     }
 
     /**

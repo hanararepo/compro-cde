@@ -14,6 +14,25 @@
             </div>
         </div>
 
+        @can('settings.edit')
+            <section class="rounded-2xl border border-brand-200 bg-white p-5 shadow-xs" aria-labelledby="notification-settings-title">
+                <h3 id="notification-settings-title" class="text-sm font-semibold text-slate-900">Email notifications</h3>
+                <p class="mt-1 text-sm text-slate-500">New messages are saved here and sent to this email address.</p>
+                <form method="POST" action="{{ route('admin.contact-messages.email-settings') }}" class="mt-4 flex flex-col sm:flex-row sm:items-end gap-3">
+                    @csrf
+                    @method('PUT')
+                    <div class="flex-1">
+                        <label for="notification-email" class="block text-xs font-semibold text-slate-600 mb-1">Recipient email</label>
+                        <input type="email" name="notification_email" id="notification-email" value="{{ old('notification_email', $notificationEmail) }}" required maxlength="254" placeholder="contact@company.com" class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20">
+                    </div>
+                    <button type="submit" class="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700">Save settings</button>
+                </form>
+                @if(!$notificationEmail)
+                    <p class="mt-3 text-sm text-amber-700">Add a recipient email to receive contact notifications.</p>
+                @endif
+            </section>
+        @endcan
+
         {{-- Filters --}}
         <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs">
             <form method="GET" action="{{ route('admin.contact-messages.index') }}" class="flex flex-wrap items-end gap-3">
@@ -69,6 +88,7 @@
                                 <th class="px-5 py-3.5 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider">Name</th>
                                 <th class="px-5 py-3.5 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider">Email</th>
                                 <th class="px-5 py-3.5 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider">Subject</th>
+                                <th class="px-5 py-3.5 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider">Email delivery</th>
                                 <th class="px-5 py-3.5 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider w-40">Date</th>
                                 <th class="px-5 py-3.5 text-right text-xs font-semibold text-slate-500 uppercase tracking-wider w-32">Actions</th>
                             </tr>
@@ -89,6 +109,7 @@
                                     <td class="px-5 py-3.5 {{ !$msg->is_read ? 'font-semibold text-slate-900' : 'text-slate-700' }} max-w-xs truncate">
                                         {{ $msg->subject }}
                                     </td>
+                                    <td class="px-5 py-3.5">@include('admin.contact-messages.partials.delivery-status', ['contactMessage' => $msg])</td>
                                     <td class="px-5 py-3.5 text-slate-500 tabular-nums text-xs whitespace-nowrap">
                                         <div>{{ \App\Support\LocalTime::format($msg->created_at, 'd M Y') }}</div>
                                         <div class="text-slate-400">{{ \App\Support\LocalTime::format($msg->created_at, 'H:i T') }}</div>
